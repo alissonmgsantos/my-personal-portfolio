@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, List, ListItem, Username } from './style';
 
 const anchors = [
-  { label: 'Início', link: '#home', icon: 'icon-home' },
-  { label: 'Sobre', link: '#about', icon: 'icon-user-following' },
+  { label: 'Início', link: '#home', icon: 'fa fa-home' },
+  { label: 'Sobre', link: '#about', icon: 'fa fa-address-card-o' },
   { label: 'Experiências', link: '#experience', icon: 'icon-directions' },
   { label: 'Trabalhos', link: '#works', icon: 'icon-briefcase' },
   { label: 'Contato', link: '#contact', icon: 'icon-bubbles' },

@@ -6,6 +6,5 @@ export const LayoutWrapper = styled.section`
 `;
 
 export const Wrapper = styled.main`
-  padding: 1rem;
   margin-left: 300px;
 `;

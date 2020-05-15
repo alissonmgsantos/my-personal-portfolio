@@ -4,12 +4,15 @@ import Layout from './Layout';
 
 import { GlobalStyle, themeLight } from './theme/globalStyle.js';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import Home from './pages/home';
 
 function App() {
   return (
     <ThemeProvider theme={themeLight}>
       <GlobalStyle />
-      <Layout></Layout>
+      <Layout>
+        <Home />
+      </Layout>
     </ThemeProvider>
   );
 }
