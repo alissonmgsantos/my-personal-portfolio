@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const themeLight = {
-  primary: '#6c6ce5',
+  primary: '#0073b0',
   danger: '#ff4c60',
   dark: '#353353',
   secondary: '#f9f9ff',

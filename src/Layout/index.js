@@ -7,7 +7,7 @@ import Sidenav from './components/Sidenav';
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
-      <Sidenav username="Nome" />
+      <Sidenav username="Alisson" />
       <PerfectScrollbar>
         <Wrapper>{children}</Wrapper>
       </PerfectScrollbar>

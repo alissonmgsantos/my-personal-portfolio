@@ -40,10 +40,9 @@ export const ListItem = styled.li`
   width: 100%;
   text-decoration: none;
   position: relative;
-
+  align-items: center;
   i {
-    font-size: 1.3rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     color: ${(props) => props.theme.primary};
   }
   &:hover {
