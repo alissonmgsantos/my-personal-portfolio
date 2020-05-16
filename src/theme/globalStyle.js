@@ -1,4 +1,15 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const themeLight = {
+  white: '#fff',
+  primary: '#0073b0',
+  secondary: '#e2e7ea',
+  success: '#28a745',
+  info: '#007bff',
+  warning: '#ffc107',
+  danger: '#ff4c60',
+  dark: '#343a40',
+};
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -11,9 +22,21 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export const themeLight = {
-  primary: '#0073b0',
-  danger: '#ff4c60',
-  dark: '#353353',
-  secondary: '#f9f9ff',
-};
+export const Wrapper = styled.section((props) => ({
+  display: 'flex',
+  margin: '0 auto',
+  height: '100vh',
+  flexDirection: 'column',
+}));
+
+export const Typography = styled.div((props) => ({
+  fontStyle: props.fontStyle || 'initial',
+  color: props.color || props.theme.dark,
+}));
+
+export const Link = styled.a((props) => ({
+  color: props.theme.dark,
+  '&:hover': {
+    color: props.theme.primary,
+  },
+}));

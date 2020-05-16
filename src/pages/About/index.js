@@ -44,7 +44,7 @@ const About = () => {
   });
 
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Title>Sobre</Title>
       <Bio>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,

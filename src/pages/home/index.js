@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Wrapper, Intro, Social, MouseWrapper, Mouse, Scroll } from './style';
+import { Wrapper, Typography } from '../../theme/globalStyle';
+import { Intro, Social, MouseWrapper, Icon, Image } from './style';
 const avatar =
   'https://votoconscientejundiai.com.br/wp-content/uploads/2015/02/depositphotos_42239995-Vector-Avatar-Profile-Account-Icon.jpg';
 const Home = () => {
   const skills = ['Desenvolvedor Front-End', 'Desenvolvedor Back-End'];
   const [skill, setskill] = useState(skills[0]);
+  const networks = [
+    {
+      icon: 'fa fa-linkedin-square fa-2x',
+      link: 'https://linkedin.com/in/alissonmgsantos',
+    },
+    { icon: 'fa fa-github fa-2x', link: 'https://github.com/alissonmgsantos' },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,26 +22,20 @@ const Home = () => {
   }, [skills, skill]);
 
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <Intro>
-        <img src={avatar} alt="user avatar" />
+        <Image src={avatar} alt="user avatar" />
         <h1>Alisson Matos</h1>
-        <span>{skill}</span>
+        <Typography fontStyle="italic">{skill}</Typography>
         <Social>
-          <a href="https://linkedin.com/in/alissonmgsantos">
-            <i className="fa fa-linkedin-square fa-2x" />
-          </a>
-          <a href="https://github.com/alissonmgsantos">
-            <i className="fa fa-github fa-2x" />
-          </a>
+          {networks.map((item, key) => (
+            <a key={key} href={item.link}>
+              <Icon className={item.icon} />
+            </a>
+          ))}
         </Social>
       </Intro>
-      <MouseWrapper>
-        <Mouse>
-          <Scroll className="sroll"></Scroll>
-        </Mouse>
-        <small>Scroll down</small>
-      </MouseWrapper>
+      <MouseWrapper />
     </Wrapper>
   );
 };

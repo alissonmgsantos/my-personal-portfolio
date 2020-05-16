@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, List, ListItem, Username } from './style';
-
+import { Wrapper, Icon, List, ListItem, Username } from './style';
+import { Link } from '../../../theme/globalStyle';
 const anchors = [
   { label: 'Início', link: '#home', icon: 'fa fa-desktop' },
   { label: 'Sobre', link: '#about', icon: 'fa fa-address-card-o' },
@@ -11,19 +11,18 @@ const anchors = [
 
 const Sidenav = ({ username }) => {
   return (
-    <Container>
-      <Username>
-        {username}
-        <span>.</span>
-      </Username>
+    <Wrapper>
+      <Username data-end=".">{username}</Username>
       <List>
         {anchors.map((item, key) => (
-          <ListItem key={key}>
-            <i className={item.icon} /> {item.label}
-          </ListItem>
+          <Link key={key} href={item.link}>
+            <ListItem>
+              <Icon className={item.icon} /> {item.label}
+            </ListItem>
+          </Link>
         ))}
       </List>
-    </Container>
+    </Wrapper>
   );
 };
 
