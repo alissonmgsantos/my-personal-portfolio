@@ -4,7 +4,8 @@ import Layout from './Layout';
 
 import { GlobalStyle, themeLight } from './theme/globalStyle.js';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import Home from './pages/home';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <GlobalStyle />
       <Layout>
         <Home />
+        <About />
       </Layout>
     </ThemeProvider>
   );
