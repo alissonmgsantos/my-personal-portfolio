@@ -3,20 +3,22 @@ import { Wrapper, Intro, Social, MouseWrapper, Mouse, Scroll } from './style';
 const avatar =
   'https://votoconscientejundiai.com.br/wp-content/uploads/2015/02/depositphotos_42239995-Vector-Avatar-Profile-Account-Icon.jpg';
 const Home = () => {
-  const jobs = ['Desenvolvedor Front-End', 'Desenvolvedor Back-End'];
-  const [job, setJob] = useState(jobs[0]);
+  const skills = ['Desenvolvedor Front-End', 'Desenvolvedor Back-End'];
+  const [skill, setskill] = useState(skills[0]);
+
   useEffect(() => {
-    setInterval(() => {
-      setJob(jobs[Math.floor(Math.random() * jobs.length)]);
-    }, 5000);
-  }, [job, jobs]);
+    const interval = setInterval(() => {
+      setskill(skills.filter((item) => item !== skill)[0]);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [skills, skill]);
 
   return (
     <Wrapper>
       <Intro>
         <img src={avatar} alt="user avatar" />
         <h1>Alisson Matos</h1>
-        <span>{job}</span>
+        <span>{skill}</span>
         <Social>
           <a href="https://linkedin.com/in/alissonmgsantos">
             <i className="fa fa-linkedin-square fa-2x" />
