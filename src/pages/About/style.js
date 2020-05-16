@@ -60,11 +60,10 @@ export const SkillItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  padding: 0.5rem;
   margin: 0.5rem;
   i {
-    font-size: 1.7rem;
-    padding: 0 1rem;
+    font-size: 2.5rem;
+    padding: 0 0.5rem;
   }
 `;
 

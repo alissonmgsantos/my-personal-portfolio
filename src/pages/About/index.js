@@ -54,13 +54,7 @@ const About = () => {
         adipisicing elit. Pariatur, nesciunt optio, praesentium, tempore in
         doloremque culpa et eius blanditiis quo laudantium sapiente nisi
         perferendis repellat officiis quos provident minima earum. Lorem ipsum
-        dolor, sit amet consectetur adipisicing elit. Pariatur, nesciunt optio,
-        praesentium, tempore in doloremque culpa et eius blanditiis quo
-        laudantium sapiente nisi perferendis repellat officiis quos provident
-        minima earum. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Modi qui totam incidunt quos aut hic maxime magnam blanditiis et, ea
-        facere, optio voluptate esse nesciunt, commodi quo dignissimos vero
-        dicta.
+        dolor, sit amet consectetur adipisicing elit.
       </Bio>
       <Skill>
         <SubTitle>Habildiades</SubTitle>
