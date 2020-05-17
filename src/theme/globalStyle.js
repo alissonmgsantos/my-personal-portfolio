@@ -12,6 +12,7 @@ export const ThemeLight = {
   warning: '#ffc107',
   danger: '#ff4c60',
   dark: '#353353',
+  gray: '#969798',
 };
 
 /**===========================================================================
@@ -50,15 +51,15 @@ export const Title = styled.h1((props) => ({
 }));
 
 export const SubTitle = styled.h1((props) => ({
-  fontSize: '1.5rem',
+  fontSize: props.fontSize || '1.5rem',
   color: props.color || props.theme.dark,
   width: '100%',
-  paddingBottom: '1rem',
 }));
 
 export const Paragraph = styled.div((props) => ({
   fontStyle: props.fontStyle || 'initial',
-  color: props.color || props.theme.dark,
+  color: props.color || props.theme.gray,
+  fontSize: props.fontSize || 'initial',
 }));
 
 /**===========================================================================
@@ -80,4 +81,23 @@ export const Link = styled.a((props) => ({
   '&:hover': {
     color: props.theme.primary,
   },
+}));
+
+/**===========================================================================
+ * CARD
+ ===========================================================================*/
+export const Card = styled.div((props) => ({
+  padding: '1rem',
+}));
+
+export const CardHeader = styled.div((props) => ({
+  display: 'flex',
+  color: props.theme.dark,
+  flexDirection: props.flexDirection || 'row',
+}));
+
+export const CardContent = styled.div((props) => ({
+  display: 'flex',
+  padding: '1rem 0 0 0',
+  flexDirection: props.flexDirection || 'row',
 }));
