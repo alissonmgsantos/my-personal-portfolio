@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Wrapper, Typography } from '../../theme/globalStyle';
-import { Intro, Social, MouseWrapper, Icon, Image } from './style';
+import {
+  Wrapper,
+  Paragraph,
+  Avatar,
+  Link,
+  Icon,
+  Title,
+} from '../../theme/globalStyle';
+import { Intro, Social, MouseWrapper } from './style';
 const avatar =
   'https://votoconscientejundiai.com.br/wp-content/uploads/2015/02/depositphotos_42239995-Vector-Avatar-Profile-Account-Icon.jpg';
 const Home = () => {
@@ -8,10 +15,15 @@ const Home = () => {
   const [skill, setskill] = useState(skills[0]);
   const networks = [
     {
-      icon: 'fa fa-linkedin-square fa-2x',
+      title: 'LinkedIn',
+      icon: 'fa fa-linkedin fa-2x',
       link: 'https://linkedin.com/in/alissonmgsantos',
     },
-    { icon: 'fa fa-github fa-2x', link: 'https://github.com/alissonmgsantos' },
+    {
+      title: 'GitHub',
+      icon: 'fa fa-github fa-2x',
+      link: 'https://github.com/alissonmgsantos',
+    },
   ];
 
   useEffect(() => {
@@ -24,14 +36,14 @@ const Home = () => {
   return (
     <Wrapper id="home">
       <Intro>
-        <Image src={avatar} alt="user avatar" />
-        <h1>Alisson Matos</h1>
-        <Typography fontStyle="italic">{skill}</Typography>
+        <Avatar src={avatar} alt="user avatar" width="100" height="100" />
+        <Title>Alisson Matos</Title>
+        <Paragraph fontStyle="italic">{skill}</Paragraph>
         <Social>
           {networks.map((item, key) => (
-            <a key={key} href={item.link}>
+            <Link key={key} href={item.link} title={item.title}>
               <Icon className={item.icon} />
-            </a>
+            </Link>
           ))}
         </Social>
       </Intro>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Title } from '../../../theme/globalStyle';
 
 export const Wrapper = styled.aside((props) => ({
   background: props.theme.secondary,
@@ -16,9 +17,7 @@ export const Wrapper = styled.aside((props) => ({
   zIndex: 1,
 }));
 
-export const Username = styled.h1((props) => ({
-  fontSize: '2.5rem',
-  color: props.theme.dark,
+export const Username = styled(Title)((props) => ({
   ':after': {
     content: 'attr(data-end)',
     color: props.theme.primary,
