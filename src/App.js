@@ -13,8 +13,8 @@ function App() {
     <ThemeProvider theme={ThemeLight}>
       <GlobalStyle />
       <Layout>
-        {/* <Home />
-        <About /> */}
+        <Home />
+        <About />
         <Experience />
       </Layout>
     </ThemeProvider>
