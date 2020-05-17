@@ -1,5 +1,22 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
+/**===========================================================================
+ * THEMES
+ ===========================================================================*/
+export const ThemeLight = {
+  white: '#fff',
+  primary: '#0073b0',
+  secondary: '#e2e7ea',
+  success: '#28a745',
+  info: '#007bff',
+  warning: '#ffc107',
+  danger: '#ff4c60',
+  dark: '#353353',
+};
+
+/**===========================================================================
+ * GLOBAL
+ ===========================================================================*/
 export const GlobalStyle = createGlobalStyle`
 * {
         margin: 0;
@@ -11,9 +28,56 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export const themeLight = {
-  primary: '#0073b0',
-  danger: '#ff4c60',
-  dark: '#353353',
-  secondary: '#f9f9ff',
-};
+/**===========================================================================
+ * WRAPPER
+ ===========================================================================*/
+export const Wrapper = styled.section((props) => ({
+  display: 'flex',
+  margin: '0 auto',
+  padding: '1rem',
+  height: '100vh',
+  flexDirection: props.direction || 'column',
+  alignContent: props.alignContent || 'center',
+  justifyContent: props.justifyContent || 'center',
+}));
+
+/**===========================================================================
+ * TYPOGRAPHY
+ ===========================================================================*/
+export const Title = styled.h1((props) => ({
+  fontSize: '2.5rem',
+  color: props.color || props.theme.dark,
+}));
+
+export const SubTitle = styled.h1((props) => ({
+  fontSize: '1.5rem',
+  color: props.color || props.theme.dark,
+  width: '100%',
+  paddingBottom: '1rem',
+}));
+
+export const Paragraph = styled.div((props) => ({
+  fontStyle: props.fontStyle || 'initial',
+  color: props.color || props.theme.dark,
+}));
+
+/**===========================================================================
+ * AVATAR, ICONS AND LINK
+ ===========================================================================*/
+export const Avatar = styled.img((props) => ({
+  margin: '1rem',
+  borderRadius: '50%',
+}));
+
+export const Icon = styled.i((props) => ({
+  padding: '1rem',
+  color: props.color || props.theme.dark,
+  cursor: 'pointer',
+}));
+
+export const Link = styled.a((props) => ({
+  color: props.theme.dark,
+  '&:hover': {
+    color: props.theme.primary,
+  },
+}));

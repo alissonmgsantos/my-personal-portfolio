@@ -1,100 +1,53 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Wrapper = styled.section`
-  display: flex;
-  margin: 0 auto;
-  padding: 1rem;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+export const Intro = styled.div((props) => ({
+  display: 'flex',
+  width: '100%',
+  height: '100%',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
 
-export const Intro = styled.div`
-  display: flex;
-  margin: auto;
-  width: 300px;
-  flex-direction: column;
-  align-items: center;
-  color: ${(props) => props.theme.dark};
-
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-    padding-bottom: 0.5rem;
-  }
-
-  span {
-    font-size: 0.9rem;
-    font-style: italic;
-  }
-`;
-
-export const Social = styled.div`
-  display: flex;
-  margin: 1.5rem 0;
-  flex-direction: row;
-
-  i {
-    padding: 0 0.5rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-    &.fa-linkedin-square {
-      color: ${(props) => props.theme.primary};
-    }
-  }
-`;
+export const Social = styled.div((props) => ({
+  display: 'flex',
+  margin: '1rem',
+  flexDirection: 'row',
+}));
 
 export const MouseWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  small {
-    padding: 0.5rem;
-    font-size: 0.6rem;
-    font-style: italic;
-    color: ${(props) => props.theme.dark};
-  }
-`;
-
-const MouseAnimation = keyframes`
- 0% {
-      top: 29%;
-    }
-    50% {
-      top: 50%;
-    }
-    100% {
-      top: 29%;
-    }
-`;
-
-export const Mouse = styled.div`
-  border: solid 2px ${(props) => props.theme.dark};
-  border-radius: 16px;
+  border: solid 0.1rem ${(props) => props.theme.dark};
+  border-radius: 1rem;
   display: block;
-  margin: auto;
-  margin-top: 10px;
-  height: 26px;
+  margin: auto auto 3rem auto;
+  height: 2rem;
   position: relative;
-  width: 20px;
-`;
-export const Scroll = styled.div`
-  background: ${(props) => props.theme.dark};
-  border-radius: 100%;
-  display: block;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 4px;
-  width: 4px;
-  animation: ${MouseAnimation} 1s linear infinite;
+  width: 1.3rem;
+
+  &::before {
+    content: '';
+    background: ${(props) => props.theme.dark};
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.2rem;
+    width: 0.2rem;
+    animation: ${keyframes`
+      0% {top: 29%;}
+      50% { top: 50%; }
+      100% { top: 29%; }
+     `} 1s linear infinite;
+  }
+
+  &::after {
+    content: 'Scroll Down';
+    color: ${(props) => props.theme.dark};
+    font-size: 0.5rem;
+    top: 2.3rem;
+    left: -0.1rem;
+    position: absolute;
+  }
 `;
