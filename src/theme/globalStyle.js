@@ -34,8 +34,11 @@ export const GlobalStyle = createGlobalStyle`
 export const Wrapper = styled.section((props) => ({
   display: 'flex',
   margin: '0 auto',
+  padding: '1rem',
   height: '100vh',
-  flexDirection: 'column',
+  flexDirection: props.direction || 'column',
+  alignContent: props.alignContent || 'center',
+  justifyContent: props.justifyContent || 'center',
 }));
 
 /**===========================================================================
@@ -47,8 +50,10 @@ export const Title = styled.h1((props) => ({
 }));
 
 export const SubTitle = styled.h1((props) => ({
-  fontSize: '2.5rem',
+  fontSize: '1.5rem',
   color: props.color || props.theme.dark,
+  width: '100%',
+  paddingBottom: '1rem',
 }));
 
 export const Paragraph = styled.div((props) => ({
