@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutWrapper, Wrapper } from './style';
+import { LayoutWrapper, Content } from './style';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import Sidenav from './components/Sidenav';
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <LayoutWrapper>
       <Sidenav username="Alisson" />
       <PerfectScrollbar>
-        <Wrapper>{children}</Wrapper>
+        <Content>{children}</Content>
       </PerfectScrollbar>
     </LayoutWrapper>
   );

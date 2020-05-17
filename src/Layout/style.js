@@ -5,6 +5,6 @@ export const LayoutWrapper = styled.section((props) => ({
   background: props.theme.secondary,
 }));
 
-export const Wrapper = styled.main`
-  margin-left: 300px;
-`;
+export const Content = styled.main((props) => ({
+  marginLeft: '300px',
+}));
