@@ -17,7 +17,7 @@ export const ButtonFilter = styled.li((props) => ({
   cursor: 'pointer',
 
   '&.actived': {
-    color: props.theme.danger,
+    color: props.theme.primary,
   },
 }));
 
