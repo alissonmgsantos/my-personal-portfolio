@@ -7,6 +7,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
+import Project from './pages/Project';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Project />
       </Layout>
     </ThemeProvider>
   );

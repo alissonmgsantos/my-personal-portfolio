@@ -5,7 +5,7 @@ const anchors = [
   { label: 'Início', link: '#home', icon: 'fa fa-desktop' },
   { label: 'Sobre', link: '#about', icon: 'fa fa-address-card-o' },
   { label: 'Experiências', link: '#experience', icon: 'fa fa-map-signs' },
-  { label: 'Trabalhos', link: '#works', icon: 'fa fa-code-fork' },
+  { label: 'Projetos', link: '#projects', icon: 'fa fa-code-fork' },
   { label: 'Contato', link: '#contact', icon: 'fa fa-comments-o' },
 ];
 
