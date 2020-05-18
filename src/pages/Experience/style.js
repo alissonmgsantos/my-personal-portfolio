@@ -31,7 +31,7 @@ export const LineAcademic = styled.div`
   position: absolute;
   top: 3rem;
   left: 0.5rem;
-  height: 70%;
+  height: 50%;
   border: solid 0.1rem ${(props) => props.theme.primary};
 
   &::before {
@@ -39,8 +39,8 @@ export const LineAcademic = styled.div`
     font-family: 'FontAwesome';
     color: ${(props) => props.theme.primary};
     font-size: 1.5rem;
-    top: -2.5rem;
-    left: -1rem;
+    top: -1.8rem;
+    left: -0.7rem;
     position: absolute;
     background: ${(props) => props.theme.white};
   }
@@ -50,7 +50,7 @@ export const LineWork = styled.div`
   position: absolute;
   top: 3rem;
   left: 0.5rem;
-  height: 70%;
+  height: 50%;
   border: solid 0.1rem ${(props) => props.theme.primary};
 
   &::before {
@@ -58,7 +58,7 @@ export const LineWork = styled.div`
     font-family: 'FontAwesome';
     color: ${(props) => props.theme.primary};
     font-size: 1.5rem;
-    top: -2.5rem;
+    top: -1.8rem;
     left: -0.7rem;
     position: absolute;
     background: ${(props) => props.theme.white};

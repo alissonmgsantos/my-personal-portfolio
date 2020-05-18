@@ -17,8 +17,6 @@ const Experience = () => {
       university: 'Centro Universitário Jorge Amado',
       start: '2015',
       end: '2017',
-      description:
-        ' Lorem ipsum dolor sit amet quo ei simul congue exerci ad necadmodum perfecto.',
     },
   ];
 
@@ -28,16 +26,10 @@ const Experience = () => {
       role: 'Analista desenvolvedor',
       start: '2017',
       end: 'Presente',
-      description:
-        ' Lorem ipsum dolor sit amet quo ei simul congue exerci ad necadmodum perfecto.',
     },
   ];
   return (
-    <Wrapper
-      id="experience"
-      alignContent="flex-start"
-      justifyContent="flex-start"
-    >
+    <Wrapper id="experience">
       <Title>Experiências</Title>
       <List>
         <ListItem>
@@ -51,9 +43,6 @@ const Experience = () => {
                   <Paragraph fontSize="1rem">{item.university}</Paragraph>
                   <SubTitle fontSize="1.2rem">{item.course}</SubTitle>
                 </CardHeader>
-                <CardContent>
-                  <Paragraph fontStyle="italic">{item.description}</Paragraph>
-                </CardContent>
               </Card>
               <LineAcademic />
             </Timeline>
@@ -70,9 +59,6 @@ const Experience = () => {
                   <Paragraph>{item.company}</Paragraph>
                   <SubTitle fontSize="1.2rem">{item.role}</SubTitle>
                 </CardHeader>
-                <CardContent>
-                  <Paragraph fontStyle="italic">{item.description}</Paragraph>
-                </CardContent>
               </Card>
               <LineWork />
             </Timeline>
