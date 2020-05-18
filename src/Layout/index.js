@@ -6,7 +6,7 @@ import Sidenav from './components/Sidenav';
 import { Icon } from '../theme/globalStyle';
 
 const Layout = ({ children }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   return (
     <LayoutWrapper>
       <Sidenav username="Alisson" sidenav={visible} />

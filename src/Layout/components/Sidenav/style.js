@@ -15,9 +15,9 @@ export const Wrapper = styled.aside((props) => ({
   alignItems: 'flex-start',
   justifyContent: 'center',
   zIndex: 1,
-
+  visibility: props.sidenav ? 'visible' : 'hidden',
   '@media (max-width: 900px)': {
-    visibility: props.sidenav ? 'visible' : 'hidden',
+    visibility: props.sidenav ? 'hidden' : 'visible',
   },
 }));
 
