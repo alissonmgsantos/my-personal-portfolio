@@ -6,7 +6,6 @@ const anchors = [
   { label: 'Sobre', link: '#about', icon: 'fa fa-address-card-o' },
   { label: 'Experiências', link: '#experience', icon: 'fa fa-map-signs' },
   { label: 'Projetos', link: '#projects', icon: 'fa fa-code-fork' },
-  { label: 'Contato', link: '#contact', icon: 'fa fa-comments-o' },
 ];
 
 const Sidenav = ({ username, sidenav }) => {

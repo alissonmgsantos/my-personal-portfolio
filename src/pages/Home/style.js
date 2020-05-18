@@ -20,7 +20,7 @@ export const MouseWrapper = styled.div`
   border: solid 0.1rem ${(props) => props.theme.dark};
   border-radius: 1rem;
   display: block;
-  margin: auto auto 5.5rem auto;
+  margin: auto auto 2rem auto;
   height: 2rem;
   position: relative;
   width: 1.3rem;

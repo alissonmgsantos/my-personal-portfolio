@@ -24,7 +24,7 @@ const Experience = () => {
 
   const works = [
     {
-      company: 'Solutis Tecnologias LTDA.',
+      company: 'Solutis Tecnologias.',
       role: 'Analista desenvolvedor',
       start: '2017',
       end: 'Presente',
