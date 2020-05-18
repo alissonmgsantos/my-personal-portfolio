@@ -17,7 +17,7 @@ export const Wrapper = styled.aside((props) => ({
   zIndex: 1,
 
   '@media (max-width: 900px)': {
-    visibility: 'hidden',
+    visibility: props.sidenav ? 'visible' : 'hidden',
   },
 }));
 

@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LayoutWrapper, Content } from './style';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import Sidenav from './components/Sidenav';
+import { Icon } from '../theme/globalStyle';
 
 const Layout = ({ children }) => {
+  const [visible, setVisible] = useState(false);
   return (
     <LayoutWrapper>
-      <Sidenav username="Alisson" />
+      <Sidenav username="Alisson" sidenav={visible} />
       <PerfectScrollbar>
-        <Content>{children}</Content>
+        <Content sidenav={visible}>
+          <Icon
+            className="fa fa-bars fa-2x"
+            onClick={() => setVisible(!visible)}
+          />
+          {children}
+        </Content>
       </PerfectScrollbar>
     </LayoutWrapper>
   );

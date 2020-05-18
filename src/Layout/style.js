@@ -7,7 +7,13 @@ export const LayoutWrapper = styled.section((props) => ({
 
 export const Content = styled.main((props) => ({
   marginLeft: '18rem',
+  i: {
+    visibility: 'hidden',
+  },
   '@media (max-width: 900px)': {
-    marginLeft: '0',
+    marginLeft: props.sidenav ? '18rem' : '0',
+    i: {
+      visibility: 'visible',
+    },
   },
 }));

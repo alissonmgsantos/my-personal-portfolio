@@ -9,9 +9,9 @@ const anchors = [
   { label: 'Contato', link: '#contact', icon: 'fa fa-comments-o' },
 ];
 
-const Sidenav = ({ username }) => {
+const Sidenav = ({ username, sidenav }) => {
   return (
-    <Wrapper>
+    <Wrapper sidenav={sidenav}>
       <Username data-end=".">{username}</Username>
       <List>
         {anchors.map((item, key) => (
