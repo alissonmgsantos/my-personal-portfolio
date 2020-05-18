@@ -7,4 +7,7 @@ export const LayoutWrapper = styled.section((props) => ({
 
 export const Content = styled.main((props) => ({
   marginLeft: '18rem',
+  '@media (max-width: 900px)': {
+    marginLeft: '0',
+  },
 }));

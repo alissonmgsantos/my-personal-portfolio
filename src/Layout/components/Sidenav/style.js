@@ -15,6 +15,10 @@ export const Wrapper = styled.aside((props) => ({
   alignItems: 'flex-start',
   justifyContent: 'center',
   zIndex: 1,
+
+  '@media (max-width: 900px)': {
+    visibility: 'hidden',
+  },
 }));
 
 export const Username = styled(Title)((props) => ({
