@@ -7,15 +7,17 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
+import Project from './pages/Project';
 
 function App() {
   return (
     <ThemeProvider theme={ThemeLight}>
       <GlobalStyle />
       <Layout>
-        <Home />
+        {/* <Home />
         <About />
-        <Experience />
+        <Experience /> */}
+        <Project />
       </Layout>
     </ThemeProvider>
   );
