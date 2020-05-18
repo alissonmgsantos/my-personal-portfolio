@@ -3,7 +3,7 @@ import { Title } from '../../../theme/globalStyle';
 
 export const Wrapper = styled.aside((props) => ({
   background: props.theme.secondary,
-  width: '300px',
+  width: '18rem',
   height: '100vh',
   paddingLeft: '2rem',
   borderRight: 'solid 0.15rem rgba(0, 0, 0, 0.09)',

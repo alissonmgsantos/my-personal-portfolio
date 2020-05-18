@@ -3,7 +3,12 @@ import { Bio, SoftSkill, Skill, SkillItem } from './style';
 import { Icon, Title, SubTitle, Wrapper } from '../../theme/globalStyle';
 
 const About = () => {
-  const softSkills = ['Empatia', 'Adaptabilidade', 'Trabalho em equipe'];
+  const softSkills = [
+    'Empatia',
+    'Adaptabilidade',
+    'Trabalho em equipe',
+    'Criatividade',
+  ];
 
   const hardSkills = [
     {
