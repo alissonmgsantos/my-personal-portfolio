@@ -6,7 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const ThemeLight = {
   white: '#fff',
   primary: '#0073b0',
-  secondary: '#eee',
+  secondary: '#e2e7ea',
   success: '#28a745',
   info: '#007bff',
   warning: '#ffc107',
@@ -36,8 +36,7 @@ export const Wrapper = styled.section((props) => ({
   display: 'flex',
   margin: '0 auto',
   padding: '1rem',
-  minHeight: '100vh',
-  paddingTop: '2rem',
+  height: '100vh',
   flexDirection: props.direction || 'column',
   alignContent: props.alignContent || 'center',
   justifyContent: props.justifyContent || 'center',

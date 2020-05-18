@@ -14,9 +14,9 @@ function App() {
     <ThemeProvider theme={ThemeLight}>
       <GlobalStyle />
       <Layout>
-        <Home />
+        {/* <Home />
         <About />
-        <Experience />
+        <Experience /> */}
         <Project />
       </Layout>
     </ThemeProvider>

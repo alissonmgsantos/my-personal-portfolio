@@ -27,16 +27,15 @@ export const SkillItem = styled.div((props) => ({
   display: 'flex',
   flexWrap: 'wrap',
   flex: 1,
-  margin: '2rem 0.5rem',
+  margin: '0.5rem',
 }));
 
 export const SoftSkill = styled.h3((props) => ({
   color: props.theme.dark,
   fontWeight: '500',
   width: '80%',
-  paddingBottom: '1rem',
   hr: {
-    borderBottom: `0.5rem solid ${props.theme.primary}`,
+    borderBottom: `0.3rem solid ${props.theme.primary}`,
     borderRadius: '0.25rem',
   },
 }));

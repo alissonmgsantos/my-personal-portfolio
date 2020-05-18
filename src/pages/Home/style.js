@@ -7,7 +7,6 @@ export const Intro = styled.div((props) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  margin: 'auto',
 }));
 
 export const Social = styled.div((props) => ({
