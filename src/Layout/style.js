@@ -6,5 +6,5 @@ export const LayoutWrapper = styled.section((props) => ({
 }));
 
 export const Content = styled.main((props) => ({
-  marginLeft: '300px',
+  marginLeft: '18rem',
 }));
