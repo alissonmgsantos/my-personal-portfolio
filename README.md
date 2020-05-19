@@ -20,4 +20,4 @@ Para saber mais sobre o React acesse (https://pt-br.reactjs.org/).
 
 ## Autor
 - [Linkedin](https://www.linkedin.com/in/alissonmgsantos)
-- [Website](http://ildaneta.netlify.com/)
+- [Website](http://alissonmgsantos.netlify.com/)
