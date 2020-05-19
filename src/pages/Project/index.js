@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Wrapper,
   Title,
   SubTitle,
   Paragraph,
-  Icon,
   Link,
 } from '../../theme/globalStyle';
 import {
@@ -19,45 +18,26 @@ import {
 import webImage from '../../assets/images/web.jpeg';
 import mobileImage from '../../assets/images/mobile.jpeg';
 import fullstackImage from '../../assets/images/fullstack.jpeg';
+import Axios from 'axios';
 
 const Project = () => {
   const filters = ['Web', 'Mobile', 'FullStack'];
   const [search, setSearch] = useState('Web');
+  const [repository, setRepository] = useState([]);
 
-  const repo = [
-    {
-      id: 1,
-      node_id: 'MDEwOlJlcG9zaXRvcnkyNjQxNjk0MDI=',
-      name: 'my-personal-portfolio',
-      full_name: 'alissonmgsantos/my-personal-portfolio',
-      html_url: 'https://github.com/alissonmgsantos/my-personal-portfolio',
-      description:
-        '(Web) Repository for my personal portfolio using react, styled-components and creativity.',
-      language: 'JavaScript',
-    },
-    {
-      id: 2,
-      name: 'my-mobile',
-      full_name: 'alissonmgsantos/my-personal-portfolio',
-      html_url: 'https://github.com/alissonmgsantos/my-personal-portfolio',
-      description:
-        '(Mobile) Repository for my personal portfolio using react, styled-components and creativity.',
-      language: 'React Native',
-    },
-    {
-      id: 3,
-      node_id: 'MDEwOlJlcG9zaXRvcnkyNjQxNjk0MDI=',
-      name: 'my-FullStack',
-      full_name: 'alissonmgsantos/my-personal-portfolio',
-      html_url: 'https://github.com/alissonmgsantos/my-personal-portfolio',
-      description:
-        '(FullStack) Repository for my personal portfolio using react, styled-components and creativity.',
-      language: 'JavaScript',
-    },
-  ];
+  useEffect(() => {
+    async function loadRepository() {
+      await Axios.get(
+        'https://api.github.com/users/alissonmgsantos/repos'
+      ).then((response) => setRepository(response.data));
+    }
+    if (repository.length === 0) {
+      loadRepository();
+    }
+  }, [repository]);
 
   const formatName = (name) => {
-    name = name.split('-').join(' ');
+    name = name.split('_').join(' ');
     return `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
   };
 
@@ -94,19 +74,33 @@ const Project = () => {
         ))}
       </ListFilter>
       <Portfolio>
-        {repo.map((item, key) => {
-          return (
-            item.description.includes(search) && (
-              <PortfolioItem key={key}>
-                <PortfolioHeader image={searchImage(search)}></PortfolioHeader>
-                <PortfolioItemContent>
-                  <Paragraph fontSize="0.9rem">{item.language}</Paragraph>
-                  <SubTitle>{formatName(item.name)}</SubTitle>
-                </PortfolioItemContent>
-              </PortfolioItem>
-            )
-          );
-        })}
+        {repository &&
+          repository.map((item, key) => {
+            return (
+              item.description &&
+              item.description.includes(search) && (
+                <Link
+                  key={key}
+                  href={item.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visualizar no Github"
+                >
+                  <PortfolioItem>
+                    <PortfolioHeader
+                      image={searchImage(search)}
+                    ></PortfolioHeader>
+                    <PortfolioItemContent>
+                      <Paragraph fontSize="0.9rem">
+                        {item.description.includes(search)}
+                      </Paragraph>
+                      <SubTitle>{formatName(item.name)}</SubTitle>
+                    </PortfolioItemContent>
+                  </PortfolioItem>
+                </Link>
+              )
+            );
+          })}
       </Portfolio>
     </Wrapper>
   );

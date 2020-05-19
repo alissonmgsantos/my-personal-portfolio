@@ -8,10 +8,10 @@ const anchors = [
   { label: 'Projetos', link: '#projects', icon: 'fa fa-code-fork' },
 ];
 
-const Sidenav = ({ username, sidenav }) => {
+const Sidenav = () => {
   return (
-    <Wrapper sidenav={sidenav}>
-      <Username data-end=".">{username}</Username>
+    <Wrapper>
+      <Username data-end=".">Alisson</Username>
       <List>
         {anchors.map((item, key) => (
           <Link key={key} href={item.link}>
