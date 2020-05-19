@@ -20,6 +20,10 @@ export const Skill = styled.div((props) => ({
   flexWrap: 'wrap',
   width: '100%',
   paddingTop: '2rem',
+
+  '@media (max-width: 425px)': {
+    flexDirection: 'column',
+  },
 }));
 
 export const SkillItem = styled.div((props) => ({
@@ -28,7 +32,6 @@ export const SkillItem = styled.div((props) => ({
   flexWrap: 'wrap',
   flex: 1,
   margin: '1rem',
-  padding: '1rem',
 }));
 
 export const SoftSkill = styled.h3((props) => ({

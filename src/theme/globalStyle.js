@@ -49,26 +49,33 @@ export const Wrapper = styled.section((props) => ({
 export const Title = styled.h1((props) => ({
   fontSize: '2.5rem',
   color: props.color || props.theme.dark,
+  paddingTop: '0.5rem',
 }));
 
 export const SubTitle = styled.h1((props) => ({
   fontSize: props.fontSize || '1.5rem',
   color: props.color || props.theme.dark,
   width: '100%',
+  paddingTop: '0.5rem',
 }));
 
 export const Paragraph = styled.div((props) => ({
   fontStyle: props.fontStyle || 'initial',
   color: props.color || props.theme.gray,
   fontSize: props.fontSize || 'initial',
+  paddingTop: '0.5rem',
 }));
 
 /**===========================================================================
  * AVATAR, ICONS AND LINK
  ===========================================================================*/
 export const Avatar = styled.img((props) => ({
-  margin: '1rem',
   borderRadius: '50%',
+}));
+
+export const Image = styled.img((props) => ({
+  // padding: '1rem',
+  margin: '0 0.9rem 0.9rem',
 }));
 
 export const Icon = styled.i((props) => ({
