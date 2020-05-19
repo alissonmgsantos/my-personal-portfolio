@@ -8,11 +8,12 @@ import {
   Title,
 } from '../../theme/globalStyle';
 import { Intro, Social, MouseWrapper } from './style';
-const avatar =
-  'https://votoconscientejundiai.com.br/wp-content/uploads/2015/02/depositphotos_42239995-Vector-Avatar-Profile-Account-Icon.jpg';
+import Axios from 'axios';
 const Home = () => {
   const skills = ['Desenvolvedor Front-End', 'Desenvolvedor Back-End'];
   const [skill, setskill] = useState(skills[0]);
+  const [user, setUser] = useState([]);
+
   const networks = [
     {
       title: 'LinkedIn',
@@ -38,11 +39,27 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [skills, skill]);
 
+  useEffect(() => {
+    async function loadUser() {
+      await Axios.get(
+        'https://api.github.com/users/alissonmgsantos'
+      ).then((response) => setUser(response.data));
+    }
+    if (user.length === 0) {
+      loadUser();
+    }
+  }, [user]);
+
   return (
     <Wrapper id="home">
       <Intro>
-        <Avatar src={avatar} alt="user avatar" width="100" height="100" />
-        <Title>Alisson Matos</Title>
+        <Avatar
+          src={user && user.avatar_url}
+          alt="user avatar"
+          width="100"
+          height="100"
+        />
+        <Title>{user.name}</Title>
         <Paragraph fontStyle="italic">{skill}</Paragraph>
         <Social>
           {networks.map((item, key) => (

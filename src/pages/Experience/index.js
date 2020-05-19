@@ -3,7 +3,6 @@ import { List, ListItem, Timeline, LineAcademic, LineWork } from './style';
 import {
   Card,
   CardHeader,
-  CardContent,
   Wrapper,
   Title,
   SubTitle,
