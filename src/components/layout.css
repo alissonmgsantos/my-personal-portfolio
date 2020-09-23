@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -594,4 +602,10 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.wrapper {
+  margin: '0 auto';
+  max-width: 960;
+  padding: '0 1.0875rem 1.45rem';
 }
