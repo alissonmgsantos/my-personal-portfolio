@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={author || "Author"} />
+      <Header author={author || "Author"} />
       <main>{children}</main>
       <footer
         style={{

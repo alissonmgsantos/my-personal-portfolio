@@ -11,11 +11,13 @@ export const Navigation = () => {
         justifyContent: "center",
       }}
     >
-      {routes.map(route => (
-        <ul>
-          <Link to={route.path}>{route.name}</Link>
-        </ul>
-      ))}
+      <ul>
+        {routes.map(route => (
+          <Link to={route.path} key={route.path}>
+            <li>{route.name}</li>
+          </Link>
+        ))}
+      </ul>
     </div>
   )
 }

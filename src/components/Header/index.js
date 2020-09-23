@@ -1,12 +1,14 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
 import { Navigation } from "../Navigation"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ author }) => (
   <header
     style={{
       background: `rebeccapurple`,
+      display: "flex",
+      flexDirection: "row",
+      height: 64,
     }}
   >
     <div
@@ -15,20 +17,20 @@ const Header = ({ siteTitle }) => (
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: `1rem`,
-        margin: "0 4rem",
+        width: "100%",
+        maxWidth: "970px",
+        margin: "0 auto",
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+      <h1
+        style={{
+          display: "flex",
+          flexGrow: 1,
+          color: `white`,
+          textTransform: "uppercase",
+        }}
+      >
+        {author}
       </h1>
       <Navigation />
     </div>
@@ -36,11 +38,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  author: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  author: ``,
 }
 
 export default Header
