@@ -3,7 +3,7 @@ import { Profile } from '../Profile';
 
 const Home = () => {
   return (
-    <div>
+    <div className="banner-home">
       <Profile />
     </div>
   );
