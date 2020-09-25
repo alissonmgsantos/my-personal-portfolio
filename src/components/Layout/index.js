@@ -24,12 +24,7 @@ const Layout = ({ children }) => {
     <>
       <Header author={author || 'Author'} />
       <main className="h-screen">{children}</main>
-      <footer
-        id="responsive-header"
-        className="h-screen"
-        style={{
-          marginTop: `2rem`,
-        }}>
+      <footer>
         © {new Date().getFullYear()}, Built with
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>

@@ -25,9 +25,8 @@ export const Profile = () => {
         src={photo}
         alt="User profile."
       />
-
-      <h1 className="text-white">Alisson Matos</h1>
-      <p className="cursor">{skill}</p>
+      <h1 className="font-semibold text-white">Alisson Matos</h1>
+      <h3 className="cursor">{skill}</h3>
     </div>
   );
 };

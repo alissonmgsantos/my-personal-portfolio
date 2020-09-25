@@ -3,9 +3,9 @@ import { Profile } from '../Profile';
 
 const Home = () => {
   return (
-    <div className="banner-home">
+    <section id="home" className="banner-home">
       <Profile />
-    </div>
+    </section>
   );
 };
 export default Home;

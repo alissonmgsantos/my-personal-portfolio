@@ -6,15 +6,15 @@ import { routes } from '../../constants';
 const Header = ({ author }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header>
-      <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-3">
-        <div className="flex items-center flex-shrink-0 text-white lg:pl-32">
-          <span className="font-semibold text-xl tracking-tight">{author}</span>
+    <header className="bg-transparent p-6 z-50 absolute w-full">
+      <nav className="flex items-center justify-between flex-wrap lg:pl-10 lg:pr-10">
+        <div className="text-white">
+          <h2 className="font-semibold">{author}</h2>
         </div>
         <div className="block lg:hidden">
           <button
             onClick={() => setIsOpen(prevState => !prevState)}
-            className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            className="flex items-center px-3 py-2 border rounded text-white">
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
@@ -25,15 +25,13 @@ const Header = ({ author }) => {
           </button>
         </div>
         <div
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } w-full lg:flex lg:items-center lg:w-auto  lg:pr-32`}>
+          className={`${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:w-auto`}>
           <div className="text-sm">
             {routes.map((route, key) => (
               <Link
+                key={key}
                 to={route.path}
-                key={route.path}
-                className="block p-2 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                className="block p-3 text-sm lg:inline-block hover:text-teal-200 text-white uppercase">
                 {route.name}
               </Link>
             ))}
