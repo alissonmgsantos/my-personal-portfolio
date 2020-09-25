@@ -19,32 +19,15 @@ export const Profile = () => {
   }, [skills, skill, loop]);
 
   return (
-    <div className="wrapper">
-      <div
-        style={{
-          position: 'relative',
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 1,
-        }}>
-        <img
-          src={photo}
-          alt="User profile."
-          style={{
-            width: '160px',
-            height: '160px',
-            borderRadius: '50%',
-            overflow: 'hidden',
-            border: '5px solid #fff',
-            display: 'inline-block',
-          }}
-        />
-        <h2 style={{ color: '#fff' }}>Alisson Matos</h2>
-        <p className="cursor">{skill}</p>
-      </div>
+    <div className="flex flex-col justify-center items-center relative z-10 h-full">
+      <img
+        className="h-48 w-48 rounded-full border-white border-8 m-6"
+        src={photo}
+        alt="User profile."
+      />
+
+      <h1 className="text-white">Alisson Matos</h1>
+      <p className="cursor">{skill}</p>
     </div>
   );
 };
