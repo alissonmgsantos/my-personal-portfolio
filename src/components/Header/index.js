@@ -3,13 +3,20 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { routes } from '../../constants';
 
-const Header = ({ author }) => {
+const Header = ({ author, scrollPosition }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="bg-transparent p-6 z-50 absolute w-full">
+    <header
+      className={`${
+        scrollPosition <= 30
+          ? 'bg-transparent absolute p-6 text-white'
+          : 'bg-gray-100 fixed p-3 text-black shadow-md'
+      } z-50 w-full`}>
       <nav className="flex items-center justify-between flex-wrap lg:pl-10 lg:pr-10">
-        <div className="text-white">
-          <h2 className="font-semibold">{author}</h2>
+        <div>
+          <Link to="/" className="font-semibold text-3xl">
+            {author}
+          </Link>
         </div>
         <div className="block lg:hidden">
           <button
@@ -31,7 +38,7 @@ const Header = ({ author }) => {
               <Link
                 key={key}
                 to={route.path}
-                className="block p-3 text-sm lg:inline-block hover:text-teal-200 text-white uppercase">
+                className="block p-3 text-sm font-semibold lg:inline-block hover:text-blue-500 uppercase">
                 {route.name}
               </Link>
             ))}

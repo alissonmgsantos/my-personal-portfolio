@@ -3,7 +3,7 @@ import { Profile } from '../Profile';
 
 const Home = () => {
   return (
-    <section id="home" className="banner-home">
+    <section id="home" className="banner-home h-screen">
       <Profile />
     </section>
   );
