@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import UserContext from '../../contexts/user';
 
 export const Profile = () => {
+  const user = useContext(UserContext);
   const photo = 'https://source.unsplash.com/random';
-  const skills = ['Front-end Developer', 'Back-end Developer'];
   const [loop, setLoop] = useState(0);
-  const [skill, setSkill] = useState(skills[0]);
+  const [skill, setSkill] = useState(user.skills[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLoop(prevState => prevState + 1);
-      const textoArray = skills[loop % skills.length].split('');
+      console.log(user.skills.length);
       setSkill(prevState => '');
-      textoArray.map((letra, i) =>
-        setTimeout(() => setSkill(prevState => (prevState += letra)), 75 * i)
-      );
-    }, 5000);
+      user.skills[loop % user.skills.length]
+        .split('')
+        .map((letra, i) =>
+          setTimeout(() => setSkill(prevState => (prevState += letra)), 75 * i)
+        );
+    }, 2000);
     return () => clearInterval(interval);
-  }, [skills, skill, loop]);
+  }, [user.skills, skill, loop]);
 
   return (
     <div className="flex flex-col justify-center items-center relative z-10 h-full">
@@ -25,7 +28,9 @@ export const Profile = () => {
         src={photo}
         alt="User profile."
       />
-      <h1 className="font-semibold text-white">Alisson Matos</h1>
+      <h1 className="font-semibold text-white">{`I'm ${
+        user.name.split(' ')[0]
+      }`}</h1>
       <h3 className="cursor">{skill}</h3>
     </div>
   );

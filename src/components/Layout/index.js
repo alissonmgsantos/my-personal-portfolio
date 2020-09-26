@@ -1,27 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import { UserProvider } from '../../contexts/user';
 
 import Header from '../Header';
 import '../../styles/global.css';
 
 const Layout = ({ children }) => {
   const [scrollPosition, setSrollPosition] = useState(window.pageYOffset || 0);
-
-  const {
-    site: {
-      siteMetadata: { author },
-    },
-  } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          author
-        }
-      }
-    }
-  `);
-
   useEffect(() => {
     window.scrollTo(0, 0);
     const handleScroll = () => {
@@ -33,10 +18,10 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <>
-      <Header author={author || 'Author'} scrollPosition={scrollPosition} />
+    <UserProvider>
+      <Header scrollPosition={scrollPosition} />
       <main className="h-screen">{children}</main>
-    </>
+    </UserProvider>
   );
 };
 

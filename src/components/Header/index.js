@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { routes } from '../../constants';
+import UserContext from '../../contexts/user';
 
-const Header = ({ author, scrollPosition }) => {
+const Header = ({ scrollPosition }) => {
+  const user = useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header
@@ -15,7 +17,7 @@ const Header = ({ author, scrollPosition }) => {
       <nav className="flex items-center justify-between flex-wrap lg:pl-10 lg:pr-10">
         <div>
           <Link to="/" className="font-semibold text-3xl">
-            {author}
+            {user.name.split(' ')[0]}
           </Link>
         </div>
         <div className="block lg:hidden">

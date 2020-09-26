@@ -26,7 +26,7 @@ ul li {
 .cursor::after {
   content: '|';
   opacity: 1;
-  margin-left: 5px;
+  margin-left: 2px;
   display: inline-block;
   animation: blink .7s infinite;
 }
@@ -41,7 +41,7 @@ ul li {
 }
 
 .banner-home {
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url('https://source.unsplash.com/1600x900/?html,javascript,php');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -67,3 +67,156 @@ h2 {
 h3 {
   @apply text-xl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------About area css ends--------------*/
+
+/*-------- 7. Services area starts ----------*/
+
+.service-box {
+  padding: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  transition: .9s;
+}
+
+.service-box:hover:after {
+  top: 0;
+  height: 100%;
+  transition: 0.9s;
+}
+
+.service-box:hover .after {
+  bottom: 0;
+  height: 100%;
+  transition: 0.9s;
+}
+
+.service-box:hover:before {
+  left: 0;
+  width: 100%;
+  transition: 0.9s;
+}
+
+.service-box:hover .before {
+  right: 0;
+  width: 100%;
+  transition: 0.9s;
+}
+
+.service-box:hover:before,
+.service-box:hover .before {
+  width: 100%;
+  transition: 0.9s;
+}
+
+.service-box:after {
+  height: 80%;
+  width: 2px;
+  content: '';
+  top: 10%;
+  left: 0px;
+  transition: 0.9s;
+}
+
+.service-box .before,
+.service-box .after,
+.service-box:before,
+.service-box:after {
+  background: #777;
+  position: absolute;
+  transition: 0.9s;
+}
+
+.service-box:before {
+  height: 2px;
+  width: 80%;
+  content: '';
+  top: 0px;
+  left: 10%;
+  transition: 0.9s;
+}
+
+.service-box .before {
+  height: 2px;
+  width: 80%;
+  bottom: 0px;
+  right: 10%;
+  transition: 0.9s;
+}
+
+.service-box .after {
+  height: 80%;
+  width: 2px;
+  bottom: 10%;
+  right: 0px;
+  transition: 0.9s;
+}
+
+/*-------- Services area ends ----------*/
+
+/*--------- 8. Skills area starts --------------*/
+
+
+.skills-area{
+  position: relative;
+  background-image: url('https://source.unsplash.com/random');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+.skills-area::before{
+  position: absolute;
+  content: '';
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.skillbar {
+  margin-bottom: 24px;
+  position: relative;
+  width: 100%;
+  display: block
+}
+
+
+.skillbar-bar {
+  background-color: #fff;
+  width: 100%;
+  height: 15px;
+  border-radius: 40px;
+}
+
+.skillbar-bar .skillbar-child {
+  width: 0;
+  height: 100%;
+  background-color: #00B0DC;
+  -webkit-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  border-radius: 5px;
+}
+
+/*--------- Skills area ends --------------*/
