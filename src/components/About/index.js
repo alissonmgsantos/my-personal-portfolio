@@ -3,7 +3,6 @@ import LanguageContext from '../../contexts/language';
 import UserContext from '../../contexts/user';
 
 const About = () => {
-  const { language } = useContext(LanguageContext);
   const { user } = useContext(UserContext);
 
   const photo = 'https://source.unsplash.com/random';
@@ -11,30 +10,34 @@ const About = () => {
     <section
       id="about"
       className="flex flex-col justify-center items-center bg-gray-200 pt-10">
-      <div id="_about" className="p-10 lg:p-20">
+      <div id="_about" className="p-10 ">
         <h1 className="font-semibold text-center">About</h1>
         <div className="flex flex-wrap pt-10">{user.bio}</div>
       </div>
 
-      <div id="services" className="p-10 lg:p-20">
+      <div id="services" className="w-full p-10">
         <h1 className="font-semibold text-center uppercase">My Services</h1>
         <div className="flex flex-wrap pt-10">
-          {[1, 2, 3].map((item, key) => (
+          {user.services.map((item, key) => (
             <div key={key} className="w-full sm:w-1/3 p-2">
               <div className="service-box">
                 <span className="after"></span>
                 <span className="before"></span>
-                <div className="flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center text-center">
                   <img
                     className="h-20 w-20 rounded-full"
                     src={photo}
                     alt="User profile."
                   />
-                  <h2 className="font-semibold">Web Develop</h2>
+                  <h3 className="font-semibold">{item.name}</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aut, id laboriosam maxime nam neque nulla placeat quam
-                    repudiandae similique ullam?
+                    {item.description.split(',').map((item, key) => (
+                      <span
+                        key={key}
+                        className="rounded-full bg-blue-300 px-2 py-1 text-xs mr-3">
+                        {item}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -49,18 +52,20 @@ const About = () => {
         </h1>
 
         <div className="flex flex-wrap pt-10">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, key) => (
+          {user.skills_progress.map((item, key) => (
             <div key={key} className="w-full sm:w-1/2 p-2 sm:pr-10 sm:pl-10">
-              <div className="skillbar text-white" data-percent="95%">
+              <div
+                className="skillbar text-white"
+                data-percent={`${item.value}%`}>
                 <div className="flex flex-row justify-between">
-                  <h3>HTML5</h3>
-                  <h3>95%</h3>
+                  <h3>{item.name}</h3>
+                  <h3>{item.value}%</h3>
                 </div>
 
                 <div className="skillbar-bar">
                   <div
                     className="skillbar-child"
-                    style={{ width: '75%' }}></div>
+                    style={{ width: `${item.value}%` }}></div>
                 </div>
               </div>
             </div>

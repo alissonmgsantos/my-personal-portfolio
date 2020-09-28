@@ -1,10 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import LanguageContext from '../../contexts/language';
 import UserContext from '../../contexts/user';
 
 export const Profile = () => {
   const { user } = useContext(UserContext);
-  const { language } = useContext(LanguageContext);
   const photo = 'https://source.unsplash.com/random';
   const [loop, setLoop] = useState(0);
   const [skill, setSkill] = useState(user.skills[0]);

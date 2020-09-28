@@ -1,12 +1,12 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { useQueryUser } from '../hooks';
-import LanguageContext from './language';
 
 const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   let data = useQueryUser();
+  const UI_LANG = localStorage.getItem('UI_LANG');
   const [user, setUser] = useState(
-    Object.assign({ name: data.name }, JSON.parse(data.pt.code))
+    Object.assign({ name: data.name }, JSON.parse(data[UI_LANG || 'pt'].code))
   );
 
   function languageSwitch(language) {
