@@ -4,7 +4,7 @@ import UserContext from '../../contexts/user';
 
 const About = () => {
   const { language } = useContext(LanguageContext);
-  const user = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   const photo = 'https://source.unsplash.com/random';
   return (
@@ -13,7 +13,7 @@ const About = () => {
       className="flex flex-col justify-center items-center bg-gray-200 pt-10">
       <div id="_about" className="p-10 lg:p-20">
         <h1 className="font-semibold text-center">About</h1>
-        <div className="flex flex-wrap pt-10">{user[language].bio}</div>
+        <div className="flex flex-wrap pt-10">{user.bio}</div>
       </div>
 
       <div id="services" className="p-10 lg:p-20">

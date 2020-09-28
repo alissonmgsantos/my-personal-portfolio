@@ -3,24 +3,24 @@ import LanguageContext from '../../contexts/language';
 import UserContext from '../../contexts/user';
 
 export const Profile = () => {
-  const user = useContext(UserContext);
+  const { user } = useContext(UserContext);
   const { language } = useContext(LanguageContext);
   const photo = 'https://source.unsplash.com/random';
   const [loop, setLoop] = useState(0);
-  const [skill, setSkill] = useState(user[language].skills[0]);
+  const [skill, setSkill] = useState(user.skills[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLoop(prevState => prevState + 1);
       setSkill(prevState => '');
-      user[language].skills[loop % user[language].skills.length]
+      user.skills[loop % user.skills.length]
         .split('')
         .map((letra, i) =>
           setTimeout(() => setSkill(prevState => (prevState += letra)), 75 * i)
         );
     }, 2000);
     return () => clearInterval(interval);
-  }, [user[language].skills, skill, loop]);
+  }, [user.skills, skill, loop]);
 
   return (
     <div className="flex flex-col justify-center items-center relative z-10 h-full">

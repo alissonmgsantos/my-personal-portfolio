@@ -8,7 +8,7 @@ import flag_br from '../../images/br.svg';
 import flag_us from '../../images/us.svg';
 
 const Header = ({ scrollPosition }) => {
-  const user = useContext(UserContext);
+  const { user } = useContext(UserContext);
   const { language, handleLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState(false);
@@ -30,7 +30,7 @@ const Header = ({ scrollPosition }) => {
         <div
           className={`${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:w-auto`}>
           <div className="text-sm">
-            {routes.map((route, key) => (
+            {routes[0][language].map((route, key) => (
               <Link
                 key={key}
                 to={route.path}
