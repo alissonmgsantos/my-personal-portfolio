@@ -6,11 +6,11 @@ export const useQueryUser = () => {
         markdownRemark(fileAbsolutePath: { regex: "/(user.md)/" }) {
           frontmatter {
             name
-            bio
-            skills
-            services {
-              name
-              description
+            pt {
+              code
+            }
+            en {
+              code
             }
           }
         }

@@ -4,6 +4,7 @@ import { UserProvider } from '../../contexts/user';
 
 import Header from '../Header';
 import '../../styles/global.css';
+import { LanguageProvider } from '../../contexts/language';
 
 const Layout = ({ children }) => {
   const [scrollPosition, setSrollPosition] = useState(window.pageYOffset || 0);
@@ -19,8 +20,10 @@ const Layout = ({ children }) => {
 
   return (
     <UserProvider>
-      <Header scrollPosition={scrollPosition} />
-      <main className="h-screen">{children}</main>
+      <LanguageProvider>
+        <Header scrollPosition={scrollPosition} />
+        <main className="h-screen">{children}</main>
+      </LanguageProvider>
     </UserProvider>
   );
 };
