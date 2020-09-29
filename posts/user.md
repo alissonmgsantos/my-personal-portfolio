@@ -3,7 +3,7 @@ title: user
 name: Alisson Matos Gomes dos Santos
 hard_skills: angular; bootstrap; css3; git; github; gitlab; graphql; html5;
   javascript; material; mysql; nodejs; oracle; php; react; sass; sqlserver;
-  typescript; vuejs;
+  typescript; vuejs
 pt:
   code: >-
     {

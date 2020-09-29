@@ -20,5 +20,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Hard Skills", name: "hard_skills", widget: "string"}
       - {label: "Portuguese", name: "pt", widget: "code"}
       - {label: "English", name: "en", widget: "code"}

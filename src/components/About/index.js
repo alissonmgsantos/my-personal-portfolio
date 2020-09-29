@@ -5,6 +5,11 @@ const About = () => {
   const { user } = useContext(UserContext);
 
   const photo = 'https://source.unsplash.com/random';
+
+  const findImage = image => {
+    return require(`../../images/skills/${image.trim()}.svg`);
+  };
+
   return (
     <section
       id="about"
@@ -51,6 +56,20 @@ const About = () => {
         </h1>
 
         <div className="flex flex-wrap pt-10">
+          {user.hard_skills.split(';').map((item, key) => (
+            <div key={key} className="flex w-1/5 p-2 justify-center">
+              <img
+                key={key}
+                src={findImage(item)}
+                alt={item}
+                width="72"
+                height="72"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="flex flex-wrap pt-10">
           {user.skills_progress.map((item, key) => (
             <div key={key} className="w-full sm:w-1/2 p-2 sm:pr-10 sm:pl-10">
               <div
@@ -69,7 +88,7 @@ const About = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

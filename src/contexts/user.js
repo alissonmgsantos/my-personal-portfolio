@@ -6,7 +6,7 @@ export const UserProvider = ({ children }) => {
   let data = useQueryUser();
   const [UI_LANG, setUI_LANG] = useState(null);
   const [user, setUser] = useState(
-    Object.assign({ name: data.name }, JSON.parse(data[UI_LANG || 'pt'].code))
+    Object.assign(data, JSON.parse(data[UI_LANG || 'pt'].code))
   );
 
   useEffect(() => {
