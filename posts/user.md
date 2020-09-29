@@ -1,6 +1,9 @@
 ---
 title: user
 name: Alisson Matos Gomes dos Santos
+hard_skills: angular; bootstrap; css3; git; github; gitlab; graphql; html5;
+  javascript; material; mysql; nodejs; oracle; php; react; sass; sqlserver;
+  typescript; vuejs;
 pt:
   code: >-
     {
@@ -9,8 +12,7 @@ pt:
       "services": [
         {"name": "Desenvolvedor Front-end", "description": "HTML, React, Vuejs, Angular"},
         {"name": "Desenvolvedor Back-end", "description": "JavaScript, PHP"},
-        {"name": "Desenvolvedor Mobile", "description": "React-native"} ],
-      "skills_progress": [ {"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" } ]
+        {"name": "Desenvolvedor Mobile", "description": "React-native"} ]
     }
   lang: json
 en:
@@ -22,7 +24,6 @@ en:
          "services": [
         {"name": "Front-end Developer", "description": "HTML, React, Vuejs, Angular"},
         {"name": "Back-end Developer", "description": "JavaScript, PHP"},
-        {"name": "Mobile Developer", "description": "React-native"} ],
-      "skills_progress": [ {"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" },{"name": "HTML 5", "value": "90.5" } ]
+        {"name": "Mobile Developer", "description": "React-native"} ]
     }
 ---
