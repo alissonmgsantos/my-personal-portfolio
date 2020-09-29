@@ -1,11 +1,15 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import UserContext from './user';
 
 const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const { languageSwitch } = useContext(UserContext);
-  const UI_LANG = localStorage.getItem('UI_LANG');
-  const [language, setLanguage] = useState(prevSate => UI_LANG || 'pt');
+  const [language, setLanguage] = useState(prevSate => 'pt');
+
+  useEffect(() => {
+    const UI_LANG = localStorage.getItem('UI_LANG');
+    setLanguage(prevSate => UI_LANG || 'pt');
+  }, []);
 
   function handleLanguage(lang) {
     switch (lang) {

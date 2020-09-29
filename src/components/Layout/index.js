@@ -7,8 +7,9 @@ import '../../styles/global.css';
 import { LanguageProvider } from '../../contexts/language';
 
 const Layout = ({ children }) => {
-  const [scrollPosition, setSrollPosition] = useState(window.pageYOffset || 0);
+  const [scrollPosition, setSrollPosition] = useState(0);
   useEffect(() => {
+    setSrollPosition(prevSate => window.pageYOffset || 0);
     window.scrollTo(0, 0);
     const handleScroll = () => {
       setSrollPosition(prevSate => window.pageYOffset);
