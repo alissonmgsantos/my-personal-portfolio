@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       © {new Date().getFullYear()}, Built with
       <a href="https://www.gatsbyjs.com">Gatsby</a>
     </footer>
