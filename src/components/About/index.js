@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import LanguageContext from '../../contexts/language';
 import UserContext from '../../contexts/user';
 
 const About = () => {
