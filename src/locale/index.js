@@ -3,10 +3,11 @@ export default {
     about: 'Sobre',
     skills: 'Habilidades',
     services: 'Serviços',
+    experiences: 'Experiências',
   },
   en: {
     about: 'About',
     skills: 'Skills',
-    services: 'Services',
+    experiences: 'Experiences',
   },
 };
