@@ -9,13 +9,6 @@
   outline: none;
 }
 
-
-ul li {
-  display: inline-block;
-  padding: 1rem;
-  color: #fff;
-}
-
 /* cursor animation */
 .cursor {
   max-width: auto;
@@ -42,7 +35,7 @@ ul li {
 }
 
 .banner-home {
-  background-image: url('https://source.unsplash.com/1600x900/?html,javascript,php');
+  background-image: url('../images//bg-home.jpeg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -59,15 +52,9 @@ ul li {
   content: '';
 }
 
-h1 {
-  @apply text-4xl;
-}
-h2 {
-  @apply text-2xl;
-}
-h3 {
-  @apply text-xl;
-}
+h1 { @apply text-4xl; }
+h2 { @apply text-2xl; }
+h3 { @apply text-xl; }
 
 
 
@@ -175,7 +162,7 @@ h3 {
 
 .skills-area{
   position: relative;
-  background-image: url('https://source.unsplash.com/random');
+  background-image: url('../images//bg-skills.jpeg');
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;

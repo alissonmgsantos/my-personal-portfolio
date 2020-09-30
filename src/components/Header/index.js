@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { routes } from '../../constants';
 import UserContext from '../../contexts/user';
@@ -41,22 +40,19 @@ const Header = ({ scrollPosition }) => {
           </div>
         </div>
 
-        <div className="relative inline-block pl-5 pr-5">
-          <div>
-            <span>
-              <button
-                type="button"
-                className="inline-flex justify-center w-full focus:outline-none"
-                id="options-menu"
-                onClick={() => setShow(prevState => !prevState)}>
-                <img
-                  src={language === 'pt' ? flag_br : flag_us}
-                  width="24"
-                  height="24"
-                />
-              </button>
-            </span>
-          </div>
+        <div className="flex pl-5 pr-5">
+          <button
+            type="button"
+            className="w-full focus:outline-none"
+            id="options-menu"
+            onClick={() => setShow(prevState => !prevState)}>
+            <img
+              src={language === 'pt' ? flag_br : flag_us}
+              width="24"
+              height="24"
+              alt="flag nation"
+            />
+          </button>
 
           <div
             className={`${
@@ -64,27 +60,38 @@ const Header = ({ scrollPosition }) => {
             } origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg`}>
             <div className="rounded-md bg-white shadow-xs">
               <div className="py-1">
-                <span
+                <button
                   id="pt-br"
                   onClick={() => [
                     handleLanguage('pt'),
                     setShow(prevState => !prevState),
                   ]}
-                  className="flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
-                  <img src={flag_br} width="24" height="24" className="mr-2" />
+                  className="w-full flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
+                  <img
+                    src={flag_br}
+                    width="24"
+                    height="24"
+                    className="mr-2"
+                    alt="flag nation"
+                  />
                   {language === 'pt' ? 'Português' : 'Portuguese'}
-                </span>
-                <span
+                </button>
+                <button
                   id="en-us"
                   onClick={() => [
                     handleLanguage('en'),
                     setShow(prevState => !prevState),
                   ]}
-                  // onClick={() => setShow(prevState => !prevState)}
-                  className="flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 cursor-pointer">
-                  <img src={flag_us} width="24" height="24" className="mr-2" />
+                  className="w-full flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
+                  <img
+                    src={flag_us}
+                    width="24"
+                    height="24"
+                    className="mr-2"
+                    alt="flag nations"
+                  />
                   {language === 'pt' ? 'Inglês' : 'English'}
-                </span>
+                </button>
               </div>
             </div>
           </div>
@@ -93,7 +100,9 @@ const Header = ({ scrollPosition }) => {
         <div className="block lg:hidden">
           <button
             onClick={() => setIsOpen(prevState => !prevState)}
-            className="flex items-center px-3 py-2 border rounded text-white">
+            className={`${
+              scrollPosition <= 30 ? 'text-white' : 'text-black'
+            }flex items-center px-3 py-2 border rounded`}>
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
@@ -106,14 +115,6 @@ const Header = ({ scrollPosition }) => {
       </nav>
     </header>
   );
-};
-
-Header.propTypes = {
-  author: PropTypes.string,
-};
-
-Header.defaultProps = {
-  author: ``,
 };
 
 export default Header;

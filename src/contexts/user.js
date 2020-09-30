@@ -14,9 +14,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   function languageSwitch(language) {
-    setUser(prevSate =>
-      Object.assign({ name: data.name }, JSON.parse(data[language].code))
-    );
+    setUser(prevSate => Object.assign(data, JSON.parse(data[language].code)));
   }
 
   return (

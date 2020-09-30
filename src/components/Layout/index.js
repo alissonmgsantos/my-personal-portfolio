@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { UserProvider } from '../../contexts/user';
 
 import Header from '../Header';
 import '../../styles/global.css';
-import { LanguageProvider } from '../../contexts/language';
 
 const Layout = ({ children }) => {
   const [scrollPosition, setSrollPosition] = useState(0);
@@ -20,12 +18,10 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <UserProvider>
-      <LanguageProvider>
-        <Header scrollPosition={scrollPosition} />
-        <main className="h-screen">{children}</main>
-      </LanguageProvider>
-    </UserProvider>
+    <>
+      <Header scrollPosition={scrollPosition} />
+      <main className="h-screen">{children}</main>
+    </>
   );
 };
 
