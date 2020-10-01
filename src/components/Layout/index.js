@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../Header';
 import '../../styles/global.css';
 
 const Layout = ({ children }) => {
+  const isSSR = typeof window === 'undefined';
   const [scrollPosition, setSrollPosition] = useState(0);
   useEffect(() => {
     setSrollPosition(prevSate => window.pageYOffset || 0);
@@ -19,8 +20,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header scrollPosition={scrollPosition} />
-      <main className="h-screen">{children}</main>
+      {!isSSR && (
+        <Suspense fallback={<div />}>
+          <Header scrollPosition={scrollPosition} />
+          <main className="h-screen">{children}</main>
+        </Suspense>
+      )}
     </>
   );
 };
