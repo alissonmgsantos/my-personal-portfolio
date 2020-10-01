@@ -28,6 +28,7 @@ const About = () => {
           {user.hard_skills.split(';').map((item, key) => (
             <div key={key} className="flex w-1/5 p-2 justify-center">
               <img
+                title={item}
                 key={key}
                 src={findImage(item)}
                 alt={`${item} skill`}
