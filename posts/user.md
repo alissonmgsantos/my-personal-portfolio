@@ -27,7 +27,7 @@ en:
         {"name": "Back-end Developer", "description": "JavaScript, PHP"},
         {"name": "Mobile Developer", "description": "React-native"} ],
       "contact": [
-        {"name": "linkedin", "description": "HTML, React, Vuejs, Angular"},
+        {"name": "linkedin", "description": "https://www.linkedin.com/in/alissonmgsantos"},
         {"name": "github", "description": "https://github.com/alissonmgsantos"} ]
     }
 ---

@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       {!isSSR && (
         <Suspense fallback={<div />}>
           <Header scrollPosition={scrollPosition} />
-          <main className="h-screen">{children}</main>
+          <main className="h-screen divide-y divide-gray-400">{children}</main>
         </Suspense>
       )}
     </>
