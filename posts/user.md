@@ -9,21 +9,25 @@ pt:
     {
       "bio": "Minha biografia",
       "skills": ["Desenvolvedor Front-end", "Desenvolvedor Back-end", "Desenvolvedor Mobile"],
-      "services": [
+      "experiences": [
         {"name": "Desenvolvedor Front-end", "description": "HTML, React, Vuejs, Angular"},
         {"name": "Desenvolvedor Back-end", "description": "JavaScript, PHP"},
-        {"name": "Desenvolvedor Mobile", "description": "React-native"} ]
+        {"name": "Desenvolvedor Mobile", "description": "React-native"} ],
+      "contact": [
+        {"name": "linkedin", "description": "https://www.linkedin.com/in/alissonmgsantos"},
+        {"name": "github", "description": "https://github.com/alissonmgsantos"} ]
     }
-  lang: json
 en:
-  lang: json
   code: >
     {
       "bio": "My biography",
-     "skills": ["Front-end Developer", "Back-end Developer", "Mobile Developer"],
-         "services": [
+      "skills": ["Front-end Developer", "Back-end Developer", "Mobile Developer"],
+      "experiences": [
         {"name": "Front-end Developer", "description": "HTML, React, Vuejs, Angular"},
         {"name": "Back-end Developer", "description": "JavaScript, PHP"},
-        {"name": "Mobile Developer", "description": "React-native"} ]
+        {"name": "Mobile Developer", "description": "React-native"} ],
+      "contact": [
+        {"name": "linkedin", "description": "HTML, React, Vuejs, Angular"},
+        {"name": "github", "description": "https://github.com/alissonmgsantos"} ]
     }
 ---
