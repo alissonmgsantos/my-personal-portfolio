@@ -3,14 +3,18 @@ export const useQueryHome = () => {
   const result = useStaticQuery(
     graphql`
       query Home {
-        en: markdownRemark(fileAbsolutePath: { regex: "posts/en/(home.md)/" }) {
+        en: markdownRemark(
+          fileAbsolutePath: { regex: "posts/home/(home_english.md)/" }
+        ) {
           data: frontmatter {
             username
             photo
             description
           }
         }
-        pt: markdownRemark(fileAbsolutePath: { regex: "posts/pt/(home.md)/" }) {
+        pt: markdownRemark(
+          fileAbsolutePath: { regex: "posts/home/(home_portuguese.md)/" }
+        ) {
           data: frontmatter {
             username
             photo
