@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react';
 import { Link } from 'gatsby';
+import React, { useContext, useState } from 'react';
 import { routes } from '../../constants';
-import UserContext from '../../contexts/user';
 import LanguageContext from '../../contexts/language';
+import { useQueryHome } from '../../hooks/home';
 import flag_br from '../../images/br.svg';
 import flag_us from '../../images/us.svg';
 
 const Header = ({ scrollPosition }) => {
-  const { user } = useContext(UserContext);
+  const info = useQueryHome();
   const { language, handleLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState(false);
@@ -22,7 +22,7 @@ const Header = ({ scrollPosition }) => {
       <nav className="flex items-center justify-between flex-wrap lg:pl-10 lg:pr-10">
         <div className="flex flex-grow">
           <Link to="/" className="font-semibold text-3xl">
-            {user.name.split(' ')[0]}
+            {info[language].data.username.split(' ')[0]}
           </Link>
         </div>
 
@@ -66,7 +66,7 @@ const Header = ({ scrollPosition }) => {
                     handleLanguage('pt'),
                     setShow(prevState => !prevState),
                   ]}
-                  className="w-full flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
+                  className="w-full flex items-center text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
                   <img
                     src={flag_br}
                     width="24"
@@ -82,7 +82,7 @@ const Header = ({ scrollPosition }) => {
                     handleLanguage('en'),
                     setShow(prevState => !prevState),
                   ]}
-                  className="w-full flex text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
+                  className="w-full flex items-center text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
                   <img
                     src={flag_us}
                     width="24"
