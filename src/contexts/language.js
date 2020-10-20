@@ -1,9 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import UserContext from './user';
+import React, { createContext, useEffect, useState } from 'react';
 
 const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
-  const { languageSwitch } = useContext(UserContext);
   const [language, setLanguage] = useState(prevSate => 'pt');
 
   useEffect(() => {
@@ -15,12 +13,10 @@ export const LanguageProvider = ({ children }) => {
     switch (lang) {
       case 'en':
         localStorage.setItem('UI_LANG', lang);
-        languageSwitch(lang);
         setLanguage(prevState => 'en');
         break;
       default:
         localStorage.setItem('UI_LANG', lang);
-        languageSwitch(lang);
         setLanguage(prevState => 'pt');
         break;
     }
