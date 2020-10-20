@@ -1,7 +1,7 @@
 ---
 page: about
 language: portuguese
-hard_skills:
+skills:
   - angular
   - bootstrap
   - css3
