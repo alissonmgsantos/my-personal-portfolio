@@ -1,6 +1,6 @@
 ---
 page: home
-name: Alisson Matos
+username: Alisson Matos
 description:
   - Front-end Developer
   - Back-end Developer
