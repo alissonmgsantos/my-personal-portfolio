@@ -6,12 +6,14 @@ export const useQueryHome = () => {
         en: markdownRemark(fileAbsolutePath: { regex: "posts/en/(home.md)/" }) {
           data: frontmatter {
             username
+            photo
             description
           }
         }
         pt: markdownRemark(fileAbsolutePath: { regex: "posts/pt/(home.md)/" }) {
           data: frontmatter {
             username
+            photo
             description
           }
         }

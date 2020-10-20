@@ -14,7 +14,7 @@ public_folder: "/assets/images" # The src attribute for uploaded media will begi
 collections:
   - name: "user" # Used in routes, e.g., /admin/collections/blog
     label: "User" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+    folder: "posts/en" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -23,3 +23,25 @@ collections:
       - {label: "Hard Skills", name: "hard_skills", widget: "string"}
       - {label: "Portuguese", name: "pt", widget: "code"}
       - {label: "English", name: "en", widget: "code"}
+
+  - name: "pt" # Used in routes, e.g., /admin/collections/blog
+    label: "Portuguese" # Used in the UI
+    folder: "posts/pt" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{page}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Page", name: "page", widget: "string"}
+      - {label: "Username", name: "username", widget: "string"}
+      - {label: "URL photo", name: "photo", widget: "string"}
+      - {label: "Description", name: "description", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
+
+  - name: "en" # Used in routes, e.g., /admin/collections/blog
+    label: "English" # Used in the UI
+    folder: "posts/en" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{page}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Page", name: "page", widget: "string"}
+      - {label: "Username", name: "username", widget: "string"}
+      - {label: "URL photo", name: "photo", widget: "string"}
+      - {label: "Description", name: "description", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
