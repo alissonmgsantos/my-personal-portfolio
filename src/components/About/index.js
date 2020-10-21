@@ -12,10 +12,8 @@ const About = () => {
   };
 
   return (
-    <section
-      id="about"
-      className="flex flex-col justify-center items-center pt-10">
-      <div id="_about" className="p-10 ">
+    <section id="about" className="flex flex-col justify-center items-center ">
+      <div id="_about">
         <h1 className="font-semibold text-center">{locale[language].about}</h1>
         <div className="flex flex-wrap pt-10">{info[language].data.bio}</div>
       </div>
