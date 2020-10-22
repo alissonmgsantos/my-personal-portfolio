@@ -5,9 +5,9 @@ import locale from '../../locale';
 const Experience = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <section id="experience" className="h-screen">
+    <section id="experience">
       <div className="text-center">
-        <h1 className="mt-2 font-extrabold text-gray-900 ">
+        <h1 className="mt-2 font-extrabold text-gray-900">
           {locale[language].experiences}
         </h1>
         <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
@@ -16,7 +16,7 @@ const Experience = () => {
         </p>
       </div>
 
-      <div className="m-10">
+      <div className="p-10">
         <ul className="md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-10">
           <li>
             <div className="flex">

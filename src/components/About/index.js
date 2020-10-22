@@ -12,30 +12,12 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="flex flex-col justify-center items-center ">
+    <section id="about">
       <div id="_about">
-        <h1 className="font-semibold text-center">{locale[language].about}</h1>
-        <div className="flex flex-wrap pt-10">{info[language].data.bio}</div>
-      </div>
-
-      <div id="skills" className="skills-area p-10 lg:p-20">
-        <h1 className="font-semibold text-center text-white">
-          {locale[language].skills}
+        <h1 className="mt-2 font-extrabold text-gray-900">
+          {locale[language].about}
         </h1>
-        <div className="flex flex-wrap pt-10">
-          {info[language].data.skills.map((item, key) => (
-            <div key={key} className="flex w-1/5 p-2 justify-center">
-              <img
-                title={item}
-                key={key}
-                src={findImage(item)}
-                alt={`${item} skill`}
-                width="72"
-                height="72"
-              />
-            </div>
-          ))}
-        </div>
+        <div className="flex flex-wrap pt-10">{info[language].data.bio}</div>
       </div>
     </section>
   );
