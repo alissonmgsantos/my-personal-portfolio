@@ -8,7 +8,7 @@ const Portfolio = () => {
   const options = ['WEB', 'MOBILE', 'FULLSTACK'];
 
   return (
-    <section id="experience">
+    <section id="portfolio">
       <div className="text-center">
         <h1 className="mt-2 font-extrabold text-gray-900">
           {locale[language].portfolio}
@@ -17,9 +17,9 @@ const Portfolio = () => {
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
-        <ul class="flex item-center justify-center mt-4">
+        <ul className="flex item-center justify-center mt-4">
           {options.map((item, key) => (
-            <li class="mr-3">
+            <li className="mr-3" key={key}>
               <a
                 className={`${
                   checked === item
@@ -33,8 +33,46 @@ const Portfolio = () => {
           ))}
         </ul>
       </div>
+      {/* <Image /> */}
 
-      <div className="p-10"></div>
+      <div className="pt-10 md:grid md:grid-cols-3 gap-1">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item, key) => (
+          <div
+            key={key}
+            className="m-5 max-w-sm rounded overflow-hidden shadow-lg">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://source.unsplash.com/random"
+              alt="Sunset in the mountains"
+            />
+            <div className="px-6 py-4">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-xl mb-2">Título</span>
+                <span className="font-bold text-xl mb-2">GITHUB</span>
+              </div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #php
+              </span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #node
+              </span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #js
+              </span>
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #react
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

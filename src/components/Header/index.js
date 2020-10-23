@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import React, { useContext, useState } from 'react';
 import { routes } from '../../constants';
 import LanguageContext from '../../contexts/language';
@@ -21,21 +20,21 @@ const Header = ({ scrollPosition }) => {
       } z-50 w-full`}>
       <nav className="flex items-center justify-between flex-wrap lg:pl-10 lg:pr-10">
         <div className="flex flex-grow">
-          <Link to="/" className="font-semibold text-3xl">
+          <a href="/" className="font-semibold text-3xl">
             {info[language].data.username.split(' ')[0]}
-          </Link>
+          </a>
         </div>
 
         <div
           className={`${isOpen ? 'block' : 'hidden'} w-full lg:flex lg:w-auto`}>
           <div className="text-sm">
             {routes[0][language].map((route, key) => (
-              <Link
+              <a
                 key={key}
-                to={route.path}
+                href={route.path}
                 className="block p-3 text-sm font-semibold lg:inline-block hover:text-blue-500 uppercase">
                 {route.name}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
