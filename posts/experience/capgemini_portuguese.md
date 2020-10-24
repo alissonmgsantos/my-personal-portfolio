@@ -1,10 +1,9 @@
 ---
-slug: solutis
-title: Solutis Tecnologias Ltda.
-subTitle: Analista Desenvolvedor
+title: Capgemini
+subTitle: Analista de Sistemas PL
 type: job
 language: portuguese
-period: Maio de 2017 à Agosto de 2020
+period: Agosto de 2020 - Presente
 description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
   Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
   Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
