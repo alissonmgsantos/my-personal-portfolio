@@ -7,27 +7,20 @@ export const Profile = () => {
   const { language } = useContext(LanguageContext);
 
   const [loop, setLoop] = useState(0);
-  const [description, setDescription] = useState(
-    info[language].data.description[0]
-  );
+  const [skills, setSkills] = useState(info[language].data.skills[0]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLoop(prevState => prevState + 1);
-      setDescription(prevState => '');
-      info[language].data.description[
-        loop % info[language].data.description.length
-      ]
+      setSkills(prevState => '');
+      info[language].data.skills[loop % info[language].data.skills.length]
         .split('')
         .map((value, i) =>
-          setTimeout(
-            () => setDescription(prevState => (prevState += value)),
-            75 * i
-          )
+          setTimeout(() => setSkills(prevState => (prevState += value)), 75 * i)
         );
     }, 2000);
     return () => clearInterval(interval);
-  }, [info, description, loop, language]);
+  }, [info, skills, loop, language]);
 
   return (
     <div className="flex flex-col justify-center items-center relative z-10 h-full">
@@ -39,7 +32,7 @@ export const Profile = () => {
       <h1 className="font-semibold text-white">
         {info[language].data.username}
       </h1>
-      <h3 className="cursor">{description}</h3>
+      <h3 className="cursor">{skills}</h3>
     </div>
   );
 };

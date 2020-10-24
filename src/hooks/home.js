@@ -9,7 +9,7 @@ export const useQueryHome = () => {
           data: frontmatter {
             username
             photo
-            description
+            skills
           }
         }
         pt: markdownRemark(
@@ -18,7 +18,7 @@ export const useQueryHome = () => {
           data: frontmatter {
             username
             photo
-            description
+            skills
           }
         }
       }

@@ -25,7 +25,7 @@ collections:
       - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
       - {label: "Username", name: "username", widget: "string"}
       - {label: "URL photo", name: "photo", widget: "string"}
-      - {label: "Description", name: "description", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
+      - {label: "Skills", name: "skills", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
 ##################
 # ABOUT
 #################
@@ -39,3 +39,18 @@ collections:
       - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
       - {label: "Skills", name: "skills", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
       - {label: "Bio", name: "bio", widget: "text"}
+##################
+# EXPERIENCE
+#################
+  - name: "experience" # Used in routes, e.g., /admin/collections/blog
+    label: "Experience" # Used in the UI
+    folder: "posts/experience" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}_{{language}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "subtitle", name: "subTitle", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["academic", "job"]}
+      - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
+      - {label: "Period", name: "period", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
