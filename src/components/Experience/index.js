@@ -28,7 +28,7 @@ const Experience = () => {
                     : 'text-blue-500 hover:border-gray-200 text-blue-500 hover:bg-gray-200'
                 } inline-block border  rounded py-1 px-3 cursor-pointer`}
                 onClick={() => setChecked(prevState => item)}>
-                {locale[language][item.toLowerCase()]}
+                {locale[language][item.toLowerCase()].toLocaleUpperCase()}
               </a>
             </li>
           ))}
@@ -37,43 +37,46 @@ const Experience = () => {
       <div className="flex items-center justify-center">
         <ul className="md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-10">
           {info[language].map((item, key) => {
-            if (item.type === checked) {
-              <li key={key} className="p-4">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                      <svg
-                        className="h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                        />
-                      </svg>
+            if (item.type.toLocaleUpperCase() === checked.toLocaleUpperCase()) {
+              return (
+                <li key={key} className="p-4">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <svg
+                          className="h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="text-lg leading-6 font-medium text-gray-900">
+                        {item.title}
+                      </h4>
+                      <p className="mt-2 text-base leading-6 text-gray-500">
+                        {item.subTitle}
+                      </p>
+                      {item.activity[0] !== '' &&
+                        item.activity.map((value, key) => (
+                          <span
+                            key={key}
+                            className="rounded-full bg-gray-300 uppercase px-2 py-1 text-xs font-bold mr-3">
+                            {value}
+                          </span>
+                        ))}
                     </div>
                   </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg leading-6 font-medium text-gray-900">
-                      {item.title}
-                    </h4>
-                    <p className="mt-2 text-base leading-6 text-gray-500">
-                      {item.subTitle}
-                    </p>
-                    {item.activity.map((value, key) => (
-                      <span
-                        key={key}
-                        className="rounded-full bg-gray-300 uppercase px-2 py-1 text-xs font-bold mr-3">
-                        {value}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </li>;
+                </li>
+              );
             }
           })}
         </ul>
