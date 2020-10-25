@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import LanguageContext from '../../contexts/language';
 import locale from '../../locale';
+import Image from '../Image';
 
 const Portfolio = () => {
   const [checked, setChecked] = useState('WEB');
@@ -48,7 +49,12 @@ const Portfolio = () => {
             <div className="px-6 py-4">
               <div className="flex items-center justify-between">
                 <span className="font-bold text-xl mb-2">Título</span>
-                <span className="font-bold text-xl mb-2">GITHUB</span>
+                <a
+                  href="http://github.com/alissonmgsantos"
+                  target="_blank"
+                  rel="noreferrer">
+                  <Image src="github" />
+                </a>
               </div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -12,7 +12,7 @@ import React from 'react';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ src, width, height }) => {
+const Image = ({ src, width = 'auto', height = 'auto' }) => {
   const { data } = useStaticQuery(graphql`
     query Images {
       data: allFile(filter: { extension: { regex: "/(svg|png|jpeg|jpg)/" } }) {
