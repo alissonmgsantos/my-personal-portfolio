@@ -11,9 +11,10 @@ export const useQueryExperience = () => {
         ) {
           nodes {
             frontmatter {
+              type
               title
               subTitle
-              description
+              activity
             }
           }
         }
@@ -25,9 +26,10 @@ export const useQueryExperience = () => {
         ) {
           nodes {
             frontmatter {
+              type
               title
               subTitle
-              description
+              activity
             }
           }
         }

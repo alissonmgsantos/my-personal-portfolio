@@ -17,7 +17,7 @@ const Portfolio = () => {
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
-        <ul className="flex item-center justify-center mt-4">
+        <ul className="flex item-center justify-center m-10">
           {options.map((item, key) => (
             <li className="mr-3" key={key}>
               <a

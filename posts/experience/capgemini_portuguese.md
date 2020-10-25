@@ -4,8 +4,8 @@ subTitle: Analista de Sistemas PL
 type: job
 language: portuguese
 period: Agosto de 2020 - Presente
-description: "Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
-  Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
-  Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste
-  Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste "
+activity:
+  - PHP
+  - Node
+  - JavaScript
 ---
