@@ -7,10 +7,6 @@ const About = () => {
   const info = useQueryAbout();
   const { language } = useContext(LanguageContext);
 
-  const findImage = image => {
-    return require(`../../images/skills/${image.trim()}.svg`);
-  };
-
   return (
     <section id="about">
       <div id="_about">

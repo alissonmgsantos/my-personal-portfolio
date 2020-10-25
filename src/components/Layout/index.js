@@ -1,32 +1,23 @@
-import React, { Suspense, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
-import Header from '../Header';
+import React, { Suspense, useState } from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import '../../styles/global.css';
+import Header from '../Header';
 
 const Layout = ({ children }) => {
-  const isSSR = typeof window === 'undefined';
   const [scrollPosition, setSrollPosition] = useState(0);
-  useEffect(() => {
-    setSrollPosition(prevSate => window.pageYOffset || 0);
-    window.scrollTo(0, 0);
-    const handleScroll = () => {
-      setSrollPosition(prevSate => window.pageYOffset);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <>
-      {!isSSR && (
-        <Suspense fallback={<div />}>
-          <Header scrollPosition={scrollPosition} />
-          <main className="h-screen divide-y divide-gray-400">{children}</main>
-        </Suspense>
-      )}
-    </>
+    <Suspense fallback={<div />}>
+      <Header scrollPosition={scrollPosition} />
+      <PerfectScrollbar
+        onScrollY={container =>
+          setSrollPosition(prevState => container.scrollTop)
+        }>
+        <main className="h-screen">{children}</main>
+      </PerfectScrollbar>
+    </Suspense>
   );
 };
 

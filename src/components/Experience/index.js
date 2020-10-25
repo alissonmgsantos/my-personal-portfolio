@@ -44,7 +44,11 @@ const Experience = () => {
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <Image src={item.type} width="48" height="48" />
+                        <Image
+                          src={item.type.toLowerCase()}
+                          width="48"
+                          height="48"
+                        />
                       </div>
                     </div>
                     <div className="ml-4">

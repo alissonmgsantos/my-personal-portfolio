@@ -1,39 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import LanguageContext from '../../contexts/language';
+import locale from '../../locale';
+import Image from '../Image';
 
 const Footer = () => {
-  const findImage = image => {
-    return require(`../../images/social/${image}.svg`);
-  };
+  const { language } = useContext(LanguageContext);
   return (
-    <section
-      id="footer"
-      className="h-40 flex flex-col justify-center items-center">
-      <footer className="flex flex-col justify-center items-center">
-        <div className="flex justify-center">
-          {/* {user.contact.map((item, key) => (
-            <a
-              href={item.description}
-              target="_blank"
-              key={key}
-              rel="noreferrer">
-              <img
-                title={item.name}
-                src={findImage(item.name)}
-                alt={`${item.name} contact`}
-                width="32"
-                height="32"
-              />
-            </a>
-          ))} */}
-        </div>
-        {/* <p className="font-black uppercase tracking-wider">{`${
-          user.name.split(' ')[0]
-        } ${user.name.split(' ')[user.name.split(' ').length - 1]}`}</p> */}
-        <small className="italic">
-          {`Copyright © ${new Date().getFullYear()}`} All rights reserved. ®
-        </small>
-      </footer>
-    </section>
+    <footer className="pt-10 pb-10 pl-20 pr-20 flex items-center justify-between bg-gray-200">
+      <h6 className="italic">
+        {`Copyright © ${new Date().getFullYear()} ${locale[language].rights} ®`}
+      </h6>
+      <div className="flex flex-row items-center justify-center">
+        <h6 className="pt-1">{locale[language].stayConnected}</h6>
+        <Image src="linkedin" width="24" height="24" />
+        <Image src="github" width="24" height="24" />
+      </div>
+    </footer>
   );
 };
 

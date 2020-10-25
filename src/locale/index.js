@@ -12,6 +12,9 @@ export default {
     // Languages
     pt: 'Português',
     en: 'Inglês',
+    // Footer
+    rights: 'Todos os direitos reservados.',
+    stayConnected: 'Permaneça conectado',
   },
   en: {
     // Routes
@@ -26,5 +29,8 @@ export default {
     // Languages
     pt: 'Portuguese',
     en: 'English',
+    // Footer
+    rights: 'All rights reserved.',
+    stayConnected: 'Stay Connected',
   },
 };
