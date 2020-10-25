@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react';
 import { routes } from '../../constants';
 import LanguageContext from '../../contexts/language';
 import { useQueryHome } from '../../hooks/home';
-import flag_br from '../../images/br.svg';
-import flag_us from '../../images/us.svg';
+import locale from '../../locale';
+import Image from '../Image';
 
 const Header = ({ scrollPosition }) => {
   const info = useQueryHome();
-  const { language, handleLanguage } = useContext(LanguageContext);
+  const { language, languageOptions, handleLanguage } = useContext(
+    LanguageContext
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -45,12 +47,7 @@ const Header = ({ scrollPosition }) => {
             className="w-full focus:outline-none"
             id="options-menu"
             onClick={() => setShow(prevState => !prevState)}>
-            <img
-              src={language === 'pt' ? flag_br : flag_us}
-              width="24"
-              height="24"
-              alt="flag nation"
-            />
+            <Image src={language} width="24" height="24" />
           </button>
 
           <div
@@ -59,38 +56,18 @@ const Header = ({ scrollPosition }) => {
             } origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg`}>
             <div className="rounded-md bg-white shadow-xs">
               <div className="py-1">
-                <button
-                  id="pt-br"
-                  onClick={() => [
-                    handleLanguage('pt'),
-                    setShow(prevState => !prevState),
-                  ]}
-                  className="w-full flex items-center text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
-                  <img
-                    src={flag_br}
-                    width="24"
-                    height="24"
-                    className="mr-2"
-                    alt="flag nation"
-                  />
-                  {language === 'pt' ? 'Português' : 'Portuguese'}
-                </button>
-                <button
-                  id="en-us"
-                  onClick={() => [
-                    handleLanguage('en'),
-                    setShow(prevState => !prevState),
-                  ]}
-                  className="w-full flex items-center text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
-                  <img
-                    src={flag_us}
-                    width="24"
-                    height="24"
-                    className="mr-2"
-                    alt="flag nations"
-                  />
-                  {language === 'pt' ? 'Inglês' : 'English'}
-                </button>
+                {languageOptions.map((item, key) => (
+                  <button
+                    key={key}
+                    onClick={() => [
+                      handleLanguage(item),
+                      setShow(prevState => !prevState),
+                    ]}
+                    className="w-full flex items-center text-gray-700 px-4 py-2 hover:bg-gray-100 hover:text-gray-900 focus:outline-none">
+                    <Image src={item} width="24" height="24" />
+                    {locale[language][item]}
+                  </button>
+                ))}
               </div>
             </div>
           </div>

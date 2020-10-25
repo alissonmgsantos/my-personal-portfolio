@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import React from 'react';
 
 /*
@@ -13,33 +12,35 @@ import React from 'react';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "br.svg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+const Image = ({ src, width, height }) => {
+  const { data } = useStaticQuery(graphql`
+    query Images {
+      data: allFile(filter: { extension: { regex: "/(svg|png|jpeg|jpg)/" } }) {
+        edges {
+          node {
+            id
+            name
+            extension
+            publicURL
           }
         }
-        extension
-        publicURL
       }
     }
   `);
-
-  // console.log(data);
-  if (
-    !data?.placeholderImage?.childImageSharp &&
-    data?.placeholderImage?.extension === 'svg'
-  ) {
-    return <img src={data?.placeholderImage?.publicURL} />;
+  let file = data.edges.filter(image => image.node.name === src);
+  if (file[0]?.node) {
+    return (
+      <img
+        className="ml-2 mr-2"
+        src={file[0].node.publicURL}
+        width={width}
+        heigh={height}
+        alt={file[0].node.name}
+      />
+    );
+  } else {
+    return true;
   }
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
-    return <div>Picture not found</div>;
-  }
-
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
 };
 
 export default Image;

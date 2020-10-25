@@ -2,8 +2,8 @@ import React, { createContext, useEffect, useState } from 'react';
 
 const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(prevSate => 'pt');
-
+  const [language, setLanguage] = useState('pt');
+  const languageOptions = ['pt', 'en'];
   useEffect(() => {
     const UI_LANG = localStorage.getItem('UI_LANG');
     setLanguage(prevSate => UI_LANG || 'pt');
@@ -23,7 +23,8 @@ export const LanguageProvider = ({ children }) => {
   }
 
   return (
-    <LanguageContext.Provider value={{ language, handleLanguage }}>
+    <LanguageContext.Provider
+      value={{ languageOptions, language, handleLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

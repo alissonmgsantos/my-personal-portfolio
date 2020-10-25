@@ -6,6 +6,9 @@ export default {
     portfolio: 'Portfólio',
     academic: 'Acadêmica',
     job: 'Trabalho',
+    // Languages
+    pt: 'Português',
+    en: 'Inglês',
   },
   en: {
     about: 'About',
@@ -14,5 +17,8 @@ export default {
     portfolio: 'Portfolio',
     academic: 'Academic',
     job: 'Job',
+    // Languages
+    pt: 'Portuguese',
+    en: 'English',
   },
 };
