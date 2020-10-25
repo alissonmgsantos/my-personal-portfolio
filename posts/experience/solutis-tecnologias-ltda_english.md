@@ -1,7 +1,7 @@
 ---
 title: Solutis Tecnologias Ltda.
 subTitle: Analista Desenvolvedor
-type: job
+type: professional
 language: english
 period: Agosto de 2020 - Present
 activity:

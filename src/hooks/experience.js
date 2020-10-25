@@ -15,6 +15,7 @@ export const useQueryExperience = () => {
               title
               subTitle
               activity
+              period
             }
           }
         }
@@ -30,6 +31,7 @@ export const useQueryExperience = () => {
               title
               subTitle
               activity
+              period
             }
           }
         }

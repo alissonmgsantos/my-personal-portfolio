@@ -7,8 +7,8 @@ import Image from '../Image';
 const Experience = () => {
   const info = useQueryExperience();
   const { language } = useContext(LanguageContext);
-  const [checked, setChecked] = useState('JOB');
-  const options = ['ACADEMIC', 'JOB'];
+  const [checked, setChecked] = useState('PROFESSIONAL');
+  const options = ['EDUCATIONAL', 'PROFESSIONAL'];
   return (
     <section id="experience">
       <div className="text-center">
@@ -35,8 +35,47 @@ const Experience = () => {
           ))}
         </ul>
       </div>
+
       <div className="flex items-center justify-center">
-        <ul className="md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-10">
+        <div class="grid grid-flow-row xs:grid-flow-col md:grid-cols-2 xs:grid-cols-1 md:grid-rows-2 xs:grid-rows-1 md:gap-x-32 gap-10">
+          {info[language].map((item, key) => {
+            if (
+              item['type'].toLocaleUpperCase() === checked.toLocaleUpperCase()
+            ) {
+              return (
+                <div key={key} className="flex items-center justify-center">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                      <Image
+                        src={item.type.toLowerCase()}
+                        width="24"
+                        height="24"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col ml-4">
+                    <h4 className="text-lg text-gray-900">{item.title}</h4>
+                    <p className="text-base text-gray-500">{item.subTitle}</p>
+                    <small className="text-xs text-gray-500">
+                      {item.period}
+                    </small>
+                    <div className="flex-row">
+                      {item.activity[0] !== '' &&
+                        item.activity.map((value, key) => (
+                          <span
+                            key={key}
+                            className="rounded-full bg-gray-300 uppercase px-2 py-1 text-xs font-bold mr-3">
+                            {value}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
+        {/* <ul className="md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-10">
           {info[language].map((item, key) => {
             if (
               item['type'].toLocaleUpperCase() === checked.toLocaleUpperCase()
@@ -74,7 +113,7 @@ const Experience = () => {
               );
             }
           })}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

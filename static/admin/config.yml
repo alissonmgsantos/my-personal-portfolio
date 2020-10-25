@@ -50,7 +50,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "subtitle", name: "subTitle", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["academic", "job"]}
+      - {label: "Type", name: "type", widget: "select", options: ["educational", "professional"]}
       - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
       - {label: "Period", name: "period", widget: "string"}
       - {label: "Activities", name: "activity", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}

@@ -1,9 +1,9 @@
 ---
 title: Capgemini
-subTitle: Analista de Sistemas PL
-type: job
+subTitle: Systems Analyst
+type: professional
 language: english
-period: Maio de 2017 à Agosto de 2020
+period: Aug 2020 - Present
 activity:
   - PHP
   - Node

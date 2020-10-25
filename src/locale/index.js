@@ -7,8 +7,8 @@ export default {
     experiences: 'Experiências',
     portfolio: 'Portfólio',
     // experiences options
-    academic: 'Acadêmica',
-    job: 'Trabalho',
+    educational: 'Educacional',
+    professional: 'Profissional',
     // Languages
     pt: 'Português',
     en: 'Inglês',
@@ -24,8 +24,8 @@ export default {
     experiences: 'Experiences',
     portfolio: 'Portfolio',
     // experiences options
-    academic: 'Academic',
-    job: 'Job',
+    educational: 'Educational',
+    professional: 'Professional',
     // Languages
     pt: 'Portuguese',
     en: 'English',
