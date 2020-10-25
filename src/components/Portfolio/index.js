@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
 import LanguageContext from '../../contexts/language';
+import { useQueryPortfolio } from '../../hooks/portfolio';
 import locale from '../../locale';
 import Image from '../Image';
 
 const Portfolio = () => {
+  const info = useQueryPortfolio();
+
   const [checked, setChecked] = useState('WEB');
   const { language } = useContext(LanguageContext);
   const options = ['WEB', 'MOBILE', 'FULLSTACK'];
@@ -34,50 +37,58 @@ const Portfolio = () => {
           ))}
         </ul>
       </div>
-      {/* <Image /> */}
 
-      <div className="pt-10 md:grid md:grid-cols-3 gap-1">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((item, key) => (
-          <div
-            key={key}
-            className="m-5 max-w-sm rounded overflow-hidden shadow-lg">
-            <img
-              className="w-full h-48 object-cover"
-              src="https://source.unsplash.com/random"
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="flex items-center justify-between">
-                <span className="font-bold text-xl mb-2">Título</span>
-                <a
-                  href="http://github.com/alissonmgsantos"
-                  target="_blank"
-                  rel="noreferrer">
-                  <Image src="github" />
-                </a>
+      <div className="pt-5 md:grid md:grid-cols-3 gap-1">
+        {info.map((item, key) => {
+          if (item.type.toLocaleUpperCase() === checked.toLocaleUpperCase()) {
+            return (
+              <div
+                key={key}
+                className="m-5 max-w-sm rounded overflow-hidden shadow-lg">
+                <img
+                  className="w-full h-48 object-cover"
+                  src={item.image}
+                  alt={item.title}
+                />
+                <div className="px-6 py-4">
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="font-bold text-xl">{item.title}</span>
+                    <div className="flex flex-row">
+                      <a
+                        href={item.preview}
+                        target="_blank"
+                        rel="noreferrer"
+                        title="Preview">
+                        <Image src="preview" width="28" height="28" />
+                      </a>
+                      <a
+                        href={item.repository}
+                        target="_blank"
+                        rel="noreferrer"
+                        title="Github">
+                        <Image src="github" width="28" height="28" />
+                      </a>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-base">
+                    {language === 'pt'
+                      ? item.descriptionPT
+                      : item.descriptionEN}
+                  </p>
+                </div>
+                <div className="pt-2 pb-2 text-center">
+                  {item.tags.map((tag, key) => (
+                    <span
+                      key={key}
+                      className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-1 mb-1">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div className="px-6 pt-4 pb-2">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #php
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #node
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #js
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #react
-              </span>
-            </div>
-          </div>
-        ))}
+            );
+          }
+        })}
       </div>
     </section>
   );

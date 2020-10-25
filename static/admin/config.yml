@@ -54,3 +54,20 @@ collections:
       - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
       - {label: "Period", name: "period", widget: "string"}
       - {label: "Activities", name: "activity", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
+##################
+# PORTFOLIO
+#################
+  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
+    label: "Portfolio" # Used in the UI
+    folder: "posts/portfolio" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["web", "mobile", "fullstack"]}
+      - {label: "URL Image", name: "image", widget: "string"}
+      - {label: "URL Preview", name: "preview", widget: "string"}
+      - {label: "Repository", name: "repository", widget: "string"}
+      - {label: "Description Portuguese", name: "descriptionPT", widget: "text"}
+      - {label: "Description English", name: "descriptionEN", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
