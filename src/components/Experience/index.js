@@ -38,7 +38,9 @@ const Experience = () => {
       <div className="flex items-center justify-center">
         <ul className="md:grid md:grid-cols-2 md:gap-x-10 md:gap-y-10">
           {info[language].map((item, key) => {
-            if (item.type === checked.toLocaleUpperCase()) {
+            if (
+              item['type'].toLocaleUpperCase() === checked.toLocaleUpperCase()
+            ) {
               return (
                 <li key={key} className="p-4">
                   <div className="flex">
