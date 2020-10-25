@@ -1,16 +1,18 @@
+import locale from '../locale';
+
 const routes = [
   {
     pt: [
-      { name: 'Inicio', path: '#home' },
-      { name: 'Sobre', path: '#about' },
-      { name: 'Experiência', path: '#experience' },
-      { name: 'Portfolio', path: '#portfolio' },
+      { name: locale['pt'].home, path: '#home' },
+      { name: locale['pt'].about, path: '#about' },
+      { name: locale['pt'].experiences, path: '#experience' },
+      { name: locale['pt'].portfolio, path: '#portfolio' },
     ],
     en: [
-      { name: 'Home', path: '#home' },
-      { name: 'About', path: '#about' },
-      { name: 'Experience', path: '#experience' },
-      { name: 'Portfolio', path: '#portfolio' },
+      { name: locale['en'].home, path: '#home' },
+      { name: locale['en'].about, path: '#about' },
+      { name: locale['en'].experiences, path: '#experience' },
+      { name: locale['en'].portfolio, path: '#portfolio' },
     ],
   },
 ];
