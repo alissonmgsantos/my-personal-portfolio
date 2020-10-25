@@ -20,7 +20,7 @@ const Portfolio = () => {
         <ul className="flex item-center justify-center m-10">
           {options.map((item, key) => (
             <li className="mr-3" key={key}>
-              <a
+              <span
                 className={`${
                   checked === item
                     ? 'bg-blue-500 text-white'
@@ -28,7 +28,7 @@ const Portfolio = () => {
                 } inline-block border  rounded py-1 px-3 cursor-pointer`}
                 onClick={() => setChecked(prevState => item)}>
                 {item}
-              </a>
+              </span>
             </li>
           ))}
         </ul>

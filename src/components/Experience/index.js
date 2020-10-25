@@ -18,18 +18,18 @@ const Experience = () => {
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
-        <ul className="flex item-center justify-center m-10">
+        <ul className="flex item-center justify-center m-10" role="list">
           {options.map((item, key) => (
-            <li className="mr-3" key={key}>
-              <a
+            <li key={key} className="mr-3" role="listitem">
+              <span
+                onClick={() => setChecked(prevState => item)}
                 className={`${
                   checked === item
                     ? 'bg-blue-500 text-white'
                     : 'text-blue-500 hover:border-gray-200 text-blue-500 hover:bg-gray-200'
-                } inline-block border  rounded py-1 px-3 cursor-pointer`}
-                onClick={() => setChecked(prevState => item)}>
+                } inline-block border  rounded py-1 px-3 cursor-pointer`}>
                 {locale[language][item.toLowerCase()].toLocaleUpperCase()}
-              </a>
+              </span>
             </li>
           ))}
         </ul>
