@@ -5,6 +5,7 @@ skills:
   - angular
   - bootstrap
   - css3
+  - database
   - gatsby
   - git
   - github
@@ -13,6 +14,7 @@ skills:
   - html5
   - javascript
   - material
+  - mongodb
   - nodejs
   - php
   - react
