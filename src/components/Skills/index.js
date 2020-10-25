@@ -15,17 +15,15 @@ const About = () => {
           {locale[language].skills}
         </h1>
       </div>
-      <div id="skills">
-        <div className="flex flex-wrap">
-          {info[language].data.skills.map((item, key) => (
-            <div
-              key={key}
-              className="flex md:w-1/5 xs:w-1/3 pt-10 justify-center"
-              title={item.toUpperCase()}>
-              <Image key={key} src={item} width="80" height="80" />
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-wrap">
+        {info[language].data.skills.map((item, key) => (
+          <div
+            key={key}
+            className="flex md:w-1/5 pt-10 justify-center"
+            title={item.toUpperCase()}>
+            <Image key={key} src={item} width="70" height="70" />
+          </div>
+        ))}
       </div>
     </section>
   );
