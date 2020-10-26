@@ -1,7 +1,9 @@
 backend:
   name: github
   repo: alissonmgsantos/alissonmgsantos.github.io
-  branch: gh-pages
+  branch: develop
+  site_domain: alissonmgsantos.netlify.com
+
 
   # This line should *not* be indented
 publish_mode: editorial_workflow
