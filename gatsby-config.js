@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/my_portfolio',
   siteMetadata: {
     title: `My personal Portfolio`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
