@@ -6,18 +6,24 @@ import '../../styles/global.css';
 import Header from '../Header';
 
 const Layout = ({ children }) => {
+  const isSSR = typeof window === 'undefined';
+
   const [scrollPosition, setSrollPosition] = useState(0);
 
   return (
-    <Suspense fallback={<div />}>
-      <Header scrollPosition={scrollPosition} />
-      <PerfectScrollbar
-        onScrollY={container =>
-          setSrollPosition(prevState => container.scrollTop)
-        }>
-        <main className="h-screen">{children}</main>
-      </PerfectScrollbar>
-    </Suspense>
+    <>
+      {!isSSR && (
+        <Suspense fallback={'loading'}>
+          <Header scrollPosition={scrollPosition} />
+          <PerfectScrollbar
+            onScrollY={container =>
+              setSrollPosition(prevState => container.scrollTop)
+            }>
+            <main className="h-screen">{children}</main>
+          </PerfectScrollbar>
+        </Suspense>
+      )}
+    </>
   );
 };
 
