@@ -2,7 +2,7 @@ backend:
   name: github
   repo: alissonmgsantos/my_portfolio
   branch: develop
-  site_domain: https://alissonmgsantos.github.io
+  site_domain: alissonmgsantos.github.io
 
 
   # This line should *not* be indented
