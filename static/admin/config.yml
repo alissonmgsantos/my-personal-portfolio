@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: alissonmgsantos/my_portfolio
-  branch: develop
+  repo: alissonmgsantos/alissonmgsantos.github.io
+  branch: gh-pages
 
   # This line should *not* be indented
 publish_mode: editorial_workflow
