@@ -20,6 +20,7 @@ skills:
   - react
   - sass
   - typescript
+  - tailwindcss
   - vuejs
 bio: >-
   Coming soon
