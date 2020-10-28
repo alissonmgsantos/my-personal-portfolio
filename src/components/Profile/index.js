@@ -26,7 +26,7 @@ export const Profile = () => {
     <div className="flex flex-col justify-center items-center relative z-10 h-full">
       <img
         className="h-48 w-48 rounded-full border-white border-8 m-6"
-        src={info[language].data.photo}
+        src={info[language].data.image}
         alt="User profile."
       />
       <h1 className="font-semibold text-white">

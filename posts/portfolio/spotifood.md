@@ -1,7 +1,7 @@
 ---
 title: SPOTIFOOD
 type: web
-image: /assets/images/bart.jpg
+image: /assets/images/barra.jpg
 preview: https://spotifood-teste.vercel.app/
 repository: https://github.com/alissonmgsantos/spotifood
 descriptionPT: PT ipsum dolor sit amet, consectetur adipisicing elit.

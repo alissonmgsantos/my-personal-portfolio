@@ -8,7 +8,7 @@ export const useQueryHome = () => {
         ) {
           data: frontmatter {
             username
-            photo
+            image
             skills
           }
         }
@@ -17,7 +17,7 @@ export const useQueryHome = () => {
         ) {
           data: frontmatter {
             username
-            photo
+            image
             skills
           }
         }
