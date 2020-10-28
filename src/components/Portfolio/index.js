@@ -52,7 +52,7 @@ const Portfolio = () => {
                 src={item.image}
                 alt={item.title}
               />
-              <div className="px-6 py-4">
+              <div className="p-4">
                 <div className="flex items-center justify-between mb-5">
                   <span className="font-bold text-xl">{item.title}</span>
                   <div className="flex flex-row">

@@ -36,14 +36,16 @@ const Experience = () => {
         </ul>
       </div>
 
-      <div className="flex items-center justify-center">
-        <div className="grid grid-flow-row xs:grid-flow-col md:grid-cols-2 xs:grid-cols-1 md:grid-rows-2 xs:grid-rows-1 md:gap-x-32 gap-10">
+      <div>
+        <div className="grid grid-flow-row xs:grid-flow-col md:grid-cols-3 xs:grid-cols-1 gap-20">
           {info[language].map((item, key) => {
             if (
               item['type'].toLocaleUpperCase() === checked.toLocaleUpperCase()
             ) {
               return (
-                <div key={key} className="flex items-center justify-center">
+                <div
+                  key={key}
+                  className="flex items-center justify-center margin-auto">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                       <Image
