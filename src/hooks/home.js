@@ -10,6 +10,8 @@ export const useQueryHome = () => {
             username
             image
             skills
+            linkedin
+            github
           }
         }
         pt: markdownRemark(
@@ -19,6 +21,8 @@ export const useQueryHome = () => {
             username
             image
             skills
+            linkedin
+            github
           }
         }
       }

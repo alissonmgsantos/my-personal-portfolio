@@ -26,6 +26,8 @@ collections:
       - {label: "Username", name: "username", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Skills", name: "skills", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
+      - {label: "Linkedin", name: "linkedin", widget: "string"}
+      - {label: "Github", name: "github", widget: "string"}
 ##################
 # ABOUT
 #################

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import LanguageContext from '../../contexts/language';
 import { useQueryHome } from '../../hooks/home';
-
+import Image from '../Image';
 export const Profile = () => {
   const info = useQueryHome();
   const { language } = useContext(LanguageContext);
@@ -33,6 +33,14 @@ export const Profile = () => {
         {info[language].data.username}
       </h1>
       <h3 className="cursor">{skills}</h3>
+      <div className="flex flex-row mt-2">
+        <a href={info[language].data.linkedin} target="_blank" rel="noreferrer">
+          <Image src="linkedin" alt="linkedin" width="40" height="40" />
+        </a>
+        <a href={info[language].data.github} target="_blank" rel="noreferrer">
+          <Image src="github" alt="github" width="40" height="40" />
+        </a>
+      </div>
     </div>
   );
 };
