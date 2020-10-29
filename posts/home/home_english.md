@@ -7,4 +7,6 @@ skills:
   - Front-end Developer
   - Back-end Developer
   - Mobile Developer
+linkedin: https://www.linkedin.com/in/alissonmgsantos
+github: https://github.com/alissonmgsantos
 ---
