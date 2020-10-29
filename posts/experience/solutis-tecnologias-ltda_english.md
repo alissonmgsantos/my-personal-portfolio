@@ -3,7 +3,7 @@ title: Solutis Tecnologias Ltda.
 subTitle: Analista Desenvolvedor
 type: professional
 language: english
-period: Agosto de 2020 - Present
+period: March 2015 to August 2020
 position: "1"
 activity:
   - PHP
