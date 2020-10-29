@@ -8,6 +8,7 @@ export const useQueryExperience = () => {
             fileAbsolutePath: { regex: "/(posts/experience)/" }
             frontmatter: { language: { eq: "english" } }
           }
+          sort: { order: DESC, fields: frontmatter___position }
         ) {
           nodes {
             frontmatter {
@@ -24,6 +25,7 @@ export const useQueryExperience = () => {
             fileAbsolutePath: { regex: "/(posts/experience)/" }
             frontmatter: { language: { eq: "portuguese" } }
           }
+          sort: { order: DESC, fields: frontmatter___position }
         ) {
           nodes {
             frontmatter {
