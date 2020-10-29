@@ -72,14 +72,15 @@ const Portfolio = () => {
                     </a>
                   </div>
                 </div>
+                <div></div>
                 <p className="text-gray-700 text-base">
                   {language === 'pt' ? item.descriptionPT : item.descriptionEN}
                 </p>
               </div>
               <div className="pt-2 pb-2 text-center">
-                {item.tags.map((tag, key) => (
+                {item.tags.map((tag, index) => (
                   <span
-                    key={key}
+                    key={index}
                     className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-1 mb-1">
                     {tag}
                   </span>

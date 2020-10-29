@@ -39,14 +39,15 @@ const Experience = () => {
       <div className="grid grid-flow-row xs:grid-flow-col xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {info[language].map((item, key) => {
           if (
-            item['type'].toLocaleUpperCase() === checked.toLocaleUpperCase()
+            `${item['type']}`.toLocaleUpperCase() ===
+            checked.toLocaleUpperCase()
           ) {
             return (
               <div
                 key={key}
                 className="flex items-center justify-center margin-auto">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
                     <Image
                       src={item.type.toLowerCase()}
                       width="24"

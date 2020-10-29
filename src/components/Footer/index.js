@@ -6,7 +6,7 @@ import Image from '../Image';
 const Footer = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <footer className="pt-10 pb-10 pl-20 pr-20 flex items-center justify-between bg-gray-200">
+    <footer className="md:p-10  flex flex-col items-center text-center lg:justify-between bg-gray-200">
       <h6 className="italic">
         {`Copyright © ${new Date().getFullYear()} ${locale[language].rights} ®`}
       </h6>
