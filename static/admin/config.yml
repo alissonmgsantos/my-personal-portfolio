@@ -53,6 +53,7 @@ collections:
       - {label: "Type", name: "type", widget: "select", options: ["educational", "professional"]}
       - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
       - {label: "Period", name: "period", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
       - {label: "Activities", name: "activity", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
 ##################
 # PORTFOLIO
