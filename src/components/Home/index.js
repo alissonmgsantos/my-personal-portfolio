@@ -17,7 +17,7 @@ const Home = () => {
       info[language].data.skills[loop % info[language].data.skills.length]
         .split('')
         .map((value, i) =>
-          setTimeout(() => setSkills(prevState => (prevState += value)), 75 * i)
+          setTimeout(() => setSkills(prevState => prevState + value), 75 * i)
         );
     }, 2000);
     return () => clearInterval(interval);
