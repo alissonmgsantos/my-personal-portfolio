@@ -13,6 +13,10 @@ h1 { @apply text-4xl; }
 h2 { @apply text-2xl; }
 h3 { @apply text-xl; }
 
+button {
+  outline: none !important;
+}
+
 section {
   background-color: #edf2f7;
   min-height: 100%;

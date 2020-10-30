@@ -22,15 +22,15 @@ const Experience = () => {
         <ul className="flex item-center justify-center m-10" role="list">
           {options.map((item, key) => (
             <li key={key} className="mr-3" role="listitem">
-              <span
+              <button
                 onClick={() => setChecked(prevState => item)}
                 className={`${
                   checked === item
                     ? 'bg-blue-500 text-white'
                     : 'text-blue-500 hover:border-gray-200 text-blue-500 hover:bg-gray-200'
-                } inline-block border  rounded py-1 px-3 cursor-pointer`}>
-                {locale[language][item.toLowerCase()].toLocaleUpperCase()}
-              </span>
+                } border rounded py-1 px-3 uppercase`}>
+                {locale[language][item.toLowerCase()]}
+              </button>
             </li>
           ))}
         </ul>
