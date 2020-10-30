@@ -21,24 +21,25 @@ const Portfolio = () => {
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
-        <ul className="flex item-center justify-center m-10" role="listbox">
+        <ul
+          className="flex item-center justify-center m-10"
+          role="presentation">
           {options.map((item, key) => (
-            <li
-              className={`${
-                checked === item
-                  ? 'bg-blue-500 text-white'
-                  : 'text-blue-500 hover:border-gray-200 text-blue-500 hover:bg-gray-200'
-              } inline-block border rounded py-1 px-3 cursor-pointer mr-3 uppercase`}
-              onClick={() => setChecked(prevState => item)}
-              onKeyPress={() => setChecked(prevState => item)}
-              key={key}
-              tabIndex={key}
-              role="button">
-              {item}
+            <li key={key} className="mr-3">
+              <button
+                onClick={() => setChecked(prevState => item)}
+                className={`${
+                  checked === item
+                    ? 'bg-blue-500 text-white'
+                    : 'text-blue-500 hover:border-gray-200 text-blue-500 hover:bg-gray-200'
+                } border rounded py-1 px-3 uppercase`}>
+                {item}
+              </button>
             </li>
           ))}
         </ul>
       </div>
+
       <div className="grid grid-flow-row xs:grid-flow-col xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:ml-24 lg:mr-24">
         {info
           .filter(value => value.type === checked)

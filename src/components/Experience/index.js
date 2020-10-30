@@ -19,9 +19,11 @@ const Experience = () => {
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
-        <ul className="flex item-center justify-center m-10" role="list">
+        <ul
+          className="flex item-center justify-center m-10"
+          role="presentation">
           {options.map((item, key) => (
-            <li key={key} className="mr-3" role="listitem">
+            <li key={key} className="mr-3">
               <button
                 onClick={() => setChecked(prevState => item)}
                 className={`${
@@ -37,43 +39,38 @@ const Experience = () => {
       </div>
 
       <div className="grid grid-flow-row xs:grid-flow-col xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {info[language].map((item, key) => {
-          if (
-            `${item['type']}`.toLocaleUpperCase() ===
-            checked.toLocaleUpperCase()
-          ) {
-            return (
-              <div
-                key={key}
-                className="flex items-center justify-center margin-auto">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                    <Image
-                      src={item.type.toLowerCase()}
-                      width="24"
-                      height="24"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col ml-4">
-                  <h4 className="text-lg text-gray-900">{item.title}</h4>
-                  <p className="text-base text-gray-500">{item.subTitle}</p>
-                  <small className="text-xs text-gray-500">{item.period}</small>
-                  <div className="flex-row">
-                    {item.activity[0] !== '' &&
-                      item.activity.map((value, key) => (
-                        <span
-                          key={key}
-                          className="rounded-full bg-gray-300 uppercase px-2 py-1 text-xs font-bold mr-3">
-                          {value}
-                        </span>
-                      ))}
-                  </div>
+        {info[language]
+          .filter(
+            value =>
+              `${value['type']}`.toLocaleUpperCase() ===
+              checked.toLocaleUpperCase()
+          )
+          .map((item, key) => (
+            <div
+              key={key}
+              className="flex items-center justify-center margin-auto">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                  <Image src={item.type.toLowerCase()} width="24" height="24" />
                 </div>
               </div>
-            );
-          }
-        })}
+              <div className="flex flex-col ml-4">
+                <h4 className="text-lg text-gray-900">{item.title}</h4>
+                <p className="text-base text-gray-500">{item.subTitle}</p>
+                <small className="text-xs text-gray-500">{item.period}</small>
+                <div className="flex-row">
+                  {item.activity[0] !== '' &&
+                    item.activity.map((value, key) => (
+                      <span
+                        key={key}
+                        className="rounded-full bg-gray-300 uppercase px-2 py-1 text-xs font-bold mr-3">
+                        {value}
+                      </span>
+                    ))}
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
     </section>
   );
