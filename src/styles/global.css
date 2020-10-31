@@ -96,10 +96,10 @@ section {
 /*--------- Skills area ends --------------*/
 
 
-
+/*--------- Card portfolio start --------------*/
 .card {
   border-radius: 15px;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -155,3 +155,4 @@ section {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+/*--------- Card portfolio ends --------------*/
