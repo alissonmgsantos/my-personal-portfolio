@@ -12,7 +12,7 @@ const About = () => {
     <section className="skills-area flex flex-col items-center justify-center p-2">
       <div className="text-center">
         <h1 className="mt-2 font-extrabold text-white">
-          {locale[language].hardSkills}
+          {locale[language].skills}
         </h1>
       </div>
       <div className="flex flex-wrap">
