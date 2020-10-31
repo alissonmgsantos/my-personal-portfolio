@@ -45,7 +45,7 @@ const Home = () => {
             <Image src="linkedin" alt="linkedin" width="40" height="40" />
           </a>
           <a href={info[language].data.github} target="_blank" rel="noreferrer">
-            <Image src="github" alt="github" width="40" height="40" />
+            <Image src="githubWhite" alt="github" width="40" height="40" />
           </a>
         </div>
       </div>

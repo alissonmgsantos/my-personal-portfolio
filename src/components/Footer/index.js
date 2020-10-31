@@ -8,7 +8,7 @@ const Footer = () => {
   const info = useQueryHome();
   const { language } = useContext(LanguageContext);
   return (
-    <footer className="md:p-10 flex flex-col items-center text-center lg:justify-between bg-gray-200 text-gray-600">
+    <footer className="p-10 flex flex-col items-center text-center lg:justify-between bg-gray-200 text-gray-600">
       <h6 className="italic">
         {`Copyright © ${new Date().getFullYear()} ${locale[language].rights} ®`}
       </h6>

@@ -13,6 +13,5 @@ descriptionEN: EN ipsum dolor sit amet, consectetur adipisicing elit.
 tags:
   - API Spotify
   - React
-  - React-Hooks
   - Redux
 ---
