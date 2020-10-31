@@ -8,7 +8,7 @@ const Experience = () => {
   const info = useQueryExperience();
   const { language } = useContext(LanguageContext);
   const [checked, setChecked] = useState('PROFESSIONAL');
-  const options = ['EDUCATIONAL', 'PROFESSIONAL'];
+  const options = ['PROFESSIONAL', 'EDUCATIONAL'];
   return (
     <section id="experience">
       <div className="text-center">

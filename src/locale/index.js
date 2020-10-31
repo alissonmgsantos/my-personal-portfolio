@@ -3,7 +3,8 @@ export default {
     // Routes
     home: 'Início',
     about: 'Sobre',
-    skills: 'Habilidades',
+    softSkills: 'Habilidades pessoais',
+    hardSkills: 'Habilidades técnicas',
     experiences: 'Experiências',
     portfolio: 'Portfólio',
     // experiences options
@@ -21,6 +22,8 @@ export default {
     home: 'Home',
     about: 'About',
     skills: 'Skills',
+    softSkills: 'Soft Skills',
+    hardSkills: 'Hard Skills',
     experiences: 'Experiences',
     portfolio: 'Portfolio',
     // experiences options
