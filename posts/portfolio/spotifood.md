@@ -11,6 +11,5 @@ descriptionEN: "Challenge: Create a web application called Spotifood used to
 tags:
   - API Spotify
   - React
-  - React-Hooks
   - Redux
 ---

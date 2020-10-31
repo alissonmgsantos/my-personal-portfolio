@@ -3,10 +3,8 @@ import LanguageContext from '../../contexts/language';
 import { useQueryPortfolio } from '../../hooks/portfolio';
 import locale from '../../locale';
 import Image from '../Image';
-
 const Portfolio = () => {
   const info = useQueryPortfolio();
-
   const [checked, setChecked] = useState('web');
   const { language } = useContext(LanguageContext);
   const options = ['web', 'mobile', 'fullstack'];
@@ -44,48 +42,39 @@ const Portfolio = () => {
         {info
           .filter(value => value.type === checked)
           .map((item, key) => (
-            <div
-              key={key}
-              className="overflow-hidden max-w-xs m-auto rounded shadow"
-              role="list">
-              <img
-                className="w-full h-48 object-center"
-                src={item.image}
-                alt={item.title}
-              />
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-bold text-xl">{item.title}</span>
-                  <div className="flex flex-row">
-                    <a
-                      href={item.preview}
-                      target="_blank"
-                      rel="noreferrer"
-                      title="Preview">
-                      <Image src="preview" width="28" height="28" />
-                    </a>
-                    <a
-                      href={item.repository}
-                      target="_blank"
-                      rel="noreferrer"
-                      title="Github">
-                      <Image src="github" width="28" height="28" />
-                    </a>
-                  </div>
-                </div>
-                <div></div>
-                <p className="text-gray-700 text-base">
+            <div key={key} className="card max-w-xs m-auto shadow">
+              <img className="image" src={item.image} alt={item.title} />
+              <div className="info">
+                <h2 className="font-extrabold">{item.title}</h2>
+                <p className="mb-5">
                   {language === 'pt' ? item.descriptionPT : item.descriptionEN}
                 </p>
-              </div>
-              <div className="pt-2 pb-2 text-center">
-                {item.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-1 mb-1">
-                    {tag}
-                  </span>
-                ))}
+                <div className="text-center">
+                  {item.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-3">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-between">
+                  <a
+                    href={item.preview}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Preview">
+                    <Image src="preview" width="28" height="28" />
+                  </a>
+
+                  <a
+                    href={item.repository}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Github">
+                    <Image src="githubWhite" width="28" height="28" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
