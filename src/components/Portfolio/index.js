@@ -38,11 +38,11 @@ const Portfolio = () => {
         </ul>
       </div>
 
-      <div className="grid grid-flow-row xs:grid-flow-col xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:ml-24 lg:mr-24">
+      <div className="grid grid-flow-cols xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-2 gap-y-10">
         {info
           .filter(value => value.type === checked)
           .map((item, key) => (
-            <div key={key} className="card max-w-xs m-auto shadow">
+            <div key={key} className="card max-w-xs mx-auto shadow">
               <img className="image" src={item.image} alt={item.title} />
               <div className="info">
                 <h2 className="font-extrabold">{item.title}</h2>
