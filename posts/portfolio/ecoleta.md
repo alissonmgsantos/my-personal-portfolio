@@ -2,7 +2,7 @@
 title: Ecoleta
 type: web
 image: /assets/images/ecoleta.png
-preview: " "
+preview: https://github.com/alissonmgsantos/Ecoleta
 repository: https://github.com/alissonmgsantos/Ecoleta
 descriptionPT: O projeto tem como objetivo solucionar o problema do descarte de
   lixo inadequado, conectando empresas, entidades que coletam resíduos orgânicos
