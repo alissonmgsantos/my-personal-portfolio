@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Alisson Matos`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Um desenvolvedor apaixonado por desenvolver soluções de forma criativa e que gerem impacto positivo no cotidiano das pessoas.`,
     author: `alissonmgsantos`,
   },
   plugins: [
@@ -23,8 +23,6 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },

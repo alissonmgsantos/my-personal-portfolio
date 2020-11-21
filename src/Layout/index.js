@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Suspense, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import '../../styles/global.css';
-import Header from '../Header';
+import Header from '../components/Header';
+import '../styles/global.css';
 
 const Layout = ({ children }) => {
   const isSSR = typeof window === 'undefined';

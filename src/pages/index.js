@@ -3,10 +3,10 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Footer from '../components/Footer';
 import Home from '../components/Home';
-import Layout from '../components/Layout';
 import Portfolio from '../components/Portfolio';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import Skills from '../components/Skills';
+import Layout from '../Layout';
 
 const IndexPage = () => (
   <Layout>
