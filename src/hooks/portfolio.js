@@ -14,8 +14,6 @@ export const useQueryPortfolio = () => {
                 image
                 preview
                 repository
-                descriptionPT
-                descriptionEN
                 tags
               }
             }

@@ -39,39 +39,43 @@ const Portfolio = () => {
         {info
           .filter(value => value.type === checked)
           .map((item, key) => (
-            <div key={key} className="card max-w-xs mx-auto shadow">
-              <img className="image" src={item.image} alt={item.title} />
-              <div className="info">
-                <h2 className="font-extrabold">{item.title}</h2>
-                <p className="mb-5">
-                  {language === 'pt' ? item.descriptionPT : item.descriptionEN}
-                </p>
-                <div className="text-center">
+            <div class=" rounded bg-white rounded-t-lg overflow-hidden shadow max-w-xs my-3">
+              <img
+                src={item.image}
+                className="card-portfolio-image"
+                alt={item.title}
+              />
+              <div class="text-center px-3 p-2">
+                <h2 class="text-black text-lg font-extrabold">{item.title}</h2>
+                <div className="text-center m-1">
                   {item.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="inline-block bg-gray-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-3">
+                      className="inline-block bg-gray-200 rounded-full px-1 py-1 text-xs font-semibold text-gray-700 mr-3">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between">
+              </div>
+              <div class="flex justify-center pb-3">
+                {item.preview && (
                   <a
                     href={item.preview}
                     target="_blank"
                     rel="noreferrer"
                     title="Preview">
-                    <Image src="preview" width="28" height="28" />
+                    <Image src="preview" width="24" height="24" />
                   </a>
-
+                )}
+                {item.repository && (
                   <a
                     href={item.repository}
                     target="_blank"
                     rel="noreferrer"
                     title="Github">
-                    <Image src="githubWhite" width="28" height="28" />
+                    <Image src="github" width="24" height="24" />
                   </a>
-                </div>
+                )}
               </div>
             </div>
           ))}

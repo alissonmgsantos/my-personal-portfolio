@@ -3,74 +3,119 @@ backend:
   repo: alissonmgsantos/my_portfolio
   branch: master
 
+
   # This line should *not* be indented
 publish_mode: editorial_workflow
 
 # This line should *not* be indented
-media_folder: "static/assets/images" # Media files will be stored in the repo under images/uploads
-public_folder: "/assets/images" # The src attribute for uploaded media will begin with /images/uploads
-
+media_folder: 'static/assets/images' # Media files will be stored in the repo under images/uploads
+public_folder: '/assets/images' # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-##################
-# Home
-#################
-  - name: "home" # Used in routes, e.g., /admin/collections/blog
-    label: "Home" # Used in the UI
-    folder: "posts/home" # The path to the folder where the documents are stored
+  ##################
+  # Home
+  #################
+  - name: 'home' # Used in routes, e.g., /admin/collections/blog
+    label: 'Home' # Used in the UI
+    folder: 'posts/home' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{page}}_{{language}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{page}}_{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Page", name: "page", widget: "string"}
-      - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
-      - {label: "Username", name: "username", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Skills", name: "skills", widget: "list", min: 1, max: 3, default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
-      - {label: "Linkedin", name: "linkedin", widget: "string"}
-      - {label: "Github", name: "github", widget: "string"}
-##################
-# ABOUT
-#################
-  - name: "about" # Used in routes, e.g., /admin/collections/blog
-    label: "About" # Used in the UI
-    folder: "posts/about" # The path to the folder where the documents are stored
+      - { label: 'Page', name: 'page', widget: 'string' }
+      - {
+          label: 'Language',
+          name: 'language',
+          widget: 'select',
+          options: ['portuguese', 'english'],
+        }
+      - { label: 'Username', name: 'username', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - {
+          label: 'Skills',
+          name: 'skills',
+          widget: 'list',
+          min: 1,
+          max: 3,
+          default: ['Exemplo 1', 'Exemplo 2', 'Exemplo 3'],
+        }
+      - { label: 'Linkedin', name: 'linkedin', widget: 'string' }
+      - { label: 'Github', name: 'github', widget: 'string' }
+  ##################
+  # ABOUT
+  #################
+  - name: 'about' # Used in routes, e.g., /admin/collections/blog
+    label: 'About' # Used in the UI
+    folder: 'posts/about' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{page}}_{{language}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{page}}_{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Page", name: "page", widget: "string"}
-      - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
-      - {label: "Skills", name: "skills", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
-      - {label: "Bio", name: "bio", widget: "text"}
-##################
-# EXPERIENCE
-#################
-  - name: "experience" # Used in routes, e.g., /admin/collections/blog
-    label: "Experience" # Used in the UI
-    folder: "posts/experience" # The path to the folder where the documents are stored
+      - { label: 'Page', name: 'page', widget: 'string' }
+      - {
+          label: 'Language',
+          name: 'language',
+          widget: 'select',
+          options: ['portuguese', 'english'],
+        }
+      - {
+          label: 'Skills',
+          name: 'skills',
+          widget: 'list',
+          default: ['Exemplo 1', 'Exemplo 2', 'Exemplo 3'],
+        }
+      - { label: 'Bio', name: 'bio', widget: 'text' }
+  ##################
+  # EXPERIENCE
+  #################
+  - name: 'experience' # Used in routes, e.g., /admin/collections/blog
+    label: 'Experience' # Used in the UI
+    folder: 'posts/experience' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{title}}_{{language}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{title}}_{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "subtitle", name: "subTitle", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["educational", "professional"]}
-      - {label: "Language", name: "language", widget: "select", options: ["portuguese", "english"]}
-      - {label: "Period", name: "period", widget: "string"}
-      - {label: "Position", name: "position", widget: "string"}
-      - {label: "Activities", name: "activity", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
-##################
-# PORTFOLIO
-#################
-  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
-    label: "Portfolio" # Used in the UI
-    folder: "posts/portfolio" # The path to the folder where the documents are stored
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'subtitle', name: 'subTitle', widget: 'string' }
+      - {
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['educational', 'professional'],
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          widget: 'select',
+          options: ['portuguese', 'english'],
+        }
+      - { label: 'Period', name: 'period', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string' }
+      - {
+          label: 'Activities',
+          name: 'activity',
+          widget: 'list',
+          default: ['Exemplo 1', 'Exemplo 2', 'Exemplo 3'],
+        }
+  ##################
+  # PORTFOLIO
+  #################
+  - name: 'portfolio' # Used in routes, e.g., /admin/collections/blog
+    label: 'Portfolio' # Used in the UI
+    folder: 'posts/portfolio' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["web", "mobile", "fullstack"]}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "URL Preview", name: "preview", widget: "string"}
-      - {label: "Repository", name: "repository", widget: "string"}
-      - {label: "Description Portuguese", name: "descriptionPT", widget: "text"}
-      - {label: "Description English", name: "descriptionEN", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list", default: ["Exemplo 1", "Exemplo 2", "Exemplo 3"]}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['web', 'mobile', 'fullstack'],
+        }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'URL Preview', name: 'preview', widget: 'string' }
+      - { label: 'Repository', name: 'repository', widget: 'string' }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          default: ['Exemplo 1', 'Exemplo 2', 'Exemplo 3'],
+        }
