@@ -2,7 +2,7 @@
 page: home
 language: portuguese
 username: Alisson Matos
-image: /assets/images/barra.jpg
+image: /assets/images/alissonmgsantos.jpeg
 skills:
   - Desenvolvedor Front-end
   - Desenvolvedor Back-end
