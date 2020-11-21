@@ -34,7 +34,8 @@ const Header = ({ scrollPosition }) => {
               <a
                 key={key}
                 href={route.path}
-                className="block p-3 text-sm font-semibold lg:inline-block hover:text-blue-500 uppercase">
+                className="block p-3 text-sm font-semibold lg:inline-block hover:text-blue-500 uppercase"
+                onClick={() => setIsOpen(prevState => !prevState)}>
                 {route.name}
               </a>
             ))}
@@ -78,7 +79,7 @@ const Header = ({ scrollPosition }) => {
             onClick={() => setIsOpen(prevState => !prevState)}
             className={`${
               scrollPosition <= 30 ? 'text-white' : 'text-black'
-            }flex items-center px-3 py-2 border rounded`}>
+            } flex items-center px-3 py-2 border rounded`}>
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
