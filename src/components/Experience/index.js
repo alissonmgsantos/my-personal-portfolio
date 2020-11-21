@@ -15,12 +15,9 @@ const Experience = () => {
         <h1 className="mt-2 font-extrabold text-gray-900">
           {locale[language].experiences}
         </h1>
-        <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-          voluptatum cupiditate veritatis in accusamus quisquam.
-        </p>
+
         <ul
-          className="flex item-center justify-center m-10"
+          className="flex item-center justify-center m-5 mb-10"
           role="presentation">
           {options.map((item, key) => (
             <li key={key} className="mr-3">

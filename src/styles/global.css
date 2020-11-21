@@ -26,6 +26,8 @@ section {
   background-color: #edf2f7;
   min-height: 100%;
   padding: 5rem 1rem 0;
+  border-bottom: 0.2rem solid #dce1e67a;
+  border-bottom-style: dashed;
 }
 
 /*--------- Scroll start --------------*/
@@ -70,6 +72,8 @@ section {
   background-size: cover;
   position: relative;
   height: 100%;
+  border-bottom: 0 !important;
+  border-bottom-style: none !important;
 }
 
 .banner-home::before {
@@ -94,6 +98,8 @@ section {
   z-index: 1;
   width: 100%;
   height: auto;
+  border-bottom: 0 !important;
+  border-bottom-style: none !important;
 }
 .skills-area::before {
   position: absolute;
