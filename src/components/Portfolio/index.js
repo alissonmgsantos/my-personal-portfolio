@@ -39,14 +39,16 @@ const Portfolio = () => {
         {info
           .filter(value => value.type === checked)
           .map((item, key) => (
-            <div class=" rounded bg-white rounded-t-lg overflow-hidden shadow max-w-xs my-3">
+            <div className="rounded bg-white rounded-t-lg overflow-hidden shadow max-w-xs my-3">
               <img
                 src={item.image}
                 className="card-portfolio-image"
                 alt={item.title}
               />
-              <div class="text-center px-3 p-2">
-                <h2 class="text-black text-lg font-extrabold">{item.title}</h2>
+              <div className="text-center px-3 p-2">
+                <h2 className="text-black text-lg font-extrabold">
+                  {item.title}
+                </h2>
                 <div className="text-center m-1">
                   {item.tags.map((tag, index) => (
                     <span
@@ -57,7 +59,7 @@ const Portfolio = () => {
                   ))}
                 </div>
               </div>
-              <div class="flex justify-center pb-3">
+              <div className="flex justify-center pb-3">
                 {item.preview && (
                   <a
                     href={item.preview}

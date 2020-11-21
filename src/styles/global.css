@@ -31,8 +31,9 @@ section {
 }
 
 /*--------- Scroll start --------------*/
-
+.ps__rail-x,
 .ps__rail-y {
+  z-index: 100;
   background-color: transparent !important;
 }
 /*--------- Scroll end --------------*/
