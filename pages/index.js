@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import GlobalStyles from '../theme/global';
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         <title>Alisson matos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <GlobalStyles />
     </div>
-  )
+  );
 }

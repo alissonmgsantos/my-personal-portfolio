@@ -1,9 +1,7 @@
 import React from 'react';
 
 const Sidenav = () => {
-    return (
-        <div>menu</div>
-    )
+  return <h1>My First Next.js Page</h1>;
 };
 
 export default Sidenav;
