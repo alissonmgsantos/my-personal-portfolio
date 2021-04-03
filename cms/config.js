@@ -15,7 +15,7 @@ export default {
         {
           label: 'Home',
           name: 'home',
-          file: 'posts/pages/home.md',
+          file: 'posts/home.md',
           fields: [
             {
               label: 'Hero Title',

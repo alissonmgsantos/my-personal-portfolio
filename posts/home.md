@@ -1,4 +1,15 @@
 ---
-hero_title: Build a SaaS faster with React
-hero_description: Serverless SaaS is aiming to be the perfect starting point for your next React app to build full-stack SaaS applications. Visit serverless.page for more info.
+title: Awesome kitties
+date: 2019-03-17T19:31:20.591Z
+cats:
+  - description: 'Maru is a Scottish Fold from Japan, and he loves boxes.'
+    name: Maru (まる)
+  - description: Lil Bub is an American celebrity cat known for her unique appearance.
+    name: Lil Bub
+  - description: 'Grumpy cat is an American celebrity cat known for her grumpy appearance.'
+    name: Grumpy cat (Tardar Sauce)
 ---
+
+Welcome to my awesome page about cats of the internet.
+
+This page is built with NextJS, and content is managed in Netlify CMS
