@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getPostBySlug } from '../../../pages/api';
 import {
   Divider,
   Github,
@@ -20,21 +21,25 @@ import {
   SocialWrapper,
 } from './styled';
 
-const Sidenav = () => {
+const Sidenav = props => {
+  const [info, setInfo] = useState(null);
+  useEffect(async () => {
+    const data = await getPostBySlug('layout');
+    setInfo(prevState => data);
+  }, []);
+
   return (
     <SidenavWrapper>
       <ProfileHeader>
-        <ProfileAvatar />
-        <ProfileUsername>Alisson Matos</ProfileUsername>
-        <ProfileDescription>
-          Front-end Develop | Back-end Develop
-        </ProfileDescription>
-        <ProfileLocation>Salvador - Bahia - Brasil</ProfileLocation>
+        <ProfileAvatar src={info?.profile.image} />
+        <ProfileUsername>{info?.profile.name}</ProfileUsername>
+        <ProfileDescription>{info?.profile.description}</ProfileDescription>
+        <ProfileLocation>{info?.profile.location}</ProfileLocation>
         <SocialWrapper>
-          <Link href="https://github.com/alissonmgsantos">
+          <Link href={info?.profile.github || '/'}>
             <Github width={24} height={24} />
           </Link>
-          <Link href="https://www.linkedin.com/in/alissonmgsantos">
+          <Link href={info?.profile.linkedin || '/'}>
             <Linkedin width={24} height={24} />
           </Link>
         </SocialWrapper>
@@ -48,11 +53,11 @@ const Sidenav = () => {
       <Divider />
 
       <SkillWrapper>
-        {['50%', '60%', '70%', '80%', '90%'].map((item, key) => (
+        {info?.skills.map((skill, key) => (
           <React.Fragment key={key}>
-            <SkillText color="#fff">aqui</SkillText>
-            <SkillText color="#ccc">{item}</SkillText>
-            <SkillProgressBar width={item} />
+            <SkillText color="#fff">{skill.name}</SkillText>
+            <SkillText color="#ccc">{skill.percentage}</SkillText>
+            <SkillProgressBar width={skill.percentage} />
           </React.Fragment>
         ))}
       </SkillWrapper>
@@ -61,8 +66,8 @@ const Sidenav = () => {
 
       <KnowledgeWrapper>
         <KnowledgeList>
-          {[0, 0, 0, 0, 0, 0].map((item, key) => (
-            <KnowledgeListItem key={key}>item item item </KnowledgeListItem>
+          {info?.knowledges.map((item, key) => (
+            <KnowledgeListItem key={key}>{item.description}</KnowledgeListItem>
           ))}
         </KnowledgeList>
       </KnowledgeWrapper>

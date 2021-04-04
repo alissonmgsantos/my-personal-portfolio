@@ -18,6 +18,6 @@ skills:
   - name: Mágica
     percentage: 75%
 knowledges:
-  - description: Bootstrap, Material Design, Tailwind
+  - description: Bootstrap, Material, Tailwind
   - description: CSS, SCSS
 ---

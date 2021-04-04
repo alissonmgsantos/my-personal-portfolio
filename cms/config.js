@@ -13,69 +13,101 @@ export default {
       label: 'Pages',
       files: [
         {
-          label: 'Home',
-          name: 'home',
-          file: 'posts/home.md',
+          label: 'Layout',
+          name: 'layout',
+          file: 'posts/layout.md',
           fields: [
             {
-              label: 'Hero Title',
-              name: 'hero_title',
-              widget: 'string',
+              label: 'Profile',
+              name: 'profile',
+              widget: 'object',
+              fields: [
+                {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                },
+                {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'string',
+                  required: true,
+                },
+                {
+                  label: 'Location',
+                  name: 'location',
+                  widget: 'string',
+                  required: true,
+                },
+                {
+                  label: 'Github',
+                  name: 'github',
+                  widget: 'string',
+                  required: true,
+                },
+                {
+                  label: 'Linkedin',
+                  name: 'linkedin',
+                  widget: 'string',
+                  required: true,
+                },
+                {
+                  label: 'URL Image',
+                  name: 'image',
+                  widget: 'string',
+                  required: true,
+                },
+              ],
             },
             {
-              label: 'Builder',
-              name: 'builder',
+              label: 'Languages',
+              name: 'languages',
               widget: 'list',
-              types: [
+              fields: [
                 {
-                  label: 'Header Image',
-                  name: 'header',
-                  widget: 'object',
-                  fields: [
-                    {
-                      label: 'Title',
-                      name: 'title',
-                      widget: 'string',
-                      required: true,
-                    },
-                    {
-                      label: 'Background Image',
-                      name: 'photo',
-                      widget: 'image',
-                      required: true,
-                      media_library: { config: { multiple: false } },
-                    },
-                  ],
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
                 },
                 {
-                  label: 'CTA Section',
-                  name: 'cta',
-                  widget: 'object',
-                  fields: [
-                    {
-                      label: 'Title',
-                      name: 'title',
-                      widget: 'string',
-                      required: true,
-                    },
-                    {
-                      label: 'Link',
-                      name: 'link',
-                      widget: 'string',
-                    },
-                  ],
+                  label: 'Percentage',
+                  name: 'percentage',
+                  widget: 'string',
+                  required: true,
+                },
+              ],
+            },
+            {
+              label: 'Skills',
+              name: 'skills',
+              widget: 'list',
+              fields: [
+                {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
                 },
                 {
-                  label: 'Content',
-                  name: 'content',
-                  widget: 'object',
-                  fields: [
-                    {
-                      name: 'Content',
-                      widget: 'markdown',
-                      required: true,
-                    },
-                  ],
+                  label: 'Percentage',
+                  name: 'percentage',
+                  widget: 'string',
+                  required: true,
+                },
+              ],
+            },
+            {
+              label: 'Knowledges',
+              name: 'knowledges',
+              widget: 'list',
+              fields: [
+                {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'string',
+                  required: true,
                 },
               ],
             },

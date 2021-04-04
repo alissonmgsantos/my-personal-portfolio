@@ -1,5 +1,5 @@
-import { LayoutMain, LayoutWrapper } from './styled';
 import { Sidenav } from './components';
+import { LayoutMain, LayoutWrapper } from './styled';
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>

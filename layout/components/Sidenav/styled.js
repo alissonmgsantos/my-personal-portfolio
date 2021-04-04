@@ -32,8 +32,8 @@ export const ProfileHeader = styled.header`
 `;
 
 export const ProfileAvatar = styled.img`
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   background: #fff;
   border-radius: 50%;
   margin-bottom: 1rem;
@@ -111,12 +111,13 @@ export const KnowledgeList = styled.ul`
 
 export const KnowledgeListItem = styled.li`
   color: #8c8c8e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
   &:before {
     content: '✔';
     color: #2196f3;
-    padding-inline-start: 1ch;
-    padding-inline-end: 1ch;
+    padding-inline-start: 0.5ch;
+    padding-inline-end: 0.5ch;
   }
 `;
 
