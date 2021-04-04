@@ -27,7 +27,7 @@ export const ProfileHeader = styled.header`
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 2rem 0.5rem 1rem 0.5rem;
+  padding: 2rem 1rem;
   background: #282a36;
   box-shadow: 0 2px 4px 0 rgb(15 15 20 / 10%);
 `;
@@ -48,13 +48,13 @@ export const ProfileUsername = styled.h5`
 
 export const ProfileDescription = styled.small`
   color: #8c8c8e;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-top: 0.5rem;
 `;
 
 export const ProfileLocation = styled.small`
   color: #8c8c8e;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-top: 0.5rem;
 `;
 
