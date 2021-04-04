@@ -22,4 +22,7 @@ sidenav:
     name: Alisson Matos
     description: Front-end Develop | Back-end Develop
     location: Salvador - Bahia - Brasil
+complements:
+  - description: Bootstrap, Material Design, Tailwind
+  - description: CSS, SCSS
 ---
