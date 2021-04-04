@@ -17,12 +17,7 @@ skills:
     percentage: 80%
   - name: Mágica
     percentage: 75%
-sidenav:
-  - type: profile
-    name: Alisson Matos
-    description: Front-end Develop | Back-end Develop
-    location: Salvador - Bahia - Brasil
-complements:
+knowledges:
   - description: Bootstrap, Material Design, Tailwind
   - description: CSS, SCSS
 ---
