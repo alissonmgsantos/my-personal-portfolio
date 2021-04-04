@@ -5,8 +5,9 @@ export const SidenavWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   width: 20rem;
-  box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
-  background: #20202a;
+  box-shadow: 0 0.5rem 0.8rem 0 rgb(20 20 25 / 25%);
+  background: #21222c;
+  z-index: 999;
 `;
 
 // DIVIDER
@@ -27,7 +28,7 @@ export const ProfileHeader = styled.header`
   width: 100%;
   height: auto;
   padding: 2rem 0.5rem 1rem 0.5rem;
-  background: #23232e;
+  background: #282a36;
   box-shadow: 0 2px 4px 0 rgb(15 15 20 / 10%);
 `;
 

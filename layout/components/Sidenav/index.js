@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { getPostBySlug } from '../../../pages/api';
@@ -15,13 +16,10 @@ import {
   ProfileUsername,
   SidenavWrapper,
   SkillProgressBar,
-  SkillProgressCircle,
   SkillText,
   SkillWrapper,
   SocialWrapper,
 } from './styled';
-
-import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
@@ -73,6 +71,7 @@ const Sidenav = props => {
       <SkillWrapper>
         {[1, 2, 3].map((item, key) => (
           <Chart
+            key={key}
             options={state.options}
             series={[75]}
             type="radialBar"

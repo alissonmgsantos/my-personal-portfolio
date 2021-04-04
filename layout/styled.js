@@ -5,7 +5,7 @@ export const LayoutWrapper = styled.section(props => ({
 }));
 
 export const LayoutMain = styled.main(props => ({
-  background: '#242430',
+  background: '#282a36',
   minHeight: '100vh',
   width: '100%',
 }));
