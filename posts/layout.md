@@ -5,13 +5,17 @@ profile:
   location: Salvador - Bahia - Brasil
   github: https://github.com/alissonmgsantos
   linkedin: https://www.linkedin.com/in/alissonmgsantos
-language:
-  - name: Português
+skills:
+  - name: Mágica
     percentage: 100%
-  - name: Inglês
-    percentage: 10%
-  - name: Espanhol
-    percentage: 10%
+  - name: Mágica
+    percentage: 100%
+  - name: Mágica
+    percentage: 100%
+  - name: Mágica
+    percentage: 100%
+  - name: Mágica
+    percentage: 100%
 sidenav:
   - type: profile
     name: Alisson Matos
