@@ -22,6 +22,6 @@ skills:
   - name: React Native
     percentage: 10%
 knowledges:
-  - description: Bootstrap, Material Design, Tailwind
+  - description: Bootstrap, Material, Tailwind
   - description: CSS, SCSS
 ---

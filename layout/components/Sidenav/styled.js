@@ -116,7 +116,6 @@ export const KnowledgeListItem = styled.li`
   &:before {
     content: '✔';
     color: #2196f3;
-    padding-inline-start: 0.5ch;
     padding-inline-end: 0.5ch;
   }
 `;
