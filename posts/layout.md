@@ -7,17 +7,21 @@ profile:
   linkedin: https://www.linkedin.com/in/alissonmgsantos
   image: https://thumbs.jusbr.com/imgs.jusbr.com/publications/artigos/images/capturar1452194585.JPG
 skills:
-  - name: Mágica
-    percentage: 100%
-  - name: Mágica
-    percentage: 50%
-  - name: Mágica
+  - name: JavaScript
+    percentage: 45%
+  - name: NodeJS
+    percentage: 35%
+  - name: PHP
+    percentage: 55%
+  - name: React
+    percentage: 62%
+  - name: VueJS
+    percentage: 53%
+  - name: Angular
+    percentage: 35%
+  - name: React Native
     percentage: 10%
-  - name: Mágica
-    percentage: 80%
-  - name: Mágica
-    percentage: 75%
 knowledges:
-  - description: Bootstrap, Material, Tailwind
+  - description: Bootstrap, Material Design, Tailwind
   - description: CSS, SCSS
 ---
