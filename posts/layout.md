@@ -23,5 +23,6 @@ skills:
     percentage: 10%
 knowledges:
   - description: Bootstrap, Material, Tailwind
-  - description: CSS, SCSS
+  - description: CSS, SCSS, styled-components
+  - description: Git, SQL
 ---

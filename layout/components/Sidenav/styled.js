@@ -26,7 +26,7 @@ export const ProfileHeader = styled.header`
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 3rem 0.5rem 2rem 0.5rem;
+  padding: 2rem 0.5rem 1rem 0.5rem;
   background: #23232e;
   box-shadow: 0 2px 4px 0 rgb(15 15 20 / 10%);
 `;
@@ -62,15 +62,24 @@ export const SkillWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
 `;
 
 export const SkillProgressCircle = styled.div`
   width: 64px;
   height: 64px;
-  background: #fff;
   border-radius: 50%;
-  margin: 0 auto;
+  border: 2px solid #fff;
+
+  &:before {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #ccc;
+    content: '60%';
+  }
 `;
 
 export const SkillText = styled.span`
@@ -100,7 +109,7 @@ export const SkillProgressBar = styled.div`
 // KNOWLEDGE
 export const KnowledgeWrapper = styled.section`
   display: flex;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
 `;
 
 export const KnowledgeList = styled.ul`

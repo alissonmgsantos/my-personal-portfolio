@@ -1,6 +1,5 @@
 import Layout from '../layout';
 import { GlobalStyles } from '../theme';
-
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
