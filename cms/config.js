@@ -23,9 +23,61 @@ export default {
               widget: 'string',
             },
             {
-              label: 'Hero Description',
-              name: 'hero_description',
-              widget: 'markdown',
+              label: 'Builder',
+              name: 'builder',
+              widget: 'list',
+              types: [
+                {
+                  label: 'Header Image',
+                  name: 'header',
+                  widget: 'object',
+                  fields: [
+                    {
+                      label: 'Title',
+                      name: 'title',
+                      widget: 'string',
+                      required: true,
+                    },
+                    {
+                      label: 'Background Image',
+                      name: 'photo',
+                      widget: 'image',
+                      required: true,
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+                },
+                {
+                  label: 'CTA Section',
+                  name: 'cta',
+                  widget: 'object',
+                  fields: [
+                    {
+                      label: 'Title',
+                      name: 'title',
+                      widget: 'string',
+                      required: true,
+                    },
+                    {
+                      label: 'Link',
+                      name: 'link',
+                      widget: 'string',
+                    },
+                  ],
+                },
+                {
+                  label: 'Content',
+                  name: 'content',
+                  widget: 'object',
+                  fields: [
+                    {
+                      name: 'Content',
+                      widget: 'markdown',
+                      required: true,
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
