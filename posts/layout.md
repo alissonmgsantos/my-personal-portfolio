@@ -9,13 +9,13 @@ skills:
   - name: Mágica
     percentage: 100%
   - name: Mágica
-    percentage: 100%
+    percentage: 50%
   - name: Mágica
-    percentage: 100%
+    percentage: 10%
   - name: Mágica
-    percentage: 100%
+    percentage: 80%
   - name: Mágica
-    percentage: 100%
+    percentage: 75%
 sidenav:
   - type: profile
     name: Alisson Matos
