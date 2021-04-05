@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { getPostBySlug } from '../../../pages/api';
+import { getPostBySlug } from '../../../services';
 import {
   Divider,
   Github,
