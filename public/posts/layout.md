@@ -25,4 +25,5 @@ knowledges:
   - description: Bootstrap, Material, Tailwind
   - description: CSS, SCSS, styled-components
   - description: Git, SQL
+  - description: NextJS, GatsbyJS
 ---

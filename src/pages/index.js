@@ -1,14 +1,18 @@
 import Head from 'next/head';
 import React from 'react';
-
+import { Container, HomeBanner, WrapperServices } from '../components';
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Alisson Matos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    </div>
+      <Container>
+        <HomeBanner />
+        <WrapperServices>a</WrapperServices>
+      </Container>
+    </>
   );
 };
 

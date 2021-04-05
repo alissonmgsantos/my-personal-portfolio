@@ -27,7 +27,7 @@ export const ProfileHeader = styled.header`
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
   background: #282a36;
   box-shadow: 0 2px 4px 0 rgb(15 15 20 / 10%);
 `;
@@ -63,7 +63,7 @@ export const SkillWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
 `;
 
 export const SkillProgressCircle = styled.div`
@@ -110,7 +110,7 @@ export const SkillProgressBar = styled.div`
 // KNOWLEDGE
 export const KnowledgeWrapper = styled.section`
   display: flex;
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
 `;
 
 export const KnowledgeList = styled.ul`
@@ -143,6 +143,7 @@ export const Github = styled(icon.Github)`
   cursor: pointer;
   margin: 0 0.3rem;
 `;
+
 export const Linkedin = styled(icon.Linkedin)`
   color: #fff;
   cursor: pointer;
