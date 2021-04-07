@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 html,
-body {
+body, #__next {
   min-height: 100%;
   margin: 0;
 }

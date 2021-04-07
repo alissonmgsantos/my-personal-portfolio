@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  display: flex;
+  display: grid;
   width: 100%;
   flex-direction: column;
+  z-index: 999;
 `;
 
 export const HomeBanner = styled.div`

@@ -2,9 +2,7 @@ import * as icon from '@styled-icons/boxicons-logos';
 import styled, { keyframes } from 'styled-components';
 
 export const SidenavWrapper = styled.aside`
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
+  grid-area: 1 / 1 / 6 / 2;
   box-shadow: 0 0.5rem 0.8rem 0 rgb(20 20 25 / 25%);
   background: #21222c;
   z-index: 999;
