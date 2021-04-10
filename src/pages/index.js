@@ -2,10 +2,10 @@ import Head from 'next/head';
 import React from 'react';
 import {
   CardServices,
+  Container,
   ContainerServices,
   HomeBanner,
   Title,
-  Wrapper,
 } from '../components';
 const Home = () => {
   return (
@@ -14,19 +14,20 @@ const Home = () => {
         <title>Alisson Matos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Wrapper>
+      <Container>
         <HomeBanner />
         <ContainerServices>
           {[1, 2, 3].map(service => (
             <CardServices>
               <Title>Título</Title>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-              esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur
-              pariatur doloribus.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              fugiat officiis esse id libero modi consequuntur itaque hic
+              laudantium facere, nihil quae asperiores dolore vitae quibusdam
+              porro voluptates inventore quaerat.
             </CardServices>
           ))}
         </ContainerServices>
-      </Wrapper>
+      </Container>
     </>
   );
 };

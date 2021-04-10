@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.section`
+export const Container = styled.section`
   display: grid;
-  width: 100%;
-  flex-direction: column;
   z-index: 999;
 `;
 
+/****************************************************
+  _   _    ___    __  __   _____
+ | | | |  / _ \  |  \/  | | ____|
+ | |_| | | | | | | |\/| | |  _|
+ |  _  | | |_| | | |  | | | |___
+ |_| |_|  \___/  |_|  |_| |_____|
+
+ ****************************************************/
 export const HomeBanner = styled.div`
   width: 100%;
   background: #21222c;
@@ -15,7 +21,7 @@ export const HomeBanner = styled.div`
   opacity: 50%;
 `;
 
-export const ContainerServices = styled(Wrapper)`
+export const ContainerServices = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -28,7 +34,7 @@ export const ContainerServices = styled(Wrapper)`
 export const CardServices = styled.div`
   width: 100%;
   height: auto;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 1rem;
   background: #282a36;
   color: #ccc;
