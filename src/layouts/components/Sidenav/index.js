@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { getPostBySlug } from '../../../services';
@@ -21,36 +20,12 @@ import {
   SocialWrapper,
 } from './styled';
 
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-
 const Sidenav = props => {
   const [info, setInfo] = useState(null);
   useEffect(async () => {
     const data = await getPostBySlug('layout');
     setInfo(prevState => data);
   }, []);
-
-  const state = {
-    options: {
-      plotOptions: {
-        radialBar: {
-          hollow: {
-            size: '50%',
-          },
-        },
-        dataLabels: {
-          name: {
-            show: false,
-          },
-          value: {
-            fontSize: '30px',
-            show: true,
-          },
-        },
-      },
-      labels: ['20%'],
-    },
-  };
 
   return (
     <SidenavWrapper>
@@ -68,18 +43,7 @@ const Sidenav = props => {
           </Link>
         </SocialWrapper>
       </ProfileHeader>
-      <SkillWrapper>
-        {[1, 2, 3].map((item, key) => (
-          <Chart
-            key={key}
-            options={state.options}
-            series={[75]}
-            type="radialBar"
-            width={50}
-            height={100}
-          />
-        ))}
-      </SkillWrapper>
+      <SkillWrapper>{[1, 2, 3].map((item, key) => item)}</SkillWrapper>
 
       <Divider />
 
