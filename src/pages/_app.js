@@ -1,6 +1,5 @@
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import { GlobalStyles } from '../../themes';
-import '../../themes/teste.css';
 import Layout from '../layouts';
 import { LanguageProvider } from '../providers/language';
 
