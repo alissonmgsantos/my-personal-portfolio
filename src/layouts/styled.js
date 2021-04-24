@@ -14,7 +14,12 @@ export const NavBar = styled.nav`
   padding: 1rem;
   position: fixed;
   z-index: 9999;
-  color: #fff;
+  color: ${props => (props.scrollPosition > 30 ? '#333' : '#fff')};
+  background: ${props => (props.scrollPosition > 30 ? '#fff' : 'transparent')};
+  box-shadow: ${props =>
+    props.scrollPosition > 30
+      ? '0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%)'
+      : 0};
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -32,13 +37,15 @@ export const Brand = styled.h1`
 
 export const Wrapper = styled.div`
   cursor: pointer;
-  & > :nth-child(2n) {
-    margin: 0 0.5rem !important;
+  & > div :not(:last-child) {
+    margin-right: 0.5rem !important;
   }
 `;
 
 export const LinkText = styled.a`
-  /* margin: 0.5rem; */
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 `;
 
 export const LayoutMain = styled.main`

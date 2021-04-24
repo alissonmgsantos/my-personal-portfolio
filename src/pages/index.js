@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { Container } from '../components';
-import { Home } from '../components/pages';
+import { Home, Portfolio } from '../components/pages';
 
 const Index = () => {
   return (
@@ -15,9 +14,10 @@ const Index = () => {
           rel="stylesheet"></link>
       </Head>
 
-      <Container>
+      <>
         <Home />
-        {/* <Portfolio />
+        <Portfolio id="#portfolio" />
+        {/*
         <HomeBanner />
         <ContainerServices>
           {[1, 2, 3].map(service => (
@@ -30,7 +30,7 @@ const Index = () => {
             </CardServices>
           ))}
         </ContainerServices>*/}
-      </Container>
+      </>
     </>
   );
 };

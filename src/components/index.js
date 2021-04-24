@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  display: grid;
+  display: block;
+  overflow-x: hidden;
   z-index: 999;
 `;
 

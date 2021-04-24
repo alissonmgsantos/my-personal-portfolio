@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import { useLanguage } from '../providers/language';
 import {
   Brand,
@@ -13,6 +14,8 @@ import {
 
 const Layout = ({ children }) => {
   const { language, languageOptions, handleLanguage } = useLanguage();
+  const [scrollPosition, setSrollPosition] = useState(0);
+
   const menu = useState({
     portuguese: [
       { name: 'Início', href: '#home' },
@@ -30,7 +33,7 @@ const Layout = ({ children }) => {
 
   return (
     <LayoutWrapper>
-      <NavBar>
+      <NavBar scrollPosition={scrollPosition}>
         <Brand>Alisson</Brand>
         <Wrapper>
           {menu &&
@@ -52,7 +55,12 @@ const Layout = ({ children }) => {
           ))}
         </Wrapper>
       </NavBar>
-      <LayoutMain>{children}</LayoutMain>
+      <PerfectScrollbar
+        onScrollY={container =>
+          setSrollPosition(prevState => container.scrollTop)
+        }>
+        <LayoutMain>{children}</LayoutMain>
+      </PerfectScrollbar>
     </LayoutWrapper>
   );
 };
