@@ -1,20 +1,23 @@
 import Head from 'next/head';
 import React from 'react';
-import {
-  CardServices,
-  Container,
-  ContainerServices,
-  HomeBanner,
-  Title,
-} from '../components';
-const Home = () => {
+import { Container } from '../components';
+import { Home } from '../components/pages';
+
+const Index = () => {
   return (
     <>
       <Head>
         <title>Alisson Matos</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet"></link>
       </Head>
+
       <Container>
+        <Home />
+        {/* <Portfolio />
         <HomeBanner />
         <ContainerServices>
           {[1, 2, 3].map(service => (
@@ -26,10 +29,10 @@ const Home = () => {
               porro voluptates inventore quaerat.
             </CardServices>
           ))}
-        </ContainerServices>
+        </ContainerServices>*/}
       </Container>
     </>
   );
 };
 
-export default Home;
+export default Index;

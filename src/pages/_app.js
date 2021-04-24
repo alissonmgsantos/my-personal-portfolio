@@ -1,12 +1,16 @@
 import { GlobalStyles } from '../../themes';
+import '../../themes/teste.css';
 import Layout from '../layouts';
+import { LanguageProvider } from '../providers/language';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </Layout>
+    <LanguageProvider>
+      <Layout>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </Layout>
+    </LanguageProvider>
   );
 }
 
