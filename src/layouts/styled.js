@@ -9,7 +9,6 @@ export const LayoutWrapper = styled.section`
 export const NavBar = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 1rem;
   position: fixed;
@@ -33,19 +32,20 @@ export const NavBar = styled.nav`
 export const Brand = styled.h1`
   font-size: 1.875rem;
   font-weight: 600;
+  flex-grow: 1;
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  & > div :not(:last-child) {
-    margin-right: 0.5rem !important;
+  & > :nth-child(odd) {
+    margin: 0 0.5rem !important;
   }
 `;
 
 export const LinkText = styled.a`
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
+  font-weight: 400;
 `;
 
 export const LayoutMain = styled.main`
