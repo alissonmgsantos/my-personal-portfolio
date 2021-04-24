@@ -28,7 +28,6 @@ export const NavBar = styled.nav`
 export const Brand = styled.h1`
   font-size: 1.875rem;
   font-weight: 600;
-  cursor: pointer;
 `;
 
 export const Wrapper = styled.div`

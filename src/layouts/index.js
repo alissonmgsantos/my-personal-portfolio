@@ -15,16 +15,16 @@ const Layout = ({ children }) => {
   const { language, languageOptions, handleLanguage } = useLanguage();
   const menu = useState({
     portuguese: [
-      { name: 'Início', href: '/home' },
-      { name: 'Sobre', href: '/about' },
-      { name: 'Experiências', href: '/experience' },
-      { name: 'Portfólio', href: '/portfolio' },
+      { name: 'Início', href: '#home' },
+      { name: 'Sobre', href: '#about' },
+      { name: 'Experiências', href: '#experience' },
+      { name: 'Portfólio', href: '#portfolio' },
     ],
     english: [
-      { name: 'Home', href: '/home' },
-      { name: 'About', href: '/about' },
-      { name: 'Experiences', href: '/experience' },
-      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Home', href: '#home' },
+      { name: 'About', href: '#about' },
+      { name: 'Experiences', href: '#experience' },
+      { name: 'Portfolio', href: '#portfolio' },
     ],
   })[0];
 

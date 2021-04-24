@@ -44,7 +44,7 @@ const Home = () => {
     <Wrapper>
       <Background
         alt="Background theme"
-        src="/background.jpeg"
+        src="/images/background.jpeg"
         layout="fill"
         objectFit="cover"
         quality={100}
