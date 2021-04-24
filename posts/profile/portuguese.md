@@ -5,7 +5,7 @@ description:
   - Desenvolvedor Front-end
   - Desenvolvedor Back-end
   - Desenvolvedor Mobile
-github: https://www.linkedin.com/in/alissonmgsantos
-linkedin: https://github.com/alissonmgsantos
-image: https://thumbs.jusbr.com/imgs.jusbr.com/publications/artigos/images/capturar1452194585.JPG
+linkedin: https://www.linkedin.com/in/alissonmgsantos
+github: https://github.com/alissonmgsantos
+image: https://avatars.githubusercontent.com/u/20065428?s=400&u=54ab0a554e4ad4f27c746a3ed50285004293b097&v=4
 ---
