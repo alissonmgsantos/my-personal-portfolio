@@ -12,4 +12,5 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   text-align: justify;
   color: #333;
+  margin: 1rem 0;
 `;
