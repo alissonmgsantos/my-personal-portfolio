@@ -12,7 +12,7 @@ public_folder: '/assets/images' # The src attribute for uploaded media will begi
 
 collections:
   ##################
-  # Profile
+  # PROFILE | HOME
   #################
   - name: 'profile' # Used in routes, e.g., /admin/collections/blog
     label: 'Profile' # Used in the UI
@@ -26,3 +26,16 @@ collections:
       - { label: "Github", name: "github", widget: "string", required: true}
       - { label: "Linkedin", name: "linkedin", widget: "string", required: true}
       - { label: "URL Image", name: "image", widget: "string", required: true}
+
+  ##################
+  # ABOUT
+  #################
+  - name: 'about' # Used in routes, e.g., /admin/collections/blog
+    label: 'About' # Used in the UI
+    folder: 'posts/about' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Bio", name: "bio", widget: "text", required: true}

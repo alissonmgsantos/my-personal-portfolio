@@ -19,7 +19,7 @@ const Home = () => {
 
   const [info, setInfo] = useState(null);
   const [loop, setLoop] = useState(0);
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(null);
 
   useEffect(async () => {
     const data = await getPostBySlug('profile', language);

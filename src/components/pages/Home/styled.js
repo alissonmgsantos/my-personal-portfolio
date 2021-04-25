@@ -1,11 +1,9 @@
-import * as icon from '@styled-icons/boxicons-logos';
+import * as icon from '@styled-icons/fa-brands';
 import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
+import * as shared from '../../shared';
 
-export const Wrapper = styled.section`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
+export const Wrapper = styled(shared.Wrapper)`
   background: rgba(0, 0, 0, 0.7);
 `;
 
@@ -68,7 +66,7 @@ export const Github = styled(icon.Github)`
   margin: 0 0.3rem;
 `;
 
-export const Linkedin = styled(icon.Linkedin)`
+export const Linkedin = styled(icon.LinkedinIn)`
   cursor: pointer;
   margin: 0 0.3rem;
 `;
