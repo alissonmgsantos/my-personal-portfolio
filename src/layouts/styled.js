@@ -24,7 +24,7 @@ export const NavBar = styled.nav`
     flex-direction: column;
 
     & > :nth-child(2) {
-      margin: 0.5rem;
+      margin: 0.5rem 1rem;
     }
   }
 `;
