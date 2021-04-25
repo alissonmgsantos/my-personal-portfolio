@@ -41,7 +41,7 @@ const Home = () => {
   }, [skills, loop]);
 
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <Background
         alt="Background theme"
         src="/images/background.jpeg"
