@@ -25,10 +25,10 @@ const About = () => {
       },
       {
         name: 'Programas',
-        description: 'Incríveis',
+        description: 'Escaláveis',
         icon: <Desktop width={48} />,
       },
-      { name: 'Sites', description: 'Responsivo', icon: <Globe width={48} /> },
+      { name: 'Sites', description: 'Responsivos', icon: <Globe width={48} /> },
     ],
     english: [
       {
@@ -38,7 +38,7 @@ const About = () => {
       },
       {
         name: 'Softwares',
-        description: 'Incredible',
+        description: 'Scalable',
         icon: <Desktop width={48} />,
       },
       {
@@ -60,18 +60,10 @@ const About = () => {
         <User width={24} />
         {info?.title}
       </Title>
-      <Paragraph>{info?.bio}</Paragraph>
 
       <Container>
-        <ServiceContainer>
-          {services[language].map((service, key) => (
-            <Card key={key}>
-              {service.icon}
-              <CardTitle>{service.name}</CardTitle>
-              <CardDescription>{service.description}</CardDescription>
-            </Card>
-          ))}
-        </ServiceContainer>
+        <Paragraph>{info?.bio}</Paragraph>
+
         <ServiceContainer>
           {services[language].map((service, key) => (
             <Card key={key}>

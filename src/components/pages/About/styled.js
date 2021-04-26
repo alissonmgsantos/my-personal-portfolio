@@ -4,6 +4,10 @@ import * as shared from '../../shared';
 
 export const Wrapper = styled(shared.Wrapper)`
   flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: auto;
+  padding: 4rem;
 `;
 
 export const Container = styled.div`
@@ -18,6 +22,7 @@ export const User = styled(icon.User)`
 `;
 
 export const ServiceContainer = styled.div`
+  margin-top: 2rem;
   & > div:hover {
     transform: rotateX(30deg) rotateY(-15deg) rotate(30deg)
       translate(-25px, 50px);
