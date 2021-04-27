@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { About, Home } from '../components/pages';
+import { About, Home, Service } from '../components/pages';
 
 const Index = () => {
   return (
@@ -17,6 +17,7 @@ const Index = () => {
       <>
         <Home />
         <About />
+        <Service />
 
         {/* <Portfolio id="#portfolio" /> */}
       </>

@@ -5,7 +5,7 @@ import { getPostBySlug } from '../../../services';
 import { Paragraph, Title } from '../../shared/typography';
 import { Wrapper } from './styled';
 
-const About = () => {
+const Service = () => {
   const { language } = useLanguage();
   const [info, setInfo] = useState(null);
   const services = useState({
@@ -47,12 +47,12 @@ const About = () => {
   }, [language]);
 
   return (
-    <Wrapper id="about">
-      <Title>{info?.title}</Title>
+    <Wrapper id="service">
+      <Title>Serviços</Title>
 
       <Paragraph>{info?.bio}</Paragraph>
     </Wrapper>
   );
 };
 
-export default About;
+export default Service;

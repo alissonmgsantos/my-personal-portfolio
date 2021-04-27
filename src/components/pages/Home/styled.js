@@ -11,12 +11,10 @@ export const Background = styled(Image)`
   z-index: -1;
 `;
 
-export const Container = styled.div`
-  display: flex;
+export const Container = styled(shared.Container)`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
   z-index: 1;
 `;
 

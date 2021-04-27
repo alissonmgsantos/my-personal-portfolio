@@ -9,3 +9,5 @@ export const Wrapper = styled(shared.Wrapper)`
   padding: 4rem;
   background: #eee;
 `;
+
+export const Container = styled(shared.Container)``;
