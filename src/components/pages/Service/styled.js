@@ -7,7 +7,7 @@ export const Wrapper = styled(shared.Wrapper)`
   justify-content: center;
   height: auto;
   padding: 4rem;
-  background: #eee;
+  background: red;
 `;
 
 export const Container = styled(shared.Container)``;

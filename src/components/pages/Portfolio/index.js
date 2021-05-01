@@ -1,19 +1,20 @@
-import { Container } from '../../shared';
-import { Galery, Photo } from './styled';
+import { Container, Galery, Photo, Wrapper } from './styled';
 const Portfolio = () => {
   return (
-    <Container id="portfolio">
-      <Galery>
-        <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
-        <Photo src="/images/background.jpeg" width="100%" height="auto" />
-        <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
-        <Photo src="/images/background.jpeg" width="100%" height="auto" />
-        <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
-        <Photo src="/images/background.jpeg" width="100%" height="auto" />
-        <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
-        <Photo src="/images/background.jpeg" width="100%" height="auto" />
-      </Galery>
-    </Container>
+    <Wrapper id="portfolio">
+      <Container>
+        <Galery>
+          <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
+          <Photo src="/images/background.jpeg" width="100%" height="auto" />
+          <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
+          <Photo src="/images/background.jpeg" width="100%" height="auto" />
+          <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
+          <Photo src="/images/background.jpeg" width="100%" height="auto" />
+          <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
+          <Photo src="/images/background.jpeg" width="100%" height="auto" />
+        </Galery>
+      </Container>
+    </Wrapper>
   );
 };
 

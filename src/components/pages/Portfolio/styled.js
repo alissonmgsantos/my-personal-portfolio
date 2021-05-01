@@ -1,7 +1,19 @@
 import styled from 'styled-components';
+import * as shared from '../../shared';
+
+export const Wrapper = styled(shared.Wrapper)`
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: auto;
+  padding: 5rem;
+`;
+
+export const Container = styled(shared.Container)`
+  align-items: center;
+`;
 
 export const Galery = styled.div`
-  width: 80%;
   column-count: 3;
   column-gap: 10px;
 `;

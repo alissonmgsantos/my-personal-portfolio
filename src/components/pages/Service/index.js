@@ -2,7 +2,8 @@ import { Desktop, Globe, MobileAlt } from '@styled-icons/fa-solid';
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Paragraph, Title } from '../../shared/typography';
+import { Container } from '../../shared';
+import { Title } from '../../shared/typography';
 import { Wrapper } from './styled';
 
 const Service = () => {
@@ -50,7 +51,7 @@ const Service = () => {
     <Wrapper id="service">
       <Title>Serviços</Title>
 
-      <Paragraph>{info?.bio}</Paragraph>
+      <Container>a</Container>
     </Wrapper>
   );
 };

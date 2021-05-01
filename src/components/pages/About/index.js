@@ -3,7 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
 import { Paragraph, Title } from '../../shared/typography';
-import { Wrapper } from './styled';
+import {
+  Card,
+  CardDescription,
+  CardTitle,
+  Container,
+  User,
+  Wrapper,
+} from './styled';
 
 const About = () => {
   const { language } = useLanguage();
@@ -18,24 +25,24 @@ const About = () => {
       {
         name: 'Programas',
         description: 'Escaláveis',
-        icon: <Desktop width={48} />,
+        icon: <Desktop width={55} />,
       },
       { name: 'Sites', description: 'Responsivos', icon: <Globe width={48} /> },
     ],
     english: [
       {
         name: 'Applications',
-        description: 'Incredible',
+        description: 'Incredibles',
         icon: <MobileAlt width={32} />,
       },
       {
         name: 'Softwares',
-        description: 'Scalable',
-        icon: <Desktop width={48} />,
+        description: 'Scalables',
+        icon: <Desktop width={55} />,
       },
       {
         name: 'Websites',
-        description: 'Responsive',
+        description: 'Responsives',
         icon: <Globe width={48} />,
       },
     ],
@@ -48,9 +55,21 @@ const About = () => {
 
   return (
     <Wrapper id="about">
-      <Title>{info?.title}</Title>
-
+      <Title>
+        <User width={24} />
+        {info?.title}
+      </Title>
       <Paragraph>{info?.bio}</Paragraph>
+
+      <Container>
+        {services[language].map(service => (
+          <Card>
+            {service.icon}
+            <CardTitle>{service.name}</CardTitle>
+            <CardDescription>{service.description}</CardDescription>
+          </Card>
+        ))}
+      </Container>
     </Wrapper>
   );
 };
