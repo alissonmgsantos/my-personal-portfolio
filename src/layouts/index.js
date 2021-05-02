@@ -16,6 +16,8 @@ import {
   FloatButton,
 } from './styled';
 
+import { Text } from '../components/shared';
+
 const Layout = ({ children }) => {
   const { language, languageOptions, handleLanguage } = useLanguage();
   const [scrollPosition, setSrollPosition] = useState(0);
@@ -44,21 +46,21 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme == 'light' ? light : dark}>
       <LayoutWrapper>
+        <FloatButton onClick={toggleTheme}>
+          {theme == 'light' ? <Moon width={32} /> : <Sun width={32} />}
+        </FloatButton>
         <NavBar scrollPosition={scrollPosition}>
-          <Brand>Alisson</Brand>
-          <FloatButton onClick={toggleTheme}>
-            {theme == 'light' ? <Moon width={32} /> : <Sun width={32} />}
-          </FloatButton>
+          <Text size="2rem" weight={600}>
+            Alisson
+          </Text>
 
           <Wrapper>
-            {menu &&
-              menu[language].map((item, key) => (
-                <Link href={item.href} key={key}>
-                  <LinkText>{item.name}</LinkText>
-                </Link>
-              ))}
-          </Wrapper>
-          <Wrapper>
+            {menu[language].map((item, key) => (
+              <Link href={item.href} key={key}>
+                <Text weight={500}>{item.name}</Text>
+              </Link>
+            ))}
+
             {languageOptions.map((language, key) => (
               <Image
                 key={key}

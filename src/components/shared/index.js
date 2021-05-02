@@ -12,4 +12,7 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+  font-size: ${props => props.size || '100%'};
+  font-weight: ${props => props.weight || 'normal'};
+`;

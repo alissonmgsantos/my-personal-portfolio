@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   vertical-align: baseline;
   font-family: 'Poppins', sans-serif;
+  font-size: 100%;
 }
 
 html,
