@@ -5,18 +5,15 @@ import { useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../../themes';
+import { Text } from '../components/shared';
 import { useLanguage } from '../providers/language';
 import {
-  Brand,
+  FloatButton,
   LayoutMain,
   LayoutWrapper,
-  LinkText,
   NavBar,
   Wrapper,
-  FloatButton,
 } from './styled';
-
-import { Text } from '../components/shared';
 
 const Layout = ({ children }) => {
   const { language, languageOptions, handleLanguage } = useLanguage();

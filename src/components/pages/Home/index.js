@@ -2,15 +2,14 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
+import { Text } from '../../shared';
 import {
   Avatar,
   Background,
   Container,
-  Description,
   Github,
   Linkedin,
   SocialWrapper,
-  Username,
   Wrapper,
 } from './styled';
 
@@ -58,8 +57,10 @@ const Home = () => {
             width={200}
             height={200}
           />
-          <Username>{info?.name}</Username>
-          <Description>{skills}</Description>
+          <Text size="2rem" weight={500}>
+            {info?.name}
+          </Text>
+          <Text>{skills}</Text>
 
           <SocialWrapper>
             <Link href={info?.linkedin || '/'}>
