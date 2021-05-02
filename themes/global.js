@@ -25,6 +25,15 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+.actived {
+  &:before{
+    content: '•';
+    font-weight: bold;
+    padding-right: 0.5rem;
+    color: ${({ theme }) => theme.color};
+  }
+}
 `;
 
 export default GlobalStyles;

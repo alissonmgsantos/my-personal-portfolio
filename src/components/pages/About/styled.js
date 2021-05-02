@@ -6,7 +6,6 @@ export const Wrapper = styled(shared.Wrapper)`
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  padding: 5rem;
 `;
 
 export const User = styled(icon.User)`

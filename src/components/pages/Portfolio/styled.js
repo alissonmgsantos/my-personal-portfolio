@@ -1,3 +1,4 @@
+import * as icon from '@styled-icons/fa-regular';
 import styled from 'styled-components';
 import * as shared from '../../shared';
 
@@ -6,15 +7,27 @@ export const Wrapper = styled(shared.Wrapper)`
   align-self: center;
   justify-content: center;
   height: auto;
-  padding: 5rem;
 `;
 
-export const Header = styled.header`
-  display: flex;
+export const Images = styled(icon.Images)`
+  margin-right: 1rem;
+`;
+
+export const Container = styled(shared.Container)`
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
 `;
-export const Container = styled(shared.Container)`
+
+export const ButtonGroup = styled.div`
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  & > p {
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
 `;
 
 export const Galery = styled.div`

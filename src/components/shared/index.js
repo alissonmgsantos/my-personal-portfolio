@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   height: 100vh;
   width: 100vw;
-  padding: 4rem 3rem 1rem;
+  padding: 5rem;
 `;
 
 export const Container = styled.div`
