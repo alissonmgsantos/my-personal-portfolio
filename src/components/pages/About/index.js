@@ -2,15 +2,8 @@ import { Desktop, Globe, MobileAlt } from '@styled-icons/fa-solid';
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Paragraph, Title } from '../../shared/typography';
-import {
-  Card,
-  CardDescription,
-  CardTitle,
-  Container,
-  User,
-  Wrapper,
-} from './styled';
+import { Container, Text } from '../../shared';
+import { Card, User, Wrapper } from './styled';
 
 const About = () => {
   const { language } = useLanguage();
@@ -55,18 +48,22 @@ const About = () => {
 
   return (
     <Wrapper id="about">
-      <Title>
+      <Text size="2rem" weight={600}>
         <User width={24} />
         {info?.title}
-      </Title>
-      <Paragraph>{info?.bio}</Paragraph>
+      </Text>
+      <Text spacing="0.15em" padding="3rem 0" align="justify">
+        {info?.bio}
+      </Text>
 
       <Container>
-        {services[language].map(service => (
-          <Card>
+        {services[language].map((service, key) => (
+          <Card key={key}>
             {service.icon}
-            <CardTitle>{service.name}</CardTitle>
-            <CardDescription>{service.description}</CardDescription>
+            <Text weight={600} margin="1rem 0 0 0">
+              {service.name}
+            </Text>
+            <Text>{service.description}</Text>
           </Card>
         ))}
       </Container>

@@ -13,6 +13,10 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p`
+  text-align: ${props => props.align || 'initial'};
   font-size: ${props => props.size || '100%'};
   font-weight: ${props => props.weight || 'normal'};
+  letter-spacing: ${props => props.spacing || 'normal'};
+  margin: ${props => props.margin || 0};
+  padding: ${props => props.padding || 0};
 `;

@@ -29,13 +29,13 @@ const Layout = ({ children }) => {
     portuguese: [
       { name: 'Início', href: '#home' },
       { name: 'Sobre', href: '#about' },
-      { name: 'Experiências', href: '#experience' },
+      { name: 'Experiência', href: '#experience' },
       { name: 'Portfólio', href: '#portfolio' },
     ],
     english: [
       { name: 'Home', href: '#home' },
       { name: 'About', href: '#about' },
-      { name: 'Experiences', href: '#experience' },
+      { name: 'Experience', href: '#experience' },
       { name: 'Portfolio', href: '#portfolio' },
     ],
   })[0];

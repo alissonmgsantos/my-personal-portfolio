@@ -15,7 +15,6 @@ const GlobalStyles = createGlobalStyle`
 html,
 body, #__next {
   min-height: 100%;
-	line-height: 1;
 }
 body {
   background: ${({ theme }) => theme.background};
