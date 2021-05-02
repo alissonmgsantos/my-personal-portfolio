@@ -1,6 +1,6 @@
 export default {
-  body: '#FFF',
-  text: '#363537',
-  toggleBorder: '#FFF',
-  background: '#363537',
+  background: '#edf2f7',
+  color: '#363537',
+  toggleTheme: '#20202a',
+  toggleThemeIcon: '#fff',
 };

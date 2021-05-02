@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme == 'light' ? light : dark}>
       <LayoutWrapper>
         <FloatButton onClick={toggleTheme}>
-          {theme == 'light' ? <Moon width={32} /> : <Sun width={32} />}
+          {theme == 'light' ? <Sun width={32} /> : <Moon width={32} />}
         </FloatButton>
         <NavBar scrollPosition={scrollPosition}>
           <Text size="2rem" weight={600}>

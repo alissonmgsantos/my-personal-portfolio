@@ -11,19 +11,19 @@ export const NavBar = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 5rem;
   position: fixed;
   z-index: 9999;
-  color: ${props => (props.scrollPosition > 30 ? '#333' : '#fff')};
-  background: ${props => (props.scrollPosition > 30 ? '#fff' : 'transparent')};
+  color: ${({ theme, scrollPosition }) =>
+    scrollPosition > 30 ? theme.color : '#fff'};
+  background: ${({ theme, scrollPosition }) =>
+    scrollPosition > 30 ? theme.background : 'transparent'};
   box-shadow: ${props =>
-    props.scrollPosition > 30
-      ? '0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%)'
-      : 0};
+    props.scrollPosition > 30 ? '0 3px 8px 0 rgb(15 15 20 / 20%)' : 0};
 
   @media (max-width: 800px) {
     flex-direction: column;
-
+    padding: 1rem;
     & > :nth-child(2) {
       margin: 0.5rem 1rem;
     }
@@ -35,8 +35,9 @@ export const Wrapper = styled.div`
   align-items: center;
   cursor: pointer;
   flex-wrap: wrap;
+  text-transform: uppercase;
   & > :nth-child(odd) {
-    margin: 0 0.5rem !important;
+    margin: 0 1rem !important;
   }
 `;
 
@@ -50,15 +51,17 @@ export const FloatButton = styled.div`
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: red;
+  background: ${({ theme }) => theme.toggleTheme};
+  color: ${({ theme }) => theme.toggleThemeIcon};
+  border: 0.15rem solid #333;
   border-radius: 100%;
   position: fixed;
   float: bottom;
   bottom: 0.5rem;
   right: 0.5rem;
-  z-index: 10000;
+  z-index: 100000000;
   cursor: pointer;
-  opacity: 50%;
+  opacity: 80%;
   &:hover {
     opacity: 100%;
   }
