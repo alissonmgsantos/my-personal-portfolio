@@ -51,3 +51,23 @@ export const LinkText = styled.a`
 export const LayoutMain = styled.main`
   height: 100vh;
 `;
+
+export const FloatButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: red;
+  border-radius: 100%;
+  position: fixed;
+  float: bottom;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 10000;
+  cursor: pointer;
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+  }
+`;

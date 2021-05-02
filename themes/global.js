@@ -13,17 +13,15 @@ const GlobalStyles = createGlobalStyle`
 
 html,
 body, #__next {
+  background: ${({ theme }) => theme.body};
   min-height: 100%;
-  margin: 0;
+	line-height: 1;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;

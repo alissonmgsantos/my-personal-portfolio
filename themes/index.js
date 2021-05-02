@@ -1,3 +1,4 @@
+import dark from './dark';
 import GlobalStyles from './global';
-
-export { GlobalStyles };
+import light from './light';
+export { GlobalStyles, light, dark };

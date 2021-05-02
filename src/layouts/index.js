@@ -1,7 +1,10 @@
+import { Moon, Sun } from '@styled-icons/fa-solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import { ThemeProvider } from 'styled-components';
+import { dark, light } from '../../themes';
 import { useLanguage } from '../providers/language';
 import {
   Brand,
@@ -10,11 +13,18 @@ import {
   LinkText,
   NavBar,
   Wrapper,
+  FloatButton,
 } from './styled';
 
 const Layout = ({ children }) => {
   const { language, languageOptions, handleLanguage } = useLanguage();
   const [scrollPosition, setSrollPosition] = useState(0);
+
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    theme == 'light' ? setTheme('dark') : setTheme('light');
+  };
 
   const menu = useState({
     portuguese: [
@@ -32,36 +42,42 @@ const Layout = ({ children }) => {
   })[0];
 
   return (
-    <LayoutWrapper>
-      <NavBar scrollPosition={scrollPosition}>
-        <Brand>Alisson</Brand>
-        <Wrapper>
-          {menu &&
-            menu[language].map((item, key) => (
-              <Link href={item.href} key={key}>
-                <LinkText>{item.name}</LinkText>
-              </Link>
+    <ThemeProvider theme={theme == 'light' ? light : dark}>
+      <LayoutWrapper>
+        <NavBar scrollPosition={scrollPosition}>
+          <Brand>Alisson</Brand>
+          <FloatButton onClick={toggleTheme}>
+            {theme == 'light' ? <Moon width={32} /> : <Sun width={32} />}
+          </FloatButton>
+
+          <Wrapper>
+            {menu &&
+              menu[language].map((item, key) => (
+                <Link href={item.href} key={key}>
+                  <LinkText>{item.name}</LinkText>
+                </Link>
+              ))}
+          </Wrapper>
+          <Wrapper>
+            {languageOptions.map((language, key) => (
+              <Image
+                key={key}
+                src={`/images/language/${language}.svg`}
+                width={24}
+                height={24}
+                onClick={() => handleLanguage(language)}
+              />
             ))}
-        </Wrapper>
-        <Wrapper>
-          {languageOptions.map((language, key) => (
-            <Image
-              key={key}
-              src={`/images/language/${language}.svg`}
-              width={24}
-              height={24}
-              onClick={() => handleLanguage(language)}
-            />
-          ))}
-        </Wrapper>
-      </NavBar>
-      <PerfectScrollbar
-        onScrollY={container =>
-          setSrollPosition(prevState => container.scrollTop)
-        }>
-        <LayoutMain>{children}</LayoutMain>
-      </PerfectScrollbar>
-    </LayoutWrapper>
+          </Wrapper>
+        </NavBar>
+        <PerfectScrollbar
+          onScrollY={container =>
+            setSrollPosition(prevState => container.scrollTop)
+          }>
+          <LayoutMain>{children}</LayoutMain>
+        </PerfectScrollbar>
+      </LayoutWrapper>
+    </ThemeProvider>
   );
 };
 export default Layout;
