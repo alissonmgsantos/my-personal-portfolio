@@ -30,9 +30,10 @@ export const Card = styled.div`
   width: 15rem;
   height: 13rem;
   border: 0.1rem dashed #ccc;
+  cursor: pointer;
 
   &:hover {
-    border: 0.1rem solid #ccc;
+    border: 0.15rem solid #ccc;
   }
 `;
 export const CardTitle = styled.h5`

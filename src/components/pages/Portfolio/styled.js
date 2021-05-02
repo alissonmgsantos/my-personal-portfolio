@@ -9,6 +9,10 @@ export const Wrapper = styled(shared.Wrapper)`
   padding: 5rem;
 `;
 
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+`;
 export const Container = styled(shared.Container)`
   align-items: center;
 `;

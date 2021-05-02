@@ -1,7 +1,15 @@
-import { Container, Galery, Photo, Wrapper } from './styled';
+import { Text } from '../../shared';
+import { Container, Galery, Header, Photo, Wrapper } from './styled';
 const Portfolio = () => {
   return (
     <Wrapper id="portfolio">
+      <Header>
+        <Text>portfolio</Text>
+        <>
+          <Text>portfolio</Text>
+          <Text>portfolio</Text>
+        </>
+      </Header>
       <Container>
         <Galery>
           <Photo src="/images/ballon.jpeg" width="100%" height="auto" />
