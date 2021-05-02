@@ -39,3 +39,16 @@ collections:
       - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
       - { label: "Title", name: "title", widget: "string", required: true}
       - { label: "Bio", name: "bio", widget: "text", required: true}
+
+  ##################
+  # PORTFOLIO
+  #################
+  - name: 'portfolio' # Used in routes, e.g., /admin/collections/blog
+    label: 'Portfolio' # Used in the UI
+    folder: 'posts/portfolio' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "URL Image", name: "image", widget: "string", required: true}
+      - { label: 'Type', name: 'type', widget: 'select', options: ['web', 'mobile', 'other'] }

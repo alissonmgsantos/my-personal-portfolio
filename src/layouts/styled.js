@@ -11,7 +11,7 @@ export const NavBar = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 0.5rem 3rem;
   position: fixed;
   z-index: 9999;
   color: ${({ theme, scrollPosition }) =>
