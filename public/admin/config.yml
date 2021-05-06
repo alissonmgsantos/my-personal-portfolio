@@ -50,5 +50,6 @@ collections:
     slug: '{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string", required: true}
-      - { label: "URL Image", name: "image", widget: "string", required: true}
       - { label: 'Type', name: 'type', widget: 'select', options: ['web', 'mobile', 'other'] }
+      - { label: "URL Image", name: "image", widget: "string", required: true}
+      - { label: "URL Repository", name: "repository", widget: "string", required: true}

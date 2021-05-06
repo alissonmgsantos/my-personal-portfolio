@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import React from 'react';
 import { About, Home, Portfolio } from '../components/pages';
+import { getPortfolio } from '../services';
 
-const Index = () => {
+const Index = ({ portfolio }) => {
   return (
     <>
       <Head>
@@ -17,11 +18,22 @@ const Index = () => {
       <>
         <Home />
         <About />
-
-        <Portfolio id="#portfolio" />
+        <Portfolio portfolio={portfolio} />
       </>
     </>
   );
 };
 
 export default Index;
+
+export async function getStaticProps(context) {
+  const portfolio = (context => {
+    return getPortfolio(context);
+  })(require.context('../../posts/portfolio', true, /\.md$/));
+
+  return {
+    props: {
+      portfolio,
+    },
+  };
+}

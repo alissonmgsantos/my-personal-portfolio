@@ -8,6 +8,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    domains: ['raw.githubusercontent.com', 'avatars.githubusercontent.com'],
   },
 };

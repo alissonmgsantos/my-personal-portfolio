@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
-import { getPostBySlug } from '../../../services';
 import { Text } from '../../shared';
 import {
   ButtonGroup,
@@ -15,10 +14,10 @@ import {
   Wrapper,
 } from './styled';
 
-const Portfolio = () => {
+const Portfolio = ({ portfolio }) => {
   const { language } = useLanguage();
   const [selected, setSelected] = useState('all');
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState([]);
   const options = useState({
     portuguese: [
       { name: 'all', description: 'Todos' },
@@ -35,8 +34,7 @@ const Portfolio = () => {
   })[0];
 
   useEffect(async () => {
-    const data = await getPostBySlug('about');
-    setInfo(prevState => data);
+    setInfo(prevState => portfolio);
   }, [language]);
 
   return (
@@ -44,7 +42,7 @@ const Portfolio = () => {
       <Container>
         <Text size="2rem" weight={600}>
           <Images width={24} />
-          {info?.title}
+          {language == 'portuguese' ? 'Portfólio' : 'Portfolio'}
         </Text>
         <ButtonGroup>
           {options[language].map((option, key) => (
@@ -58,146 +56,31 @@ const Portfolio = () => {
           ))}
         </ButtonGroup>
       </Container>
-
       <Galery>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/windmill.jpg"
-            alt="A windmill"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/suspension-bridge.jpg"
-            alt="The Clifton Suspension Bridge"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/suspension-bridge.jpg"
-            alt="The Clifton Suspension Bridge"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/sunset.jpg"
-            alt="Sunset and boats"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/snowy.jpg"
-            alt="a river in the snow"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/bristol-balloons1.jpg"
-            alt="a single checked balloon"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/dog-balloon.jpg"
-            alt="a hot air balloon shaped like a dog"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/abq-balloons.jpg"
-            alt="View from a hot air balloon of other balloons"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/disney-balloon.jpg"
-            alt="a balloon fairground ride"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/bristol-harbor.jpg"
-            alt="sunrise over a harbor"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
+        {info
+          .filter(value => value.type === selected)
+          .map((project, key) => (
+            <Figure key={key}>
+              <Photo src={project.image} alt={project.title} />
+              <Corner>
+                <Link href={project.repository || '/'}>
+                  <Github width={32} />
+                </Link>
+              </Corner>
+            </Figure>
+          ))}
 
-        <Figure>
-          <Photo
-            src="https://assets.codepen.io/12005/bristol-balloons2.jpg"
-            alt="three hot air balloons in a blue sky"
-          />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo src="/images/ballon.jpeg" alt="" />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
-        <Figure>
-          <Photo src="/images/background.jpeg" alt="" />
-          <Corner>
-            <Link href="/">
-              <Github width={32} />
-            </Link>
-          </Corner>
-        </Figure>
+        {selected == 'all' &&
+          info.map((project, key) => (
+            <Figure key={key}>
+              <Photo src={project.image} alt="A windmill" />
+              <Corner>
+                <Link href={project.repository || '/'}>
+                  <Github width={32} />
+                </Link>
+              </Corner>
+            </Figure>
+          ))}
       </Galery>
     </Wrapper>
   );
