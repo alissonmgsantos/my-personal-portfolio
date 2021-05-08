@@ -15,9 +15,9 @@ export const NavBar = styled.nav`
   position: fixed;
   z-index: 9999;
   color: ${({ theme, scrollPosition }) =>
-    scrollPosition > 30 ? theme.color : '#fff'};
+    scrollPosition > 0.02285467874083657 ? theme.color : '#fff'};
   background: ${({ theme, scrollPosition }) =>
-    scrollPosition > 30 ? theme.background : 'transparent'};
+    scrollPosition > 0.02285467874083657 ? theme.background : 'transparent'};
   box-shadow: ${props =>
     props.scrollPosition > 30 ? '0 3px 8px 0 rgb(15 15 20 / 20%)' : 0};
 

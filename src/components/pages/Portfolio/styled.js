@@ -32,7 +32,7 @@ export const ButtonGroup = styled.div`
 `;
 
 export const Galery = styled.div`
-  column-count: 4;
+  column-count: 3;
   column-gap: 1rem;
 `;
 
