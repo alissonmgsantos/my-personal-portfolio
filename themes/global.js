@@ -17,7 +17,7 @@ body, #__next {
   min-height: 100%;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
 }

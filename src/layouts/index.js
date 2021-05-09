@@ -1,7 +1,7 @@
 import { Moon, Sun } from '@styled-icons/fa-solid';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../../themes';
@@ -16,13 +16,22 @@ import {
 } from './styled';
 
 const Layout = ({ children }) => {
-  const { language, languageOptions, handleLanguage } = useLanguage();
+  const { language, languageOptions, toggleLanguage } = useLanguage();
   const [scrollPosition, setSrollPosition] = useState(0);
-
   const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    const UI_THEME = localStorage.getItem('UI_THEME');
+    setTheme(prevSate => UI_THEME || 'light');
+  }, []);
+
   const toggleTheme = () => {
-    theme == 'light' ? setTheme('dark') : setTheme('light');
+    if (theme == 'light') {
+      localStorage.setItem('UI_THEME', 'dark');
+      return setTheme(prevState => 'dark');
+    }
+    localStorage.setItem('UI_THEME', 'light');
+    return setTheme(prevState => 'light');
   };
 
   const menu = useState({
@@ -64,7 +73,7 @@ const Layout = ({ children }) => {
                 src={`/images/language/${language}.svg`}
                 width={24}
                 height={24}
-                onClick={() => handleLanguage(language)}
+                onClick={() => toggleLanguage(language)}
               />
             ))}
           </Wrapper>

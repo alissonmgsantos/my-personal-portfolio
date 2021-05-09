@@ -15,7 +15,6 @@ const Experience = () => {
     const data = await getPostBySlug('experience', language);
     setInfo(prevState => data);
   }, [language]);
-  console.log(info);
 
   return (
     <Wrapper id="experience">
