@@ -41,7 +41,7 @@ const Experience = () => {
 
       <Container>
         {selected == 'work' &&
-          info?.work.reverse().map((experience, key) => (
+          info?.work.map((experience, key) => (
             <Card key={key}>
               <Building width={64} />
               <Text
@@ -58,12 +58,12 @@ const Experience = () => {
                 {experience.period}
               </Text>
               <Link href={experience.url || '/'}>
-                <ExternalLinkAlt width={20} />
+                <ExternalLinkAlt width={16} />
               </Link>
             </Card>
           ))}
         {selected == 'academic' &&
-          info?.academic.reverse().map((experience, key) => (
+          info?.academic.map((experience, key) => (
             <Card key={key}>
               <UserGraduate width={64} />
               <Text
@@ -80,7 +80,7 @@ const Experience = () => {
                 {experience.period}
               </Text>
               <Link href={experience.url || '/'}>
-                <ExternalLinkAlt width={20} />
+                <ExternalLinkAlt width={16} />
               </Link>
             </Card>
           ))}
