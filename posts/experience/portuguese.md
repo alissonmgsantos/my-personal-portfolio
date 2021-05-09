@@ -1,6 +1,7 @@
 ---
 language: portuguese
 title: Experiências
+title_work: Trabalho
 work:
   - period: Ago 2020 - Presente
     title: Analista de Sistemas PL | Capgemini Brasil
@@ -16,6 +17,7 @@ work:
       doloribus repellendus maxime, accusamus quae debitis nesciunt maiores
       deleniti mollitia vel ipsa quasi omnis sint nisi et! Ad quo officia
       consectetur!
+title_academic: Acadêmica
 academic:
   - period: Mar 2015 - Jan 2018
     title: Centro Universitário Jorge Amado
