@@ -1,112 +1,89 @@
-import { Desktop, Globe, MobileAlt } from '@styled-icons/fa-solid';
+import { Building } from '@styled-icons/fa-regular';
+import { ExternalLinkAlt, UserGraduate } from '@styled-icons/fa-solid';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Text } from '../../shared';
-import {
-  Container,
-  ExperienceContainer,
-  ExperienceItem,
-  ExperienceLeftBorder,
-  FolderOpen,
-  UserGraduate,
-  Wrapper,
-} from './styled';
+import { ButtonGroup, Text } from '../../shared';
+import { Card, Container, FolderOpen, Wrapper } from './styled';
 const Experience = () => {
   const { language } = useLanguage();
   const [info, setInfo] = useState(null);
-  const services = useState({
-    portuguese: [
-      {
-        name: 'Aplicativos',
-        description: 'Incríveis',
-        icon: <MobileAlt width={32} />,
-      },
-      {
-        name: 'Programas',
-        description: 'Escaláveis',
-        icon: <Desktop width={55} />,
-      },
-      { name: 'Sites', description: 'Responsivos', icon: <Globe width={48} /> },
-    ],
-    english: [
-      {
-        name: 'Applications',
-        description: 'Incredibles',
-        icon: <MobileAlt width={32} />,
-      },
-      {
-        name: 'Softwares',
-        description: 'Scalables',
-        icon: <Desktop width={55} />,
-      },
-      {
-        name: 'Websites',
-        description: 'Responsives',
-        icon: <Globe width={48} />,
-      },
-    ],
-  })[0];
+  const [selected, setSelected] = useState('work');
 
   useEffect(async () => {
-    const data = await getPostBySlug('about', language);
+    const data = await getPostBySlug('experience', language);
     setInfo(prevState => data);
   }, [language]);
+  console.log(info);
 
   return (
     <Wrapper id="experience">
-      <Text size="2rem" weight={600}>
+      <Text size="2rem" weight={600} margin="0 0 4rem 0">
         <FolderOpen width={32} />
         {info?.title}
       </Text>
-      <Container>
-        <ExperienceContainer>
-          <Text size="1rem" weight={600}>
-            <UserGraduate width={32} />
-            aqui
-          </Text>
-          <PerfectScrollbar>
-            {[1, 2, 3, 4, 5].map((item, key) => (
-              <ExperienceLeftBorder>
-                <ExperienceItem key={key}>
-                  <Text size="1rem" weight={600}>
-                    aqui
-                  </Text>
-                  <Text>Data</Text>
-                  <Text padding="0 0 1.5rem">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Officia doloribus repellendus maxime, accusamus quae debitis
-                    nesciunt maiores deleniti mollitia vel ipsa quasi omnis sint
-                    nisi et! Ad quo officia consectetur!
-                  </Text>
-                </ExperienceItem>
-              </ExperienceLeftBorder>
-            ))}
-          </PerfectScrollbar>
-        </ExperienceContainer>
 
-        <ExperienceContainer>
-          <Text size="1rem" weight={600}>
-            <UserGraduate width={32} />
-            aqui
-          </Text>
-          <PerfectScrollbar>
-            {[1, 2, 3, 4, 5].map((item, key) => (
-              <ExperienceLeftBorder>
-                <ExperienceItem key={key}>
-                  <Text size="1rem" weight={600}>
-                    aqui
-                  </Text>
-                  <Text margin="1rem 0">Data</Text>
-                  <Text padding="0 0 1.5rem">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </Text>
-                </ExperienceItem>
-              </ExperienceLeftBorder>
-            ))}
-          </PerfectScrollbar>
-        </ExperienceContainer>
+      <ButtonGroup>
+        <Text
+          weight={600}
+          className={selected == 'work' && 'actived'}
+          onClick={() => setSelected(prevState => 'work')}>
+          {info?.title_work}
+        </Text>
+        <Text
+          weight={600}
+          className={selected == 'academic' && 'actived'}
+          onClick={() => setSelected(prevState => 'academic')}>
+          {info?.title_academic}
+        </Text>
+      </ButtonGroup>
+
+      <Container>
+        {selected == 'work' &&
+          info?.work.reverse().map((experience, key) => (
+            <Card key={key}>
+              <Building width={64} />
+              <Text
+                weight={500}
+                size="0.9rem"
+                align="center"
+                margin="2rem 0 0 0 ">
+                {experience.company}
+              </Text>
+              <Text weight={600} size="1rem" align="center">
+                {experience.role}
+              </Text>
+              <Text size="0.8rem" align="center" margin="0 0 1rem 0">
+                {experience.period}
+              </Text>
+              <Link href={experience.url || '/'}>
+                <ExternalLinkAlt width={20} />
+              </Link>
+            </Card>
+          ))}
+        {selected == 'academic' &&
+          info?.academic.reverse().map((experience, key) => (
+            <Card key={key}>
+              <UserGraduate width={64} />
+              <Text
+                weight={500}
+                size="0.9rem"
+                align="center"
+                margin="2rem 0 0 0 ">
+                {experience.company}
+              </Text>
+              <Text weight={600} size="1rem" align="center">
+                {experience.role}
+              </Text>
+              <Text size="0.8rem" align="center" margin="0 0 1rem 0">
+                {experience.period}
+              </Text>
+              <Link href={experience.url || '/'}>
+                <ExternalLinkAlt width={20} />
+              </Link>
+            </Card>
+          ))}
       </Container>
     </Wrapper>
   );

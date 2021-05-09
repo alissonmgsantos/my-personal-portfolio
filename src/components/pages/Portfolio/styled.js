@@ -20,17 +20,6 @@ export const Container = styled(shared.Container)`
   margin-bottom: 2rem;
 `;
 
-export const ButtonGroup = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  & > p {
-    margin: 0 0.5rem;
-    cursor: pointer;
-  }
-`;
-
 export const Galery = styled.div`
   column-count: 3;
   column-gap: 1rem;

@@ -26,6 +26,12 @@ ol, ul {
 	list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: ${({ theme }) => theme.color};
+
+}
+
 .actived {
   &:before{
     content: '•';

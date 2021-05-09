@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
-import { Text } from '../../shared';
+import { ButtonGroup, Text } from '../../shared';
 import {
-  ButtonGroup,
   Container,
   Corner,
   Figure,
