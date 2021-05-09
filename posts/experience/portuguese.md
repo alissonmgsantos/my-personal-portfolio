@@ -3,24 +3,18 @@ language: portuguese
 title: Experiências
 title_work: Trabalho
 work:
-  - period: Ago 2020 - Presente
-    title: Analista de Sistemas PL | Capgemini Brasil
-    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-      doloribus repellendus maxime, accusamus quae debitis nesciunt maiores
-      deleniti mollitia vel ipsa quasi omnis sint nisi et! Ad quo officia
-      consectetur!
-    url: https://www.capgemini.com/br-pt/
   - period: Maio 2017 - Ago 2020
-    title: Analista Desenvolvedor | Solutis Tecnologias Ltda.
+    company: Solutis Tecnologias
     url: https://solutis.com.br/
-    description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-      doloribus repellendus maxime, accusamus quae debitis nesciunt maiores
-      deleniti mollitia vel ipsa quasi omnis sint nisi et! Ad quo officia
-      consectetur!
+    role: Analista Desenvolvedor
+  - period: Ago 2020 - Presente
+    company: Capgemini Brasil
+    role: Analista de Sistemas PL
+    url: https://www.capgemini.com/br-pt/
 title_academic: Acadêmica
 academic:
   - period: Mar 2015 - Jan 2018
-    title: Centro Universitário Jorge Amado
+    company: Centro Universitário Jorge Amado
+    role: Análise e Desenvolvimento de Sistemas
     url: https://www.unijorge.edu.br/
-    description: "1"
 ---
