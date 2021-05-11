@@ -23,10 +23,7 @@ export const NavBar = styled.nav`
 
   @media (max-width: 800px) {
     flex-direction: column;
-    padding: 1rem;
-    & > :nth-child(2) {
-      margin: 0.5rem 1rem;
-    }
+    padding: 0 0 1rem 0;
   }
 `;
 
@@ -38,6 +35,11 @@ export const Wrapper = styled.div`
   text-transform: uppercase;
   & > :nth-child(odd) {
     margin: 0 1rem !important;
+  }
+  @media (max-width: 800px) {
+    & > :nth-child(odd) {
+      margin: 0 0.5rem !important;
+    }
   }
 `;
 
@@ -57,8 +59,8 @@ export const FloatButton = styled.div`
   border-radius: 100%;
   position: fixed;
   float: bottom;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 1.5rem;
+  right: 2rem;
   z-index: 100000000;
   cursor: pointer;
   opacity: 80%;

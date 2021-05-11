@@ -2,8 +2,8 @@ import { Desktop, Globe, MobileAlt } from '@styled-icons/fa-solid';
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Container, Text } from '../../shared';
-import { Card, User, Wrapper } from './styled';
+import { Text } from '../../shared';
+import { Card, Container, User, Wrapper } from './styled';
 
 const About = () => {
   const { language } = useLanguage();

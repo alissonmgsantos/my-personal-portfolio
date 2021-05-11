@@ -2,14 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   display: flex;
-  height: 100vh;
   width: 100vw;
   padding: 5rem;
 `;
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 auto;
 `;
 
 export const Text = styled.p`

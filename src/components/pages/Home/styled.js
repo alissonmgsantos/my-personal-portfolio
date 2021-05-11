@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import * as shared from '../../shared';
 
 export const Wrapper = styled(shared.Wrapper)`
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
 `;
 

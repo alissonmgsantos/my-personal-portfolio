@@ -7,6 +7,10 @@ export const Wrapper = styled(shared.Wrapper)`
   align-self: center;
   justify-content: center;
 `;
+export const Container = styled(shared.Container)`
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export const User = styled(icon.User)`
   margin-right: 1rem;
