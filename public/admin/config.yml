@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: alissonmgsantos/my_portfolio
+  branch: develop
+
+  # This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: 'static/assets/images' # Media files will be stored in the repo under images/uploads
+public_folder: '/assets/images' # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  ##################
+  # PROFILE | HOME
+  #################
+  - name: 'profile' # Used in routes, e.g., /admin/collections/blog
+    label: 'Profile' # Used in the UI
+    folder: 'posts/profile' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
+      - { label: "Name", name: "name", widget: "string", required: true}
+      - { label: "Description", name: "description", widget: "list", required: true, default: ["Tag 1, Tag 2, Tag 3"]}
+      - { label: "Github", name: "github", widget: "string", required: true}
+      - { label: "Linkedin", name: "linkedin", widget: "string", required: true}
+      - { label: "URL Image", name: "image", widget: "string", required: true}
+
+  ##################
+  # ABOUT
+  #################
+  - name: 'about' # Used in routes, e.g., /admin/collections/blog
+    label: 'About' # Used in the UI
+    folder: 'posts/about' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Bio", name: "bio", widget: "text", required: true}
+
+  ##################
+  # PORTFOLIO
+  #################
+  - name: 'portfolio' # Used in routes, e.g., /admin/collections/blog
+    label: 'Portfolio' # Used in the UI
+    folder: 'posts/portfolio' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: 'Type', name: 'type', widget: 'select', options: ['web', 'mobile', 'other'] }
+      - { label: "URL Image", name: "image", widget: "string", required: true}
+      - { label: "URL Repository", name: "repository", widget: "string", required: true}
+
+  ##################
+  # EXPERIENCE
+  #################
+  - name: 'experience' # Used in routes, e.g., /admin/collections/blog
+    label: 'experience' # Used in the UI
+    folder: 'posts/experience' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Title Work list", name: "title_work", widget: "string" }
+      - label: " Work Experience"
+        name: "work"
+        widget: "list"
+        fields:
+          - { label: "Company", name: "company", widget: "string"}
+          - { label: "Role", name: "role", widget: "string"}
+          - { label: "Period", name: "period", widget: "string", default: 'Jan 2020 - Jan 2021'}
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "Title Academic list", name: "title_academic", widget: "string" }
+      - label: " Academic Experience"
+        name: "academic"
+        widget: "list"
+        fields:
+          - { label: "Company", name: "company", widget: "string"}
+          - { label: "Role", name: "role", widget: "string"}
+          - { label: "Period", name: "period", widget: "string", default: 'Jan 2020 - Jan 2021'}
+          - { label: "URL", name: "url", widget: "string" }
