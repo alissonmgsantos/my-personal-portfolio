@@ -6,7 +6,9 @@ import {
   Footer,
   Home,
   Portfolio,
+  Skill,
 } from '../components/pages';
+import { Divider } from '../components/shared';
 import { getPortfolio } from '../services';
 
 const Index = ({ portfolio }) => {
@@ -23,9 +25,15 @@ const Index = ({ portfolio }) => {
 
       <>
         <Home />
+        <Divider />
         <About />
+        <Divider />
+        <Skill />
+        <Divider />
         <Experience />
+        <Divider />
         <Portfolio portfolio={portfolio} />
+        <Divider />
         <Footer />
       </>
     </>

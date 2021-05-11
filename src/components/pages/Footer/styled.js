@@ -9,7 +9,6 @@ export const Wrapper = styled(shared.Wrapper)`
   flex-direction: column;
   height: auto;
   padding: 0 0 1rem 0;
-  border-top: 0.1rem dashed #ccc;
 `;
 
 // Social

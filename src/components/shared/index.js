@@ -31,3 +31,12 @@ export const ButtonGroup = styled.div`
     cursor: pointer;
   }
 `;
+
+// DIVIDER
+export const Divider = styled.div`
+  width: 90%;
+  height: 0.01rem;
+  background: #ccc;
+  opacity: 0.3;
+  margin: 0 auto;
+`;
