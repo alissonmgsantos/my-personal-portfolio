@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   display: flex;
-  width: 100vw;
-  padding: 5rem;
+  padding: 5rem 3rem;
+  @media (max-width: 800px) {
+    padding: 6rem 1rem;
+  }
 `;
 
 export const Container = styled.div`

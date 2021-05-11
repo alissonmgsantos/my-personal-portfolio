@@ -39,22 +39,22 @@ const Portfolio = ({ portfolio }) => {
   return (
     <Wrapper id="portfolio">
       <Container>
-        <Text size="2rem" weight={600}>
+        <Text size="2rem" weight={600} margin="0 0 4rem 0">
           <Images width={24} />
           {language == 'portuguese' ? 'Portfólio' : 'Portfolio'}
         </Text>
-        <ButtonGroup>
-          {options[language].map((option, key) => (
-            <Text
-              key={key}
-              weight={600}
-              className={selected == option.name && 'actived'}
-              onClick={() => setSelected(prevState => option.name)}>
-              {option.description}
-            </Text>
-          ))}
-        </ButtonGroup>
       </Container>
+      <ButtonGroup>
+        {options[language].map((option, key) => (
+          <Text
+            key={key}
+            weight={600}
+            className={selected == option.name && 'actived'}
+            onClick={() => setSelected(prevState => option.name)}>
+            {option.description}
+          </Text>
+        ))}
+      </ButtonGroup>
       <Galery>
         {info
           .filter(value => value.type === selected)

@@ -21,8 +21,12 @@ export const Container = styled(shared.Container)`
 `;
 
 export const Galery = styled.div`
+  margin-top: 3rem;
   column-count: 3;
   column-gap: 1rem;
+  @media (max-width: 425px) {
+    column-count: 1;
+  }
 `;
 
 export const Figure = styled.figure`
