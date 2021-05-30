@@ -1,15 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
-import {
-  About,
-  Experience,
-  Footer,
-  Home,
-  Portfolio,
-  Skill,
-} from '../components/pages';
+import { Experience, Footer, Portfolio, Skill } from '../components/pages';
 import { Divider } from '../components/shared';
 import { getPortfolio } from '../services';
+import About from './About';
+import Home from './Home';
 
 const Index = ({ portfolio }) => {
   return (

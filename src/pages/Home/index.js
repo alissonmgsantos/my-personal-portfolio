@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { useLanguage } from '../../../providers/language';
-import { getPostBySlug } from '../../../services';
-import { Text } from '../../shared';
-import {
-  Avatar,
-  Container,
-  Github,
-  Linkedin,
-  SocialWrapper,
-  Wrapper,
-} from './styled';
+import { Avatar, Text } from '../../components/shared';
+import { useLanguage } from '../../providers/language';
+import { getPostBySlug } from '../../services';
+import { Container, Github, Linkedin, SocialWrapper, Wrapper } from './styled';
 
 const Home = () => {
   const { language } = useLanguage();

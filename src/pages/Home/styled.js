@@ -1,7 +1,6 @@
 import * as icon from '@styled-icons/fa-brands';
-import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
-import * as shared from '../../shared';
+import * as shared from '../../components/shared';
 
 export const Wrapper = styled(shared.Wrapper)`
   width: 100%;
@@ -47,12 +46,6 @@ export const Container = styled(shared.Container)`
       }
     }
   }
-`;
-
-export const Avatar = styled(Image)`
-  border: 0.2rem solid #fff !important;
-  border-radius: 100%;
-  margin-bottom: 2rem;
 `;
 
 // Social
