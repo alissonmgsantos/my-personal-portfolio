@@ -72,7 +72,7 @@ const Portfolio = ({ portfolio }) => {
         {selected == 'all' &&
           info.map((project, key) => (
             <Figure key={key}>
-              <Photo src={project.image} alt="A windmill" />
+              <Photo src={project.image} alt={project.title} />
               <Corner>
                 <Link href={project.repository || '/'}>
                   <Github width={32} />

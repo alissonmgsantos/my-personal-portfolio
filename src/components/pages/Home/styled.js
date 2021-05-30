@@ -4,26 +4,37 @@ import styled, { keyframes } from 'styled-components';
 import * as shared from '../../shared';
 
 export const Wrapper = styled(shared.Wrapper)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-`;
+  background-image: url('/images/background.jpeg');
+  background-size: cover;
+  background-position: center;
 
-export const Background = styled(Image)`
-  z-index: -1;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 `;
 
 export const Container = styled(shared.Container)`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto !important;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   z-index: 1;
   & > p {
-    margin-top: 0.5rem;
     color: #fff;
-    opacity: 80%;
+    opacity: 1;
 
     &:nth-child(3) {
       &:after {
