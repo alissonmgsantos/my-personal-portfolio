@@ -9,8 +9,8 @@ import {
   UmbrellaBeach,
 } from '@styled-icons/fa-solid';
 import React, { useState } from 'react';
-import { HeaderPage, Text } from '../../components/shared';
-import { useLanguage } from '../../providers/language';
+import { useLanguage } from '../../../providers/language';
+import { HeaderPage, Text } from '../../shared';
 import { Card, CardInfo, Wrapper } from './styled';
 
 const Interest = () => {

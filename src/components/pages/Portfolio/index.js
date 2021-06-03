@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useLanguage } from '../../../providers/language';
+import { getPortfolio } from '../../../services';
 import { ButtonGroup, Text } from '../../shared';
 import {
   Container,
@@ -13,10 +14,10 @@ import {
   Wrapper,
 } from './styled';
 
-const Portfolio = ({ portfolio }) => {
+const Portfolio = () => {
   const { language } = useLanguage();
   const [selected, setSelected] = useState('all');
-  const [info, setInfo] = useState([]);
+
   const options = useState({
     portuguese: [
       { name: 'all', description: 'Todos' },
@@ -32,9 +33,9 @@ const Portfolio = ({ portfolio }) => {
     ],
   })[0];
 
-  useEffect(async () => {
-    setInfo(prevState => portfolio);
-  }, [language]);
+  const info = (context => {
+    return getPortfolio(context);
+  })(require.context('../../../../posts/portfolio', true, /\.md$/));
 
   return (
     <Wrapper id="portfolio">

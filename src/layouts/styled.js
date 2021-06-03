@@ -21,7 +21,7 @@ export const NavBar = styled.nav`
   box-shadow: ${props =>
     props.scrollPosition > 30 ? '0 3px 8px 0 rgb(15 15 20 / 20%)' : 0};
 
-  @media (max-width: 800px) {
+  @media (max-width: 425px) {
     flex-direction: column;
     padding: 0 0 1rem 0;
   }
@@ -36,9 +36,9 @@ export const Wrapper = styled.div`
   & > :nth-child(odd) {
     margin: 0 1rem !important;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 375px) {
     & > :nth-child(odd) {
-      margin: 0 0.5rem !important;
+      margin: 0 0.4rem !important;
     }
   }
 `;

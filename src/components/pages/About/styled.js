@@ -1,6 +1,6 @@
 import * as icon from '@styled-icons/fa-regular';
 import styled from 'styled-components';
-import * as shared from '../../components/shared';
+import * as shared from '../../shared';
 
 export const Wrapper = styled(shared.Wrapper)`
   flex-direction: column;
@@ -27,9 +27,15 @@ export const Card = styled(shared.Card)`
     justify-self: center;
     align-self: center;
     grid-area: 1 / 1 / 2 / 2;
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
   & > .about {
     grid-area: 1 / 2 / 2 / 5;
+    @media (max-width: 425px) {
+      grid-area: 1 / 1 / 1 / 5;
+    }
   }
   & > .info {
     grid-area: 2 / 1 / 3 / 5;
@@ -37,6 +43,9 @@ export const Card = styled(shared.Card)`
     align-items: start;
     justify-content: space-between;
     height: auto;
+    @media (max-width: 425px) {
+      flex-wrap: wrap;
+    }
   }
 `;
 
@@ -46,5 +55,9 @@ export const CardInfo = styled.div`
   & > svg {
     float: left;
     margin-right: 15px;
+  }
+
+  @media (max-width: 425px) {
+    padding-top: 1rem;
   }
 `;

@@ -1,12 +1,17 @@
 import Head from 'next/head';
 import React from 'react';
-import { Footer } from '../components/pages';
-import { getPortfolio } from '../services';
-import About from './About';
-import Home from './Home';
-import Interest from './Interest';
+import {
+  About,
+  Experience,
+  Footer,
+  Home,
+  Interest,
+  Portfolio,
+  Skill,
+} from '../components/pages';
+import { Divider } from '../components/shared';
 
-const Index = ({ portfolio }) => {
+const Index = () => {
   return (
     <>
       <Head>
@@ -22,12 +27,12 @@ const Index = ({ portfolio }) => {
         <Home />
         <About />
         <Interest />
-        {/* <Skill />
+        <Skill />
         <Divider />
         <Experience />
         <Divider />
-        <Portfolio portfolio={portfolio} />
-        <Divider /> */}
+        <Portfolio />
+        <Divider />
         <Footer />
       </>
     </>
@@ -35,15 +40,3 @@ const Index = ({ portfolio }) => {
 };
 
 export default Index;
-
-export async function getStaticProps(context) {
-  const portfolio = (context => {
-    return getPortfolio(context);
-  })(require.context('../../posts/portfolio', true, /\.md$/));
-
-  return {
-    props: {
-      portfolio,
-    },
-  };
-}

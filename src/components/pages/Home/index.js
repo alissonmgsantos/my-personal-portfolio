@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { Avatar, Text } from '../../components/shared';
-import { useLanguage } from '../../providers/language';
-import { getPostBySlug } from '../../services';
+import { useLanguage } from '../../../providers/language';
+import { getPostBySlug } from '../../../services';
+import { Avatar, Text } from '../../shared';
 import { Container, Github, Linkedin, SocialWrapper, Wrapper } from './styled';
 
 const Home = () => {
