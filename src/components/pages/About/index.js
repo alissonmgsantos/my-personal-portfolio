@@ -78,6 +78,7 @@ const About = props => {
             width={200}
             height={200}
             borderRadius="100%"
+            objectFit="cover"
           />
         </div>
         <div className="about">

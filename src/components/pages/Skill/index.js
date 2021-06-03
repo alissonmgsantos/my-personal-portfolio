@@ -144,9 +144,9 @@ const Skill = () => {
               key={key}
               alt={`${item}`}
               src={item}
-              width={80}
-              height={80}
-              padding="0.5rem"
+              width={90}
+              height={90}
+              padding="1rem"
             />
           ))}
         </div>

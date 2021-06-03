@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Image = styled.img`
-  object-fit: ${props => props.objectFit || 'cover'};
+  object-fit: ${props => props.objectFit || 'contain'};
   margin: ${props => props.margin || 0};
   padding: ${props => props.padding || 0};
   border-radius: ${props => props.borderRadius || 0};
