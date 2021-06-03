@@ -8,10 +8,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: [
-      'raw.githubusercontent.com',
-      'avatars.githubusercontent.com',
-      'alissonmgsantos.netlify.app',
-    ],
+    domains: ['raw.githubusercontent.com', 'avatars.githubusercontent.com'],
   },
 };
