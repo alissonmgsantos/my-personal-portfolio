@@ -1,11 +1,10 @@
 import { Moon, Sun } from '@styled-icons/fa-solid';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../../themes';
-import { Text } from '../components/shared';
+import { Image, Text } from '../components/shared';
 import { useLanguage } from '../providers/language';
 import {
   FloatButton,

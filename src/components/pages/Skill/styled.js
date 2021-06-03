@@ -39,11 +39,6 @@ export const Card = styled(shared.Card)`
   }
   & > .info {
     grid-area: 2 / 1 / 2 / 5;
-
-    img {
-      padding: 1rem !important;
-    }
-
     @media (max-width: 425px) {
       flex-wrap: wrap;
     }

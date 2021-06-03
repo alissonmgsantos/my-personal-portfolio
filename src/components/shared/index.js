@@ -1,5 +1,11 @@
-import Image from 'next/image';
 import styled from 'styled-components';
+
+export const Image = styled.img`
+  object-fit: ${props => props.objectFit || 'cover'};
+  margin: ${props => props.margin || 0};
+  padding: ${props => props.padding || 0};
+  border-radius: ${props => props.borderRadius || 0};
+`;
 
 export const Wrapper = styled.section`
   display: flex;
@@ -79,16 +85,7 @@ export const ButtonGroup = styled.div`
   }
 `;
 
-// DIVIDER
-export const Divider = styled.div`
-  width: 90%;
-  height: 0.01rem;
-  background: #ccc;
-  opacity: 0.3;
-  margin: 0 auto;
-`;
-
-export const Avatar = styled(Image)`
+export const Avatar = styled.img`
   border-radius: 100%;
 `;
 

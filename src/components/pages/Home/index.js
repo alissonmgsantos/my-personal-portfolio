@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Avatar, Text } from '../../shared';
+import { Image, Text } from '../../shared';
 import { Container, Github, Linkedin, SocialWrapper, Wrapper } from './styled';
 
 const Home = () => {
@@ -35,12 +35,12 @@ const Home = () => {
     <Wrapper id="home">
       {info && (
         <Container>
-          <Avatar
+          <Image
             alt="user image"
-            objectFit="cover"
             src={info?.image || '/'}
             width={250}
             height={250}
+            borderRadius="100%"
           />
           <Text size="2.5rem" weight={600}>
             {info?.name}

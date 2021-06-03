@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { getPostBySlug } from '../../../services';
 import {
-  Divider,
   Github,
   KnowledgeList,
   KnowledgeListItem,
@@ -45,8 +44,6 @@ const Sidenav = props => {
       </ProfileHeader>
       <SkillWrapper>{[1, 2, 3].map((item, key) => item)}</SkillWrapper>
 
-      <Divider />
-
       <SkillWrapper>
         {info?.skills.map((skill, key) => (
           <React.Fragment key={key}>
@@ -56,8 +53,6 @@ const Sidenav = props => {
           </React.Fragment>
         ))}
       </SkillWrapper>
-
-      <Divider />
 
       <KnowledgeWrapper>
         <KnowledgeList>

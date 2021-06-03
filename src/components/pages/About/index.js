@@ -8,7 +8,7 @@ import {
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
-import { Avatar, HeaderPage, Text } from '../../shared';
+import { HeaderPage, Image, Text } from '../../shared';
 import { Card, CardInfo, Wrapper } from './styled';
 
 const About = props => {
@@ -72,12 +72,12 @@ const About = props => {
       </HeaderPage>
       <Card>
         <div className="image-profile">
-          <Avatar
+          <Image
             alt="user image"
-            objectFit="cover"
             src={'/images/background.jpeg' || '/'}
             width={200}
             height={200}
+            borderRadius="100%"
           />
         </div>
         <div className="about">

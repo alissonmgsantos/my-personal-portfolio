@@ -8,11 +8,10 @@ import {
   Running,
   UmbrellaBeach,
 } from '@styled-icons/fa-solid';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import { ProgressBar } from '../../../components';
 import { useLanguage } from '../../../providers/language';
-import { HeaderPage, Text } from '../../shared';
+import { HeaderPage, Image, Text } from '../../shared';
 import { Card, Wrapper } from './styled';
 
 const Skill = () => {
@@ -111,7 +110,7 @@ const Skill = () => {
     <Wrapper id="about" style={{ paddingTop: 0 }}>
       <HeaderPage>
         <Text size="2rem" weight={600} align="center">
-          {info[language].title} 123123
+          {info[language].title}
         </Text>
         <span></span>
       </HeaderPage>
@@ -130,11 +129,10 @@ const Skill = () => {
             (item, key) => (
               <Image
                 key={key}
-                alt="user image"
-                objectFit="cover"
+                alt={`${item}`}
                 src={`/images/skills/${item}.svg`}
-                width={100}
-                height={100}
+                width={150}
+                height={150}
               />
             )
           )}
@@ -144,11 +142,11 @@ const Skill = () => {
           {skills.map((item, key) => (
             <Image
               key={key}
-              alt="user image"
-              objectFit="cover"
+              alt={`${item}`}
               src={item}
-              width={64}
-              height={64}
+              width={80}
+              height={80}
+              padding="0.5rem"
             />
           ))}
         </div>
