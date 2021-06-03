@@ -1,15 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
-import {
-  About,
-  Experience,
-  Footer,
-  Home,
-  Portfolio,
-  Skill,
-} from '../components/pages';
-import { Divider } from '../components/shared';
+import { Footer } from '../components/pages';
 import { getPortfolio } from '../services';
+import About from './About';
+import Home from './Home';
+import Interest from './Interest';
 
 const Index = ({ portfolio }) => {
   return (
@@ -25,15 +20,14 @@ const Index = ({ portfolio }) => {
 
       <>
         <Home />
-        <Divider />
         <About />
-        <Divider />
-        <Skill />
+        <Interest />
+        {/* <Skill />
         <Divider />
         <Experience />
         <Divider />
         <Portfolio portfolio={portfolio} />
-        <Divider />
+        <Divider /> */}
         <Footer />
       </>
     </>

@@ -40,6 +40,10 @@ a {
     color: ${({ theme }) => theme.color};
   }
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
 `;
 
 export default GlobalStyles;
