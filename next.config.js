@@ -1,13 +1,8 @@
 module.exports = {
   target: 'serverless',
-  webpack: function (config, { isServer }) {
-    if (!isServer) {
-      config.node = {
-        fs: 'empty',
-      };
-    }
+  webpack: function (config) {
     config.module.rules.push({
-      test: /\.md$/i,
+      test: /\.md$|svg/i,
       use: 'raw-loader',
     });
     return config;

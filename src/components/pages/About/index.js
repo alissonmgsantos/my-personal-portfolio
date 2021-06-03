@@ -6,9 +6,9 @@ import {
   UserAstronaut,
 } from '@styled-icons/fa-solid';
 import React, { useEffect, useState } from 'react';
-import { Avatar, HeaderPage, Text } from '../../components/shared';
-import { useLanguage } from '../../providers/language';
-import { getPostBySlug } from '../../services';
+import { useLanguage } from '../../../providers/language';
+import { getPostBySlug } from '../../../services';
+import { Avatar, HeaderPage, Text } from '../../shared';
 import { Card, CardInfo, Wrapper } from './styled';
 
 const About = props => {

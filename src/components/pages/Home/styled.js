@@ -1,6 +1,6 @@
 import * as icon from '@styled-icons/fa-brands';
 import styled, { keyframes } from 'styled-components';
-import * as shared from '../../components/shared';
+import * as shared from '../../shared';
 
 export const Wrapper = styled(shared.Wrapper)`
   width: 100%;

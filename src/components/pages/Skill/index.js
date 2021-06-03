@@ -8,13 +8,19 @@ import {
   Running,
   UmbrellaBeach,
 } from '@styled-icons/fa-solid';
+import Image from 'next/image';
 import React, { useState } from 'react';
-import { HeaderPage, Text } from '../../components/shared';
-import { useLanguage } from '../../providers/language';
-import { Card, CardInfo, Wrapper } from './styled';
+import { ProgressBar } from '../../../components';
+import { useLanguage } from '../../../providers/language';
+import { HeaderPage, Text } from '../../shared';
+import { Card, Wrapper } from './styled';
 
-const Interest = () => {
+const Skill = () => {
   const { language } = useLanguage();
+
+  const skills = (context => {
+    return context.keys().map(item => item.replace('./', '/images/skills/'));
+  })(require.context('../../../../public/images/skills', true, /\.svg$/));
 
   const info = useState({
     portuguese: {
@@ -105,20 +111,50 @@ const Interest = () => {
     <Wrapper id="about" style={{ paddingTop: 0 }}>
       <HeaderPage>
         <Text size="2rem" weight={600} align="center">
-          {info[language].title}
+          {info[language].title} 123123
         </Text>
         <span></span>
       </HeaderPage>
+
       <Card>
-        {info[language].datasource.map((service, key) => (
-          <CardInfo key={key}>
-            {service.icon}
-            <Text>{service.description}</Text>
-          </CardInfo>
-        ))}
+        <div className="soft-skills">
+          <ProgressBar title="Adaptabilidade" percentage="70%" />
+          <ProgressBar title="Criatividade" percentage="80%" />
+          <ProgressBar title="Empatia" percentage="75%" />
+          <ProgressBar title="Liderança" percentage="40%" />
+          <ProgressBar title="Trabalho em equipe" percentage="70%" />
+        </div>
+
+        <div className="hard-skills" align="center">
+          {['javascript', 'nodejs', 'php', 'react', 'vuejs', 'angular'].map(
+            (item, key) => (
+              <Image
+                key={key}
+                alt="user image"
+                objectFit="cover"
+                src={`/images/skills/${item}.svg`}
+                width={100}
+                height={100}
+              />
+            )
+          )}
+        </div>
+
+        <div className="info">
+          {skills.map((item, key) => (
+            <Image
+              key={key}
+              alt="user image"
+              objectFit="cover"
+              src={item}
+              width={64}
+              height={64}
+            />
+          ))}
+        </div>
       </Card>
     </Wrapper>
   );
 };
 
-export default Interest;
+export default Skill;
