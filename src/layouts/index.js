@@ -18,11 +18,11 @@ import {
 const Layout = ({ children }) => {
   const { language, languageOptions, toggleLanguage } = useLanguage();
   const [scrollPosition, setSrollPosition] = useState(0);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const UI_THEME = localStorage.getItem('UI_THEME');
-    setTheme(prevSate => UI_THEME || 'light');
+    setTheme(prevSate => UI_THEME || 'dark');
   }, []);
 
   const toggleTheme = () => {
@@ -36,13 +36,11 @@ const Layout = ({ children }) => {
 
   const menu = useState({
     portuguese: [
-      { name: 'Início', href: '#home' },
       { name: 'Sobre', href: '#about' },
       { name: 'Experiência', href: '#experience' },
       { name: 'Portfólio', href: '#portfolio' },
     ],
     english: [
-      { name: 'Home', href: '#home' },
       { name: 'About', href: '#about' },
       { name: 'Experience', href: '#experience' },
       { name: 'Portfolio', href: '#portfolio' },
@@ -56,10 +54,11 @@ const Layout = ({ children }) => {
           {theme == 'light' ? <Sun width={32} /> : <Moon width={32} />}
         </FloatButton>
         <NavBar scrollPosition={scrollPosition}>
-          <Text size="2rem" weight={600}>
-            Alisson
-          </Text>
-
+          <Link href="#home">
+            <Text size="2rem" weight={600} className="cursor-pointer">
+              Alisson
+            </Text>
+          </Link>
           <Wrapper>
             {menu[language].map((item, key) => (
               <Link href={item.href} key={key}>

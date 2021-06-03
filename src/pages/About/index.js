@@ -11,7 +11,7 @@ import { useLanguage } from '../../providers/language';
 import { getPostBySlug } from '../../services';
 import { Card, CardInfo, Wrapper } from './styled';
 
-const About = () => {
+const About = props => {
   const { language } = useLanguage();
   const [info, setInfo] = useState(null);
   const services = useState({
@@ -63,7 +63,7 @@ const About = () => {
   }, [language]);
 
   return (
-    <Wrapper id="about">
+    <Wrapper id="about" style={{ paddingBottom: '2rem' }}>
       <HeaderPage>
         <Text size="2rem" weight={600} align="center">
           {info?.title}
@@ -71,7 +71,7 @@ const About = () => {
         <span></span>
       </HeaderPage>
       <Card>
-        <div class="image-profile">
+        <div className="image-profile">
           <Avatar
             alt="user image"
             objectFit="cover"
@@ -80,7 +80,7 @@ const About = () => {
             height={200}
           />
         </div>
-        <div class="about">
+        <div className="about">
           <Text size="1rem" weight={600}>
             Nome
           </Text>
@@ -91,9 +91,9 @@ const About = () => {
           <Text padding="1rem 0 0 0">{info?.bio}</Text>
         </div>
 
-        <div class="info">
+        <div className="info">
           {services[language].map((service, key) => (
-            <CardInfo>
+            <CardInfo key={key}>
               {service.icon}
               <div>
                 <Text weight={600}>{service.name}</Text>
