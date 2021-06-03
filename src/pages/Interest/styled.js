@@ -18,6 +18,10 @@ export const Card = styled(shared.Card)`
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const CardInfo = styled.div`
