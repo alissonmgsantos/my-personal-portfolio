@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import React from 'react';
-import { Experience, Footer, Portfolio, Skill } from '../components/pages';
+import { Experience, Footer } from '../components/pages';
 import { Divider } from '../components/shared';
-import { getPortfolio } from '../services';
 import About from './About';
 import Home from './Home';
 import Interest from './Interest';
+import Skill from './Skill';
 
 const Index = ({ portfolio }) => {
   return (
@@ -27,7 +27,7 @@ const Index = ({ portfolio }) => {
         <Divider />
         <Experience />
         <Divider />
-        <Portfolio portfolio={portfolio} />
+        {/* <Portfolio portfolio={portfolio} /> */}
         <Divider />
         <Footer />
       </>
@@ -37,14 +37,19 @@ const Index = ({ portfolio }) => {
 
 export default Index;
 
-export async function getStaticProps(context) {
-  const portfolio = (context => {
-    return getPortfolio(context);
-  })(require.context('../../posts/portfolio', true, /\.md$/));
+// export async function getStaticProps(context) {
+//   const portfolio = (context => {
+//     return getPortfolio(context);
+//   })(require.context('../../posts/portfolio', true, /\.md$/));
 
-  return {
-    props: {
-      portfolio,
-    },
-  };
-}
+//   const skills = (context => {
+//     return context.keys();
+//   })(require.context('../../public/images/skills', true, /\.svg$/));
+
+//   return {
+//     props: {
+//       portfolio,
+//       skills,
+//     },
+//   };
+// }

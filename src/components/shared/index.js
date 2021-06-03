@@ -93,7 +93,7 @@ export const Avatar = styled(Image)`
 `;
 
 export const Card = styled.div`
-  background: ${({ theme }) => theme.backgroundSecondary || '#fff'};
+  background: ${({ theme }) => theme.backgroundSecondary};
   border-radius: 0.5rem;
   margin: 3rem 1rem;
   padding: 2rem;
