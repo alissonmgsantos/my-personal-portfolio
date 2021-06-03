@@ -27,9 +27,13 @@ export const CardInfo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
   & > svg {
     width: 2rem;
     float: left;
     margin-right: 1rem;
+  }
+  :hover {
+    opacity: 50%;
   }
 `;

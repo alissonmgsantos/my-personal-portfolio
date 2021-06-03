@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
-import { Footer } from '../components/pages';
+import { Experience, Footer, Portfolio, Skill } from '../components/pages';
+import { Divider } from '../components/shared';
 import { getPortfolio } from '../services';
 import About from './About';
 import Home from './Home';
@@ -22,12 +23,12 @@ const Index = ({ portfolio }) => {
         <Home />
         <About />
         <Interest />
-        {/* <Skill />
+        <Skill />
         <Divider />
         <Experience />
         <Divider />
         <Portfolio portfolio={portfolio} />
-        <Divider /> */}
+        <Divider />
         <Footer />
       </>
     </>
