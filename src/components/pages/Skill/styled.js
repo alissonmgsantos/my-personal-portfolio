@@ -22,22 +22,19 @@ export const Card = styled(shared.Card)`
 
   & > .soft-skills {
     grid-area: 1 / 1 / 2 / 3;
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       grid-area: 1 / 1 / 1 / 5;
     }
   }
   & > .hard-skills {
     grid-area: 1 / 3 / 2 / 5;
-    justify-content: center;
-    align-items: center;
-    img {
-      padding: 1rem !important;
-    }
-    @media (max-width: 425px) {
-      grid-area: 1 / 1 / 1 / 5;
+    align-self: center;
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
-  & > .info {
+  & > .all-skills {
     grid-area: 2 / 1 / 2 / 5;
     @media (max-width: 425px) {
       flex-wrap: wrap;

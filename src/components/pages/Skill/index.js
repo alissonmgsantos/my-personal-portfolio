@@ -131,22 +131,23 @@ const Skill = () => {
                 key={key}
                 alt={`${item}`}
                 src={`/images/skills/${item}.svg`}
-                width={150}
-                height={150}
+                width={100}
+                height={100}
+                margin="0 2rem"
               />
             )
           )}
         </div>
 
-        <div className="info">
+        <div className="all-skills" align="center">
           {skills.map((item, key) => (
             <Image
               key={key}
               alt={`${item}`}
               src={item}
-              width={90}
-              height={90}
-              padding="1rem"
+              width={64}
+              height={64}
+              margin="1rem"
             />
           ))}
         </div>
