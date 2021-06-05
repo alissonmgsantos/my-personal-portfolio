@@ -17,7 +17,7 @@ title_experience: Experience
 experience:
   - period: 2020 - Current
     company: Capgemini
-    role: Analista de Sistemas PL
+    role: System Analyst PL
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
       exercitationem quaerat ea repellat tempore minima eum numquam
       ducimus at! Eveniet, fugiat fugit similique inventore quae quod
@@ -28,12 +28,12 @@ experience:
       exercitationem quaerat ea repellat tempore minima eum numquam
       ducimus at! Eveniet, fugiat fugit similique inventore quae quod
       voluptatum architecto repudiandae ea!
-    role: Analista Desenvolvedor
+    role: Analyst Developer
 title_education: Education
 education:
   - period: 2015 - 2018
-    company: Centro Universitário Jorge Amado
-    role: Análise e Desenvolvimento de Sistemas
+    company: Jorge Amado University Center
+    role: System Analysis and Development
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
       exercitationem quaerat ea repellat tempore minima eum numquam
       ducimus at! Eveniet, fugiat fugit similique inventore quae quod
