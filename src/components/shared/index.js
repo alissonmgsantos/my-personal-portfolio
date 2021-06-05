@@ -9,7 +9,7 @@ export const Image = styled.img`
 
 export const Wrapper = styled.section`
   display: flex;
-  padding: 2rem 1rem;
+  padding: 4em 1rem 0;
 `;
 
 export const Container = styled.div`
