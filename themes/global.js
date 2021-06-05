@@ -15,14 +15,18 @@ const GlobalStyles = createGlobalStyle`
 html,
 body, #__next {
   min-height: 100%;
-  margin: 0 auto;
-  max-width: 90rem;
+
 }
 
 body {
   overflow: hidden;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
+  margin: 0 auto;
+  max-width: 90rem;
+  @media (min-width: 90rem) {
+      box-shadow: 0 3px 8px 0 rgb(15 15 20 / 20%);
+    }
 }
 
 ol, ul {

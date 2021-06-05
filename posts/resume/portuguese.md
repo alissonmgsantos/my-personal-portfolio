@@ -1,21 +1,21 @@
 ---
-language: english
-title: Resume
-title_skill: Skills
+language: portuguese
+title: Resumo
+title_skill: Habilidades
 soft_skills:
-  - name: Adaptability
+  - name: Adaptabilidade
     percentage: 70%
-  - name: Creativity
+  - name: Criatividade
     percentage: 80%
-  - name: Empathy
+  - name: Empatia
     percentage: 75%
-  - name: Leadership
+  - name: Liderança
     percentage: 30%
-  - name: Team work
+  - name: Trabalho em equipe
     percentage: 90%
-title_experience: Experience
+title_experience: Experiência
 experience:
-  - period: 2020 - Current
+  - period: 2020 - Atual
     company: Capgemini
     role: Analista de Sistemas PL
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
@@ -29,7 +29,7 @@ experience:
       ducimus at! Eveniet, fugiat fugit similique inventore quae quod
       voluptatum architecto repudiandae ea!
     role: Analista Desenvolvedor
-title_education: Education
+title_education: Educação
 education:
   - period: 2015 - 2018
     company: Centro Universitário Jorge Amado

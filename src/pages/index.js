@@ -2,12 +2,11 @@ import Head from 'next/head';
 import React from 'react';
 import {
   About,
-  Experience,
   Footer,
   Home,
   Interest,
   Portfolio,
-  Skill,
+  Resume,
 } from '../components/pages';
 
 const Index = () => {
@@ -26,8 +25,7 @@ const Index = () => {
         <Home />
         <About />
         <Interest />
-        <Skill />
-        <Experience />
+        <Resume />
         <Portfolio />
         <Footer />
       </>

@@ -58,7 +58,7 @@ collections:
   # EXPERIENCE
   #################
   - name: 'experience' # Used in routes, e.g., /admin/collections/blog
-    label: 'experience' # Used in the UI
+    label: 'Experience' # Used in the UI
     folder: 'posts/experience' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
@@ -83,3 +83,41 @@ collections:
           - { label: "Role", name: "role", widget: "string"}
           - { label: "Period", name: "period", widget: "string", default: 'Jan 2020 - Jan 2021'}
           - { label: "URL", name: "url", widget: "string" }
+  ##################
+  # RESUME
+  #################
+  - name: 'resume' # Used in routes, e.g., /admin/collections/blog
+    label: 'Resume' # Used in the UI
+    folder: 'posts/resume' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Title section skills", name: "title_skill", widget: "string" }
+      - label: "Soft Skills"
+        name: "soft_skills"
+        widget: "list"
+        fields:
+          - { label: "Name", name: "name", widget: "string"}
+          - { label: "Percentage", name: "percentage", widget: "string"}
+
+      - { label: "Title section Experiences", name: "title_experience", widget: "string" }
+      - label: " Work Experience"
+        name: "work"
+        widget: "list"
+        fields:
+          - { label: "Company", name: "company", widget: "string"}
+          - { label: "Role", name: "role", widget: "string"}
+          - { label: "Period", name: "period", widget: "string"}
+          - { label: "Description", name: "description", widget: "string" }
+      - { label: "Title section Education", name: "title_education", widget: "string" }
+      - label: " Education Experience"
+        name: "education"
+        widget: "list"
+        fields:
+          - { label: "Company", name: "company", widget: "string"}
+          - { label: "Role", name: "role", widget: "string"}
+          - { label: "Period", name: "period", widget: "string"}
+          - { label: "Description", name: "description", widget: "string" }
+
