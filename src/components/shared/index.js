@@ -9,10 +9,7 @@ export const Image = styled.img`
 
 export const Wrapper = styled.section`
   display: flex;
-  padding: 5rem 3rem;
-  @media (max-width: 800px) {
-    padding: 6rem 1rem;
-  }
+  padding: 5rem 1rem;
 `;
 
 export const Container = styled.div`

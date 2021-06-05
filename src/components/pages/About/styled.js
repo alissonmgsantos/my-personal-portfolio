@@ -45,6 +45,7 @@ export const Card = styled(shared.Card)`
     height: auto;
     @media (max-width: 425px) {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 `;

@@ -36,13 +36,15 @@ const Layout = ({ children }) => {
   const menu = useState({
     portuguese: [
       { name: 'Sobre', href: '#about' },
-      { name: 'Experiência', href: '#experience' },
+      { name: 'Resumo', href: '#resume' },
       { name: 'Portfólio', href: '#portfolio' },
+      { name: 'Contato', href: '#contact' },
     ],
     english: [
       { name: 'About', href: '#about' },
-      { name: 'Experience', href: '#experience' },
+      { name: 'Resume', href: '#resume' },
       { name: 'Portfolio', href: '#portfolio' },
+      { name: 'Contact', href: '#contact' },
     ],
   })[0];
 
@@ -64,7 +66,8 @@ const Layout = ({ children }) => {
                 <Text weight={500}>{item.name}</Text>
               </Link>
             ))}
-
+          </Wrapper>
+          <Wrapper>
             {languageOptions.map((language, key) => (
               <Image
                 key={key}

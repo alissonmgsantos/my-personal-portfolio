@@ -15,7 +15,10 @@ const GlobalStyles = createGlobalStyle`
 html,
 body, #__next {
   min-height: 100%;
+  margin: 0 auto;
+  max-width: 90rem;
 }
+
 body {
   overflow: hidden;
   background: ${({ theme }) => theme.background};

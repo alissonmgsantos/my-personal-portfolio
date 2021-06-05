@@ -38,8 +38,8 @@ const Home = () => {
           <Image
             alt="user image"
             src={info?.image || '/'}
-            width={250}
-            height={250}
+            width={230}
+            height={230}
             borderRadius="100%"
           />
           <Text size="2.5rem" weight={600}>
