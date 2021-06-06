@@ -38,6 +38,8 @@ const Portfolio = () => {
     setInfo(prevState => data);
   }, [language]);
 
+  console.log(info);
+
   return (
     <Wrapper id="portfolio">
       <HeaderPage>
@@ -50,7 +52,7 @@ const Portfolio = () => {
       <ButtonGroup>
         {options[language].map((option, key) => (
           <Text
-            padding="5rem 0 0 0"
+            padding="4rem 0 0 0"
             key={key}
             weight={600}
             className={selected == option.name && 'actived'}
@@ -60,36 +62,37 @@ const Portfolio = () => {
         ))}
       </ButtonGroup>
 
-      <Container>
-        <Image src="/images/construction.svg" width="50%" />
-      </Container>
-
-      <Galery>
-        {info?.portfolio_list
-          .filter(value => value.type === selected)
-          .map((project, key) => (
-            <Figure key={key}>
-              <Photo src={project.image} alt={project.title} />
-              <Corner>
-                <Link href={project.repository || '/'}>
-                  <Github width={32} />
-                </Link>
-              </Corner>
-            </Figure>
-          ))}
-
-        {selected == 'all' &&
-          info?.portfolio_list.map((project, key) => (
-            <Figure key={key}>
-              <Photo src={project.image} alt={project.title} />
-              <Corner>
-                <Link href={project.repository || '/'}>
-                  <Github width={32} />
-                </Link>
-              </Corner>
-            </Figure>
-          ))}
-      </Galery>
+      {!info?.portfolio_list ? (
+        <Container>
+          <Image src="/images/construction.svg" width="50%" margin="2rem 0" />
+        </Container>
+      ) : (
+        <Galery>
+          {info?.portfolio_list
+            .filter(value => value.type === selected)
+            .map((project, key) => (
+              <Figure key={key}>
+                <Photo src={project.image} alt={project.title} />
+                <Corner>
+                  <Link href={project.repository || '/'}>
+                    <Github width={32} />
+                  </Link>
+                </Corner>
+              </Figure>
+            ))}
+          {selected == 'all' &&
+            info?.portfolio_list.map((project, key) => (
+              <Figure key={key}>
+                <Photo src={project.image} alt={project.title} />
+                <Corner>
+                  <Link href={project.repository || '/'}>
+                    <Github width={32} />
+                  </Link>
+                </Corner>
+              </Figure>
+            ))}
+        </Galery>
+      )}
     </Wrapper>
   );
 };
