@@ -51,38 +51,14 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string", required: true}
       - { label: 'Type', name: 'type', widget: 'select', options: ['web', 'mobile', 'other'] }
-      - { label: "URL Image", name: "image", widget: "string", required: true}
-      - { label: "URL Repository", name: "repository", widget: "string", required: true}
-
-  ##################
-  # EXPERIENCE
-  #################
-  - name: 'experience' # Used in routes, e.g., /admin/collections/blog
-    label: 'Experience' # Used in the UI
-    folder: 'posts/experience' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{language}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: 'Language', name: 'language', widget: 'select', options: ['portuguese', 'english'] }
-      - { label: "Title", name: "title", widget: "string", required: true}
-      - { label: "Title Work list", name: "title_work", widget: "string" }
-      - label: " Work Experience"
-        name: "work"
+      - label: " Portfolio"
+        name: "portfolio_list"
         widget: "list"
         fields:
-          - { label: "Company", name: "company", widget: "string"}
-          - { label: "Role", name: "role", widget: "string"}
-          - { label: "Period", name: "period", widget: "string", default: 'Jan 2020 - Jan 2021'}
-          - { label: "URL", name: "url", widget: "string" }
-      - { label: "Title Academic list", name: "title_academic", widget: "string" }
-      - label: " Academic Experience"
-        name: "academic"
-        widget: "list"
-        fields:
-          - { label: "Company", name: "company", widget: "string"}
-          - { label: "Role", name: "role", widget: "string"}
-          - { label: "Period", name: "period", widget: "string", default: 'Jan 2020 - Jan 2021'}
-          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Title", name: "title", widget: "string", required: true}
+          - { label: 'Type', name: 'type', widget: 'select', options: ['web', 'mobile', 'other'] }
+          - { label: "URL Image", name: "image", widget: "string", required: true}
+          - { label: "URL Repository", name: "repository", widget: "string", required: true}
   ##################
   # RESUME
   #################

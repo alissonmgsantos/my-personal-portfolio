@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPortfolio } from '../../../services';
-import { ButtonGroup, Text } from '../../shared';
+import { ButtonGroup, HeaderPage, Text } from '../../shared';
 import {
   Container,
   Corner,
@@ -39,6 +39,12 @@ const Portfolio = () => {
 
   return (
     <Wrapper id="portfolio">
+      <HeaderPage>
+        <Text size="2rem" weight={600} align="center">
+          {info?.title}
+        </Text>
+        <span></span>
+      </HeaderPage>
       <Container>
         <Text size="2rem" weight={600} margin="0 0 4rem 0">
           <Images width={24} />
