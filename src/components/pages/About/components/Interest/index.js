@@ -9,9 +9,9 @@ import {
   UmbrellaBeach,
 } from '@styled-icons/fa-solid';
 import React, { useState } from 'react';
-import { useLanguage } from '../../../providers/language';
-import { HeaderPage, Text } from '../../shared';
-import { Card, CardInfo, Wrapper } from './styled';
+import { useLanguage } from '../../../../../providers/language';
+import { HeaderPage, Text } from '../../../../shared';
+import { Card, CardDescription } from './styled';
 
 const Interest = () => {
   const { language } = useLanguage();
@@ -102,7 +102,7 @@ const Interest = () => {
   })[0];
 
   return (
-    <Wrapper id="about" style={{ paddingTop: 0 }}>
+    <>
       <HeaderPage>
         <Text size="2rem" weight={600} align="center">
           {info[language].title}
@@ -111,13 +111,13 @@ const Interest = () => {
       </HeaderPage>
       <Card>
         {info[language].datasource.map((service, key) => (
-          <CardInfo key={key}>
+          <CardDescription key={key}>
             {service.icon}
             <Text>{service.description}</Text>
-          </CardInfo>
+          </CardDescription>
         ))}
       </Card>
-    </Wrapper>
+    </>
   );
 };
 

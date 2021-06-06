@@ -1,16 +1,6 @@
-import * as icon from '@styled-icons/fa-regular';
 import styled from 'styled-components';
-import * as shared from '../../shared';
+import * as shared from '../../../../shared';
 
-export const Wrapper = styled(shared.Wrapper)`
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-`;
-
-export const User = styled(icon.User)`
-  margin-right: 1rem;
-`;
 export const Card = styled(shared.Card)`
   padding: 2rem;
   display: grid;
@@ -24,7 +14,7 @@ export const Card = styled(shared.Card)`
   }
 `;
 
-export const CardInfo = styled.div`
+export const CardDescription = styled.div`
   background: ${({ theme }) => theme.background};
   padding: 1rem;
   border-radius: 1rem;

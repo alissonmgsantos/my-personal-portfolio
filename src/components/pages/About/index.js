@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../../providers/language';
 import { getPostBySlug } from '../../../services';
 import { HeaderPage, Image, Text } from '../../shared';
+import { Interest } from './components';
 import { Card, CardInfo, Wrapper } from './styled';
 
 const About = props => {
@@ -104,6 +105,7 @@ const About = props => {
           ))}
         </div>
       </Card>
+      <Interest />
     </Wrapper>
   );
 };
