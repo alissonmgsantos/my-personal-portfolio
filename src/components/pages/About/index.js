@@ -84,11 +84,11 @@ const About = props => {
         </div>
         <div className="about">
           <Text size="1rem" weight={600}>
-            Nome
+            {info?.name}
           </Text>
           <Text size="0.75rem" padding="0.2rem 0">
             <MapMarkedAlt width={20} style={{ margin: '0 0.5rem 0.3rem 0' }} />
-            Localização
+            {info?.location}
           </Text>
           <Text padding="1rem 0 0 0">{info?.bio}</Text>
         </div>
