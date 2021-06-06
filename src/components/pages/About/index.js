@@ -64,7 +64,7 @@ const About = props => {
   }, [language]);
 
   return (
-    <Wrapper id="about" style={{ paddingBottom: '2rem' }}>
+    <Wrapper id="about">
       <HeaderPage>
         <Text size="2rem" weight={600} align="center">
           {info?.title}
