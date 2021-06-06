@@ -15,8 +15,8 @@ const getPortfolio = context => {
   return data;
 };
 
-const getPostBySlug = async (folder, language = 'portuguese') => {
-  const content = await import(`../../posts/${folder}/${language}.md`);
+const getPostBySlug = async (folder, slug = 'portuguese') => {
+  const content = await import(`../../posts/${folder}/${slug}.md`);
   const { data } = matter(content.default);
   return { ...data };
 };

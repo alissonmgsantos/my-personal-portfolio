@@ -1,5 +1,4 @@
 import * as iconBrands from '@styled-icons/fa-brands';
-import * as icon from '@styled-icons/fa-regular';
 import styled from 'styled-components';
 import * as shared from '../../shared';
 export const Wrapper = styled(shared.Wrapper)`
@@ -9,15 +8,11 @@ export const Wrapper = styled(shared.Wrapper)`
   height: auto;
 `;
 
-export const Images = styled(icon.Images)`
-  margin-right: 1rem;
-`;
-
 export const Container = styled(shared.Container)`
   width: 100%;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  justify-content: center;
+  margin: 1rem;
 `;
 
 export const Galery = styled.div`
@@ -61,4 +56,5 @@ export const Photo = styled.img`
   border-radius: 0.5rem;
   margin: 0 0 1rem 0;
   break-inside: avoid;
+  max-height: 500px;
 `;
