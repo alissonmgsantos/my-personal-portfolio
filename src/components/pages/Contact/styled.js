@@ -33,6 +33,7 @@ export const SocialItem = styled.div`
   margin: 1rem;
   opacity: 90%;
   &:hover {
+    border: 0.1rem solid;
     opacity: 1;
   }
 `;
