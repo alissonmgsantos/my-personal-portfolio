@@ -1,6 +1,13 @@
 import Head from 'next/head';
 import React from 'react';
-import { About, Footer, Home, Portfolio, Resume } from '../components/pages';
+import {
+  About,
+  Contact,
+  Footer,
+  Home,
+  Portfolio,
+  Resume,
+} from '../components/pages';
 
 const Index = () => {
   return (
@@ -19,6 +26,7 @@ const Index = () => {
         <About />
         <Resume />
         <Portfolio />
+        <Contact />
         <Footer />
       </>
     </>
