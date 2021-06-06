@@ -38,8 +38,6 @@ const Portfolio = () => {
     setInfo(prevState => data);
   }, [language]);
 
-  console.log(info);
-
   return (
     <Wrapper id="portfolio">
       <HeaderPage>
